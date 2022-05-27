@@ -6,8 +6,7 @@ function Home() {
         <div>
             <NavBar/>
             <h1>Hi from Home</h1>
-            
-           
+
         </div>
 
     )
