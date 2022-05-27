@@ -1,17 +1,14 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import { Link } from "react-router-dom";
+import NavBar from '../components/Navbar/Navbar'
 
 function Home() {
     return (
-        <Box className="">
+        <div>
+            <NavBar/>
             <h1>Hi from Home</h1>
-            {/* links to in NAVBAR COMPONENT, then NAVBAR COMPONENT to HOME */}
-            {/* <Link to="/">Home</Link>
-            <Link to="/destination"> Destination </Link>
-            <Link to="/crew"> Crew </Link>
-            <Link to="/technology"> Technology </Link> */}
-        </Box>
+
+        </div>
+
     )
 }
 
