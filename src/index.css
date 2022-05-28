@@ -6,6 +6,7 @@ body, html {
 h1 {
     font-size: 150px;
     font-family: 'Bellefair', serif;
+    font-weight: 400
 }
 
 h2 {
@@ -27,6 +28,13 @@ h5 {
     font-size: 28px;
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 4.75px;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 32px;
+    color: #D0D6F9
 }
 
 .sub-heading {
