@@ -5,29 +5,41 @@ body, html {
 
 h1 {
     font-size: 150px;
+    font-weight: 400;
     font-family: 'Bellefair', serif;
-    font-weight: 400
+    color: #ffffff;
 }
 
 h2 {
     font-size: 100px;
     font-family: 'Bellefair', serif;
+    color: #ffffff;
 }
 
 h3 {
     font-size: 56px;
     font-family: 'Bellefair', serif;
+    color: #ffffff;
 }
 
 h4 {
     font-size: 32px;
     font-family: 'Bellefair', serif;
+    color: #ffffff;
 }
 
 h5 {
     font-size: 28px;
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 4.75px;
+    color: #d0d6f9;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 32px;
+    color: #D0D6F9
 }
 
 p {
@@ -40,16 +52,19 @@ p {
 .sub-heading {
     font-size: 28px;
     font-family: 'Bellefair', serif;
+    color: #ffffff;
 }
 
 .sub-heading-2 {
     font-size: 14px;
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 4.75px;
+    color: #ffffff;
 }
 
 .nav-text {
     font-size: 16px;
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 2.7px;
+    color: #ffffff;
 }
