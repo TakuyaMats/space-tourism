@@ -2,3 +2,46 @@ body, html {
     height: 100%;
     margin: 0;
 }
+
+h1 {
+    font-size: 150px;
+    font-family: 'Bellefair', serif;
+}
+
+h2 {
+    font-size: 100px;
+    font-family: 'Bellefair', serif;
+}
+
+h3 {
+    font-size: 56px;
+    font-family: 'Bellefair', serif;
+}
+
+h4 {
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
+}
+
+h5 {
+    font-size: 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 4.75px;
+}
+
+.sub-heading {
+    font-size: 28px;
+    font-family: 'Bellefair', serif;
+}
+
+.sub-heading-2 {
+    font-size: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 4.75px;
+}
+
+.nav-text {
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.7px;
+}
