@@ -1,7 +1,19 @@
-.explore-btn:hover {
-    color: white;
+.btn-hover {
+    position: absolute;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    background-color: #FFFFFF;
     width: 450px;
     height: 450px;
-    left: 913px;
-    top: 407px;
+    left: 914px;
+    top: 436px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: -1;
+}
+
+.btn-container:hover > .btn-hover {
+    opacity: 0.1;
+    transition: 0.1s;
 }
