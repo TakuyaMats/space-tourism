@@ -10,6 +10,7 @@
     top: 388px;
     border-radius: 50%;
     opacity: 0;
+    /* z-index: 1; */
 }
 
 @media only screen and (max-width: 1440px) {
@@ -21,7 +22,26 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .btn-hover {
+        width: 250px;
+        height: 250px;
+        left: 64px; 
+        top: 430px;
+    }
+}
+
+/* .btn-container {
+    z-index: 2;
+} */
+
 .btn-container:hover > .btn-hover {
+    /* z-index: 1; */
     opacity: 0.1;
     transition: 0.1s;
+}
+
+.explore-btn:hover {
+    opacity: 1;
+    /* z-index: 2; */
 }
