@@ -45,12 +45,6 @@ function NavBar() {
                         <Button component={Link} to="/destination" sx={{ my: 2, color: 'white', display: 'block' }}>01 Destination</Button>
                         <Button component={Link} to="/crew" sx={{ my: 2, color: 'white', display: 'block' }}>02 Crew</Button>
                         <Button component={Link} to="/technology" sx={{ my: 2, color: 'white', display: 'block' }}>03 Technology</Button>
-
-                        {/* <Link onClick={handleCloseNavMenu} to="/">00 Home</Link>
-                        <Link onClick={handleCloseNavMenu} to="/destination">01 Destination</Link>
-                        <Link onClick={handleCloseNavMenu} to="/crew">02 Crew</Link>
-                        <Link onClick={handleCloseNavMenu} to="/technology">03 Technology</Link> */}
-
                     </Container>
 
 
@@ -67,12 +61,13 @@ function NavBar() {
                     </Container>
                 </Toolbar>
             </Container>
-            <SwipeableDrawer 
-            anchor='right' 
-            open={open} 
-            onOpen={() => setOpen(true)} 
-            onClose={() => setOpen(false)} >
-                <div style={{ display: 'flex', justifyContent:'flex-end'}}>
+
+            <SwipeableDrawer
+                anchor='right'
+                open={open}
+                onOpen={() => setOpen(true)}
+                onClose={() => setOpen(false)} >
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <IconButton onClick={() => setOpen(false)}>
                         <CloseIcon />
                     </IconButton>
