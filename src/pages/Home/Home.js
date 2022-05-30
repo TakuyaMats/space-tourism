@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import ButtonUnstyled from '@mui/base/ButtonUnstyled';
+// import ButtonUnstyled from '@mui/base/ButtonUnstyled';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // import NavBar from '../../components/Navbar/Navbar'
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
@@ -57,13 +59,38 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'relative',
-                        width: '450px',
+                        width: '464px',
                         height: '382px',
                         left: '165px',
                         top: '387px',
                         marginLeft: '0',
                         [breakpoints.down('lg')]: {
                             top: '202px'
+                        },
+                    }
+                }
+            ]
+        },
+        MuiButton: {
+            variants: [
+                {
+                    props: {
+                        variant: 'exploreBtn'
+                    },
+                    style: {
+                        position: 'relative',
+                        width: '274px',
+                        height: '274px', 
+                        borderRadius: '50%', 
+                        left: '1001px', 
+                        top: '88px', 
+                        bottom: '131px', 
+                        right: '165px', 
+                        backgroundColor: '#FFFFFF', 
+                        borderStyle: 'none',
+                        [breakpoints.down('lg')]: {
+                            left: '263px', 
+                            top: '292px',
                         },
                     }
                 }
@@ -94,8 +121,9 @@ theme.typography.h5 = {
 
 theme.typography.p = {
     fontSize: '18px',
-    fontFamily: 'Barlow Condensed, sans-serif',
+    fontFamily: 'Barlow',
     mixBlendMode: 'normal',
+    color: '#D0D6F9',
     [breakpoints.down('lg')]: {
         fontFamily: 'Barlow',
         display: 'flex',
@@ -116,10 +144,10 @@ function Home() {
                     <Typography variant="h1">SPACE</Typography>
                     <Typography variant="p">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</Typography>
                 </Container>
-                <div className="btn-container">
-                    <ButtonUnstyled className="explore-btn" style={{ position: 'relative', width: '274px', height: '274px', borderRadius: '50%', left: '1001px', top: '125px', bottom: '131px', right: '165px', backgroundColor: '#FFFFFF', borderStyle: 'none' }}><Link to="/destination" style={{ textDecoration: 'none' }}><h4 style={{ color: '#0B0D17', fontWeight: '400', lineHeight: '36.67px', letterSpacing: '2px' }}>EXPLORE</h4></Link></ButtonUnstyled>
-                    <div className="btn-hover"></div>
-                </div>
+                <Box className="btn-container">
+                    <Button variant="exploreBtn" className="explore-btn"><Link to="/destination" style={{ textDecoration: 'none' }}><h4 style={{ color: '#0B0D17', fontWeight: '400', lineHeight: '36.67px', letterSpacing: '2px' }}>EXPLORE</h4></Link></Button>
+                    <Box className="btn-hover"></Box>
+                </Box>
             </Paper>
         </ThemeProvider>
     )
