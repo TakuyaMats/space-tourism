@@ -82,6 +82,13 @@ const theme = createTheme({
                             textAlign: 'center',
                             width: '464px',
                             left: '178px',
+                            top: '130px'
+                        },
+                        [breakpoints.only('iPadMini')]: {
+                            textAlign: 'center',
+                            width: '464px',
+                            left: '152px',
+                            top: '90px'
                         },
                         [breakpoints.only('iphoneXR')]: {
                             textAlign: 'center',
@@ -165,6 +172,13 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iPadAir')]: {
                             left: '273px',
+                            top: '320px',
+                        },
+                        [breakpoints.only('iPadMini')]: {
+                            width: '274px',
+                            height: '274px',
+                            top: '210px',
+                            left: '247px',
                         },
                         [breakpoints.only('iphoneXR')]: {
                             width: '150px',
