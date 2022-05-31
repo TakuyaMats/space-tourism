@@ -98,6 +98,11 @@ const theme = createTheme({
                             top: '295px',
                             left: '228px',
                         },
+                        [breakpoints.only('iPadAir')]: {
+                            textAlign: 'center',
+                            width: '464px',
+                            left: '178px',
+                        },
                         [breakpoints.down('iphoneXR')]: {
                             display: 'flex',
                             flexWrap: 'wrap',
@@ -143,6 +148,9 @@ const theme = createTheme({
                             height: '274px',
                             top: '655px',
                             left: '320px',
+                        },
+                        [breakpoints.only('iPadAir')]: {
+                            left: '273px',
                         },
                         [breakpoints.down('iphoneXR')]: {
                             width: '150px',
