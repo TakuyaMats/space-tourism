@@ -50,26 +50,49 @@ const theme = createTheme({
                         marginTop: 40,
                         [breakpoints.down('lg')]: {
                             backgroundColor: 'red',
-                            minWidth: 1000
+                            minWidth: 100
+                        },
+                        [breakpoints.down('md')]: {
+                            backgroundColor: 'blue',
+                            minWidth: 100
                         }
                     }
                 }
             ]
         },
-        MuiContainer: {
+        MuiIcon: {
             variants: [
                 {
                     props: {
-                        variant: 'body2'
+                        variant: 'icon'
                     },
                     style: {
-                        backdropFilter: 'blur(50px)',
-                        backgroundColor: 'transparent'
-                        // maxWidth: 'lg'
+                        display: 'flex',
+                        marginLeft: 2,
+                        marginRight: 'auto',
                     }
                 }
             ]
-        }
+        },
+        MuiButton: {
+            variants: [
+                {
+                    props: {
+                        variant: 'button'
+                    },
+                    style: {
+                        color: 'white',
+                        fontFamily: 'Barlow Condensed Regular',
+                        fontSize: '16px',
+                        wordSpacing: 2.7,
+                        marginTop: 2,
+                        display: 'flex',
+                    }
+                }
+            ]
+        },
+
+
     }
 })
 
@@ -87,7 +110,7 @@ function NavBar() {
                 <Container variant='body2'>
                     <Toolbar disableGutters>
                         {/* SPACE ICON */}
-                        <Icon sx={{ display: { xs: 'flex', md: 'flex' }, ml: 2, marginRight: 'auto' }} >
+                        <Icon variant='icon' >
                             <img src={NavLogo} />
                         </Icon>
 
@@ -97,28 +120,32 @@ function NavBar() {
                             <Button
                                 component={Link}
                                 to="/"
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                variant="button"
+                                className="on-hover"
                             >
                                 00 Home
                             </Button>
                             <Button
                                 component={Link}
                                 to="/destination"
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                variant="button"
+                                className="on-hover"
                             >
                                 01 Destination
                             </Button>
                             <Button
                                 component={Link}
                                 to="/crew"
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                variant="button"
+                                className="on-hover"
                             >
                                 02 Crew
                             </Button>
                             <Button
                                 component={Link}
                                 to="/technology"
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                variant="button"
+                                className="on-hover"
                             >
                                 03 Technology
                             </Button>
@@ -134,7 +161,6 @@ function NavBar() {
                             <IconButton onClick={() => setOpen(true)}>
                                 <MenuIcon />
                             </IconButton>
-                            {/* */}
                         </Container>
                     </Toolbar>
                 </Container>
