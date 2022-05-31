@@ -61,6 +61,16 @@
     }
 }
 
+/* iPhone 12 Pro */
+@media only screen and (width: 390px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 95px; 
+        top: 605px;
+    }
+}
+
 @media only screen and (width: 375px) {
     .btn-hover {
         width: 200px;

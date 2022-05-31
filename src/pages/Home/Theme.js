@@ -97,6 +97,13 @@ const theme = createTheme({
                             top: '53px',
                             left: '24px',
                         },
+                        [breakpoints.only('iphone12Pro')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '100px',
+                            left: '31px',
+                        },
                     }
                 }
             ]
@@ -156,6 +163,15 @@ const theme = createTheme({
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
                         },
+                        [breakpoints.only('iphone12Pro')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '120px',
+                            top: '250px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
                     }
                 }
             ]
@@ -180,6 +196,10 @@ theme.typography.h1 = {
         fontSize: '80px',
         lineHeight: '100px'
     },
+    [breakpoints.only('iphone12Pro')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
 }
 
 theme.typography.h5 = {
@@ -200,13 +220,6 @@ theme.typography.h5 = {
         letterSpacing: '2.7px',
         lineHeight: '19px'
     },
-    // [breakpoints.only('iphoneSE')]: {
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     fontSize: '16px',
-    //     letterSpacing: '2.7px',
-    //     lineHeight: '19px'
-    // },
 }
 
 theme.typography.p = {
