@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 import desktopBackgroundImage from '../../assets/home/background-home-desktop.jpg';
 import tabletBackgroundImage from '../../assets/home/background-home-tablet.jpg';
-// import NavBar from '../../components/Navbar/Navbar'
+import NavBar from '../../components/Navbar/Navbar';
 import './Home.css';
 
 // const customBreakpointValues = {
@@ -98,13 +98,24 @@ const theme = createTheme({
                             top: '295px',
                             left: '228px',
                         },
-                        [breakpoints.down('iphoneXR')]: {
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            width: '285px',
+                        [breakpoints.only('iPadAir')]: {
+                            textAlign: 'center',
+                            width: '464px',
+                            left: '178px',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            textAlign: 'center',
+                            width: '350px',
                             height: '276px',
                             top: '112px',
-                            left: '49px',
+                            left: '32px',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '53px',
+                            left: '24px',
                         },
                     }
                 }
@@ -141,14 +152,26 @@ const theme = createTheme({
                         [breakpoints.only('surfacePro7')]: {
                             width: '274px',
                             height: '274px',
-                            top: '655px',
+                            top: '540px',
                             left: '320px',
                         },
-                        [breakpoints.down('iphoneXR')]: {
+                        [breakpoints.only('iPadAir')]: {
+                            left: '273px',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
                             width: '150px',
                             height: '150px',
-                            top: '200px',
-                            left: '113px',
+                            // top: '200px',
+                            left: '132px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '112px',
+                            top: '110px',
                             fontSize: '20px',
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
@@ -169,7 +192,11 @@ theme.typography.h1 = {
         display: 'flex',
         justifyContent: 'center',
     },
-    [breakpoints.down('iphoneXR')]: {
+    [breakpoints.only('iphoneXR')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('iphoneSE')]: {
         fontSize: '80px',
         lineHeight: '100px'
     },
@@ -193,6 +220,13 @@ theme.typography.h5 = {
         letterSpacing: '2.7px',
         lineHeight: '19px'
     },
+    // [breakpoints.only('iphoneSE')]: {
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     fontSize: '16px',
+    //     letterSpacing: '2.7px',
+    //     lineHeight: '19px'
+    // },
 }
 
 theme.typography.p = {
@@ -212,6 +246,11 @@ theme.typography.p = {
         fontSize: '15px',
         lineHeight: '25px'
     },
+    [breakpoints.only('iphoneSE')]: {
+        fontSize: '15px',
+        lineHeight: '25px',
+        // width: '327px'
+    },
     },
 }
 
@@ -219,6 +258,7 @@ function Home() {
     return (
         <ThemeProvider theme={theme}>
             <Paper variant="body1">
+            <NavBar />
                 <Container variant="container1">
                     <Typography variant="h5">SO, YOU WANT TO TRAVEL TO</Typography>
                     <Typography variant="h1">SPACE</Typography>
