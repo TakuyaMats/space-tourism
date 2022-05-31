@@ -82,6 +82,13 @@ const theme = createTheme({
                             textAlign: 'center',
                             width: '464px',
                             left: '178px',
+                            top: '130px'
+                        },
+                        [breakpoints.only('iPadMini')]: {
+                            textAlign: 'center',
+                            width: '464px',
+                            left: '152px',
+                            top: '90px'
                         },
                         [breakpoints.only('iphoneXR')]: {
                             textAlign: 'center',
@@ -96,6 +103,34 @@ const theme = createTheme({
                             height: '276px',
                             top: '53px',
                             left: '24px',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '100px',
+                            left: '31px',
+                        },
+                        [breakpoints.only('pixel5')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '100px',
+                            left: '33px',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '80px',
+                            left: '16px',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '90px',
+                            left: '42px',
                         },
                     }
                 }
@@ -137,6 +172,13 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iPadAir')]: {
                             left: '273px',
+                            top: '320px',
+                        },
+                        [breakpoints.only('iPadMini')]: {
+                            width: '274px',
+                            height: '274px',
+                            top: '210px',
+                            left: '247px',
                         },
                         [breakpoints.only('iphoneXR')]: {
                             width: '150px',
@@ -152,6 +194,42 @@ const theme = createTheme({
                             height: '150px',
                             left: '112px',
                             top: '110px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '120px',
+                            top: '250px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
+                        [breakpoints.only('pixel5')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '121px',
+                            top: '250px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '105px',
+                            top: '180px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '131px',
+                            top: '300px',
                             fontSize: '20px',
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
@@ -180,6 +258,22 @@ theme.typography.h1 = {
         fontSize: '80px',
         lineHeight: '100px'
     },
+    [breakpoints.only('iphone12Pro')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('pixel5')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('samsungGalaxyS8')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('samsungGalaxyS20')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
 }
 
 theme.typography.h5 = {
@@ -200,13 +294,6 @@ theme.typography.h5 = {
         letterSpacing: '2.7px',
         lineHeight: '19px'
     },
-    // [breakpoints.only('iphoneSE')]: {
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     fontSize: '16px',
-    //     letterSpacing: '2.7px',
-    //     lineHeight: '19px'
-    // },
 }
 
 theme.typography.p = {
