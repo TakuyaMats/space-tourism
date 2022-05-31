@@ -110,6 +110,13 @@ const theme = createTheme({
                             top: '112px',
                             left: '32px',
                         },
+                        [breakpoints.only('iphoneSE')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '53px',
+                            left: '24px',
+                        },
                     }
                 }
             ]
@@ -160,6 +167,15 @@ const theme = createTheme({
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
                         },
+                        [breakpoints.only('iphoneSE')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '112px',
+                            top: '110px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
                     }
                 }
             ]
@@ -177,6 +193,10 @@ theme.typography.h1 = {
         justifyContent: 'center',
     },
     [breakpoints.only('iphoneXR')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('iphoneSE')]: {
         fontSize: '80px',
         lineHeight: '100px'
     },
@@ -200,6 +220,13 @@ theme.typography.h5 = {
         letterSpacing: '2.7px',
         lineHeight: '19px'
     },
+    // [breakpoints.only('iphoneSE')]: {
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     fontSize: '16px',
+    //     letterSpacing: '2.7px',
+    //     lineHeight: '19px'
+    // },
 }
 
 theme.typography.p = {
@@ -218,6 +245,11 @@ theme.typography.p = {
     [breakpoints.down('iphoneXR')]: {
         fontSize: '15px',
         lineHeight: '25px'
+    },
+    [breakpoints.only('iphoneSE')]: {
+        fontSize: '15px',
+        lineHeight: '25px',
+        // width: '327px'
     },
     },
 }
