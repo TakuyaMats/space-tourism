@@ -118,6 +118,13 @@ const theme = createTheme({
                             top: '80px',
                             left: '16px',
                         },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '90px',
+                            left: '42px',
+                        },
                     }
                 }
             ]
@@ -204,6 +211,15 @@ const theme = createTheme({
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
                         },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '131px',
+                            top: '300px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
                     }
                 }
             ]
@@ -237,6 +253,10 @@ theme.typography.h1 = {
         lineHeight: '100px'
     },
     [breakpoints.only('samsungGalaxyS8')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('samsungGalaxyS20')]: {
         fontSize: '80px',
         lineHeight: '100px'
     },

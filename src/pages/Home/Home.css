@@ -61,6 +61,15 @@
     }
 }
 
+@media only screen and (width: 412px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 106px; 
+        top: 655px;
+    }
+}
+
 /* Pixel 5 */
 @media only screen and (width: 393px) {
     .btn-hover {
