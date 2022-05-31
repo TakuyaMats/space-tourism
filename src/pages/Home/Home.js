@@ -143,9 +143,6 @@ const theme = createTheme({
                             height: '274px',
                             top: '655px',
                             left: '320px',
-                            fontSize: '20px',
-                            lineHeight: '22.92px', 
-                            letterSpacing: '1.25px',
                         },
                         [breakpoints.down('iphoneXR')]: {
                             width: '150px',
