@@ -104,6 +104,13 @@ const theme = createTheme({
                             top: '100px',
                             left: '31px',
                         },
+                        [breakpoints.only('pixel5')]: {
+                            textAlign: 'center',
+                            width: '327px',
+                            height: '276px',
+                            top: '100px',
+                            left: '33px',
+                        },
                     }
                 }
             ]
@@ -172,6 +179,15 @@ const theme = createTheme({
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
                         },
+                        [breakpoints.only('pixel5')]: {
+                            width: '150px',
+                            height: '150px',
+                            left: '121px',
+                            top: '250px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
                     }
                 }
             ]
@@ -197,6 +213,10 @@ theme.typography.h1 = {
         lineHeight: '100px'
     },
     [breakpoints.only('iphone12Pro')]: {
+        fontSize: '80px',
+        lineHeight: '100px'
+    },
+    [breakpoints.only('pixel5')]: {
         fontSize: '80px',
         lineHeight: '100px'
     },
