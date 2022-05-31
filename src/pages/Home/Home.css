@@ -22,6 +22,15 @@
     }
 }
 
+@media only screen and (width: 912px) {
+    .btn-hover {
+        width: 350px;
+        height: 350px;
+        left: 280px; 
+        top: 890px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .btn-hover {
         width: 250px;
