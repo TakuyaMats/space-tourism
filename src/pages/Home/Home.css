@@ -52,6 +52,15 @@
     }
 }
 
+@media only screen and (width: 414px) {
+    .btn-hover {
+        width: 250px;
+        height: 250px;
+        left: 82px; 
+        top: 624px;
+    }
+}
+
 /* .btn-container {
     z-index: 2;
 } */

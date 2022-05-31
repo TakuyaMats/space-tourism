@@ -103,13 +103,12 @@ const theme = createTheme({
                             width: '464px',
                             left: '178px',
                         },
-                        [breakpoints.down('iphoneXR')]: {
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            width: '285px',
+                        [breakpoints.only('iphoneXR')]: {
+                            textAlign: 'center',
+                            width: '350px',
                             height: '276px',
                             top: '112px',
-                            left: '49px',
+                            left: '32px',
                         },
                     }
                 }
@@ -152,11 +151,11 @@ const theme = createTheme({
                         [breakpoints.only('iPadAir')]: {
                             left: '273px',
                         },
-                        [breakpoints.down('iphoneXR')]: {
+                        [breakpoints.only('iphoneXR')]: {
                             width: '150px',
                             height: '150px',
-                            top: '200px',
-                            left: '113px',
+                            // top: '200px',
+                            left: '132px',
                             fontSize: '20px',
                             lineHeight: '22.92px', 
                             letterSpacing: '1.25px',
@@ -177,7 +176,7 @@ theme.typography.h1 = {
         display: 'flex',
         justifyContent: 'center',
     },
-    [breakpoints.down('iphoneXR')]: {
+    [breakpoints.only('iphoneXR')]: {
         fontSize: '80px',
         lineHeight: '100px'
     },
