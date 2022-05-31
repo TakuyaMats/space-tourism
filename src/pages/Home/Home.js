@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 import desktopBackgroundImage from '../../assets/home/background-home-desktop.jpg';
 import tabletBackgroundImage from '../../assets/home/background-home-tablet.jpg';
-// import NavBar from '../../components/Navbar/Navbar'
+import NavBar from '../../components/Navbar/Navbar';
 import './Home.css';
 
 // const customBreakpointValues = {
@@ -146,7 +146,7 @@ const theme = createTheme({
                         [breakpoints.only('surfacePro7')]: {
                             width: '274px',
                             height: '274px',
-                            top: '655px',
+                            top: '540px',
                             left: '320px',
                         },
                         [breakpoints.only('iPadAir')]: {
@@ -227,6 +227,7 @@ function Home() {
     return (
         <ThemeProvider theme={theme}>
             <Paper variant="body1">
+            <NavBar />
                 <Container variant="container1">
                     <Typography variant="h5">SO, YOU WANT TO TRAVEL TO</Typography>
                     <Typography variant="h1">SPACE</Typography>

@@ -7,7 +7,7 @@
     width: 450px;
     height: 450px;
     left: 914px;
-    top: 388px;
+    top: 490px;
     border-radius: 50%;
     opacity: 0;
     /* z-index: 1; */
@@ -32,11 +32,13 @@
     }
 }
 
+/* iPad Air */
 @media only screen and (width: 820px) {
     .btn-hover {
         width: 350px;
         height: 350px;
         left: 235px; 
+        top: 740px;
     }
 }
 
