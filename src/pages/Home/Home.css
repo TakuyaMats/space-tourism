@@ -90,6 +90,15 @@
     }
 }
 
+@media only screen and (width: 360px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 80px; 
+        top: 525px;
+    }
+}
+
 /* .btn-container {
     z-index: 2;
 } */
