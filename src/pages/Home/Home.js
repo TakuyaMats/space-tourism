@@ -12,15 +12,40 @@ import tabletBackgroundImage from '../../assets/home/background-home-tablet.jpg'
 // import NavBar from '../../components/Navbar/Navbar'
 import './Home.css';
 
+// const customBreakpointValues = {
+//     values: {
+//         xs: 0,
+//         sm: 375,
+//         iPadMini: 768,
+//         desktop: 1440,
+//         xl: 1680,
+//     },
+// }
+
 const customBreakpointValues = {
     values: {
         xs: 0,
-        sm: 375,
-        md: 768,
-        lg: 1440,
+        // mobile
+        galaxyFold: 280,
+        samsungGalaxyS8: 360,
+        iphoneSE: 375,
+        iphone12Pro: 390,
+        pixel5: 392,
+        samsungGalaxyA51: 412,
+        samsungGalaxyS20: 412,
+        iphoneXR: 414,
+
+        // tablet
+        surfaceDuo: 540,
+        iPadMini: 768,
+        iPadAir: 820,
+        surfacePro7: 912,
+        // tablet: 913,
+        desktop: 1140,
         xl: 1680,
     },
 }
+
 
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
 
@@ -43,7 +68,7 @@ const theme = createTheme({
                         minWidth: '100%',
                         minHeight: '100%',
                         position: 'fixed',
-                        [breakpoints.down('lg')]: {
+                        [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                         },
                     }
@@ -63,10 +88,17 @@ const theme = createTheme({
                         left: '165px',
                         top: '387px',
                         marginLeft: '0',
-                        [breakpoints.down('lg')]: {
+                        [breakpoints.down('desktop')]: {
                             top: '202px'
                         },
-                        [breakpoints.down('md')]: {
+                        [breakpoints.only('surfacePro7')]: {
+                            textAlign: 'center',
+                            width: '464px',
+                            height: '276px',
+                            top: '295px',
+                            left: '228px',
+                        },
+                        [breakpoints.down('iphoneXR')]: {
                             display: 'flex',
                             flexWrap: 'wrap',
                             width: '285px',
@@ -102,11 +134,20 @@ const theme = createTheme({
                         lineHeight: '36.67px', 
                         letterSpacing: '2px',
                         // zIndex: '2',
-                        [breakpoints.down('lg')]: {
+                        [breakpoints.down('desktop')]: {
                             left: '263px', 
                             top: '292px',
                         },
-                        [breakpoints.down('md')]: {
+                        [breakpoints.only('surfacePro7')]: {
+                            width: '274px',
+                            height: '274px',
+                            top: '655px',
+                            left: '320px',
+                            fontSize: '20px',
+                            lineHeight: '22.92px', 
+                            letterSpacing: '1.25px',
+                        },
+                        [breakpoints.down('iphoneXR')]: {
                             width: '150px',
                             height: '150px',
                             top: '200px',
@@ -127,11 +168,11 @@ theme.typography.h1 = {
     fontStyle: 'normal',
     marginTop: '24px',
     marginBottom: '24px', 
-    [breakpoints.down('lg')]: {
+    [breakpoints.down('desktop')]: {
         display: 'flex',
         justifyContent: 'center',
     },
-    [breakpoints.down('md')]: {
+    [breakpoints.down('iphoneXR')]: {
         fontSize: '80px',
         lineHeight: '100px'
     },
@@ -139,12 +180,16 @@ theme.typography.h1 = {
 
 theme.typography.h5 = {
     // right: '5%',
-    [breakpoints.down('lg')]: {
+    [breakpoints.down('desktop')]: {
         display: 'flex',
         justifyContent: 'center',
+        textAlign: 'center',
         fontSize: '20px',
     },
-    [breakpoints.down('md')]: {
+    [breakpoints.only('surfacePro7')]: {
+        fontSize: '20px',
+    },
+    [breakpoints.down('iphoneXR')]: {
         display: 'flex',
         justifyContent: 'center',
         fontSize: '16px',
@@ -158,7 +203,7 @@ theme.typography.p = {
     fontFamily: 'Barlow',
     mixBlendMode: 'normal',
     color: '#D0D6F9',
-    [breakpoints.down('lg')]: {
+    [breakpoints.down('desktop')]: {
         fontFamily: 'Barlow',
         display: 'flex',
         justifyContent: 'center',
@@ -166,7 +211,7 @@ theme.typography.p = {
         fontSize: '16px',
         color: '#D0D6F9',
         lineHeight: '28px',
-    [breakpoints.down('md')]: {
+    [breakpoints.down('iphoneXR')]: {
         fontSize: '15px',
         lineHeight: '25px'
     },
