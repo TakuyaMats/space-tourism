@@ -1,124 +1,91 @@
-.btn-hover {
+.explore-btn:before {
+    content: '';
+    background: linear-gradient(to left, rgba(249, 247, 247, 0), rgb(218, 213, 213));
     position: absolute;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 1s;
-    background-color: #FFFFFF;
-    width: 450px;
-    height: 450px;
-    left: 914px;
-    top: 490px;
-    border-radius: 50%;
+    top: -37px;
+    left:-35px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(120% + 16px);
+    height: calc(120% + 16px);
+    animation: glowing 20s linear infinite;
     opacity: 0;
-    /* z-index: 1; */
+    transition: opacity .3s ease-in-out;
+    border-radius: 50%;
 }
 
-@media only screen and (max-width: 1440px) {
-    .btn-hover {
-        width: 350px;
-        height: 350px;
-        left: 223px; 
-        top: 637px;
-    }
+.explore-btn:active {
+    color: #000;
 }
 
-/* surfacePro7 */
-@media only screen and (width: 912px) {
-    .btn-hover {
-        width: 350px;
-        height: 350px;
-        left: 280px; 
-        top: 890px;
-    }
+.explore-btn:active:after {
+    background: transparent;
 }
 
-/* iPad Air */
-@media only screen and (width: 820px) {
-    .btn-hover {
-        width: 350px;
-        height: 350px;
-        left: 235px; 
-        top: 770px;
-    }
+.explore-btn:hover:before {
+    opacity: 1;
 }
 
-/* iPadMini */
-@media only screen and (width: 768px) {
-    .btn-hover {
-        width: 350px;
-        height: 350px;
-        left: 209px; 
-        top: 660px;
-    }
+.explore-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
 }
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
 
 @media only screen and (width: 414px) {
-    .btn-hover {
-        width: 250px;
-        height: 250px;
-        left: 82px; 
-        top: 624px;
+    .explore-btn:before {
+        top: -24px;
+        left:-24px;
     }
 }
 
 @media only screen and (width: 412px) {
-    .btn-hover {
-        width: 200px;
-        height: 200px;
-        left: 106px; 
-        top: 655px;
+    .explore-btn:before {
+        top: -24px;
+        left:-24px;
     }
 }
 
 /* Pixel 5 */
 @media only screen and (width: 393px) {
-    .btn-hover {
-        width: 200px;
-        height: 200px;
-        left: 96px; 
-        top: 605px;
+    .explore-btn:before {
+        top: -24px;
+        left:-24px;
     }
 }
 
 /* iPhone 12 Pro */
 @media only screen and (width: 390px) {
-    .btn-hover {
-        width: 200px;
-        height: 200px;
-        left: 95px; 
-        top: 605px;
+    .explore-btn:before {
+        top: -24px;
+        left:-24px;
     }
 }
 
 @media only screen and (width: 375px) {
-    .btn-hover {
-        width: 200px;
-        height: 200px;
-        left: 87px; 
-        top: 465px;
+    .explore-btn:before {
+        top: -24px;
+        left:-21px;
     }
 }
 
 @media only screen and (width: 360px) {
-    .btn-hover {
-        width: 200px;
-        height: 200px;
-        left: 80px; 
-        top: 525px;
+    .explore-btn:before {
+        top: -24px;
+        left:-24px;
     }
-}
-
-/* .btn-container {
-    z-index: 2;
-} */
-
-.btn-container:hover > .btn-hover {
-    /* z-index: 1; */
-    opacity: 0.1;
-    transition: 0.1s;
-}
-
-.explore-btn:hover {
-    opacity: 1;
-    /* z-index: 2; */
 }
