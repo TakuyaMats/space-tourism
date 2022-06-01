@@ -45,15 +45,15 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'static',
-                        // opacity: 1,
-                        backgroundColor: 'grey',
+                        opacity: .07,
+                        // backdropFilter: ,
+                        backgroundColor: 'transparent',
                         marginTop: 40,
                         [breakpoints.down('lg')]: {
-                            backgroundColor: 'red',
                             minWidth: 100
                         },
                         [breakpoints.down('md')]: {
-                            backgroundColor: 'blue',
+
                             minWidth: 100
                         }
                     }
@@ -91,6 +91,31 @@ const theme = createTheme({
                 }
             ]
         },
+        MuiSvgIcon: {
+            variants: [
+                {
+                    props: {
+                        variant: 'burger-icon'
+                    },
+                    style: {
+                        color: 'white'
+                    }
+                }
+            ]
+        },
+        MuiDrawer: {
+            variants: [
+                {
+                    props: {
+                        variant: 'drawer'
+                    },
+                    style: {
+                        // backgroundColor: ''
+                        opacity: .09
+                    }
+                }
+            ]
+        }
 
 
     }
@@ -159,7 +184,7 @@ function NavBar() {
 
                             {/* hamburger menu button icon */}
                             <IconButton onClick={() => setOpen(true)}>
-                                <MenuIcon />
+                                <MenuIcon variant='burger-icon' />
                             </IconButton>
                         </Container>
                     </Toolbar>
@@ -169,8 +194,10 @@ function NavBar() {
                     anchor='right'
                     open={open}
                     onOpen={() => setOpen(true)}
-                    onClose={() => setOpen(false)} >
-                    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    onClose={() => setOpen(false)}
+                    variant='drawer'
+                >
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px', backgroundColor: 'transparent' }}>
                         <IconButton onClick={() => setOpen(false)}>
                             <CloseIcon />
                         </IconButton>
@@ -180,6 +207,7 @@ function NavBar() {
                             <Button
                                 component={Link}
                                 to="/"
+                                // variant='button'
                             >
                                 00 Home
                             </Button>

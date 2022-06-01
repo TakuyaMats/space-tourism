@@ -7,7 +7,7 @@
     width: 450px;
     height: 450px;
     left: 914px;
-    top: 388px;
+    top: 490px;
     border-radius: 50%;
     opacity: 0;
     /* z-index: 1; */
@@ -22,6 +22,7 @@
     }
 }
 
+/* surfacePro7 */
 @media only screen and (width: 912px) {
     .btn-hover {
         width: 350px;
@@ -31,12 +32,79 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+/* iPad Air */
+@media only screen and (width: 820px) {
+    .btn-hover {
+        width: 350px;
+        height: 350px;
+        left: 235px; 
+        top: 770px;
+    }
+}
+
+/* iPadMini */
+@media only screen and (width: 768px) {
+    .btn-hover {
+        width: 350px;
+        height: 350px;
+        left: 209px; 
+        top: 660px;
+    }
+}
+
+@media only screen and (width: 414px) {
     .btn-hover {
         width: 250px;
         height: 250px;
-        left: 64px; 
-        top: 430px;
+        left: 82px; 
+        top: 624px;
+    }
+}
+
+@media only screen and (width: 412px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 106px; 
+        top: 655px;
+    }
+}
+
+/* Pixel 5 */
+@media only screen and (width: 393px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 96px; 
+        top: 605px;
+    }
+}
+
+/* iPhone 12 Pro */
+@media only screen and (width: 390px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 95px; 
+        top: 605px;
+    }
+}
+
+@media only screen and (width: 375px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 87px; 
+        top: 465px;
+    }
+}
+
+@media only screen and (width: 360px) {
+    .btn-hover {
+        width: 200px;
+        height: 200px;
+        left: 80px; 
+        top: 525px;
     }
 }
 
