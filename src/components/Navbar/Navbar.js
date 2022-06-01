@@ -45,15 +45,14 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'static',
-                        // opacity: 1,
-                        backgroundColor: 'grey',
+                        backdropFilter: "blur(5px)",
+                        backgroundColor: "transparent",
                         marginTop: 40,
                         [breakpoints.down('lg')]: {
-                            backgroundColor: 'red',
                             minWidth: 100
                         },
                         [breakpoints.down('md')]: {
-                            backgroundColor: 'blue',
+
                             minWidth: 100
                         }
                     }
@@ -91,6 +90,58 @@ const theme = createTheme({
                 }
             ]
         },
+        MuiButton: {
+            variants: [
+                {
+                    props: {
+                        variant: 'listbutton'
+                    },
+                    style: {
+                        color: 'white',
+                        fontFamily: 'Barlow Condensed Regular',
+                        fontSize: '16px',
+                        wordSpacing: 2.7,
+                        marginTop: 2,
+                        display: 'flex',
+                    }
+                }
+            ]
+        },
+
+        MuiSvgIcon: {
+            variants: [
+                {
+                    props: {
+                        variant: 'burger-icon'
+                    },
+                    style: {
+                        color: 'white'
+                    }
+                }
+            ]
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    "&.MuiPaper-root": {
+                        backgroundColor: 'transparent',
+                        backdropFilter: "blur(4px)",
+
+                    }
+                }
+            },
+            variants: [
+                {
+                    props: {
+                        variant: 'drawer'
+                    },
+                    style: {
+                        backdropFilter: "blur(4px)",
+
+                    }
+                }
+            ]
+        }
 
 
     }
@@ -159,7 +210,7 @@ function NavBar() {
 
                             {/* hamburger menu button icon */}
                             <IconButton onClick={() => setOpen(true)}>
-                                <MenuIcon />
+                                <MenuIcon variant='burger-icon' />
                             </IconButton>
                         </Container>
                     </Toolbar>
@@ -169,17 +220,21 @@ function NavBar() {
                     anchor='right'
                     open={open}
                     onOpen={() => setOpen(true)}
-                    onClose={() => setOpen(false)} >
-                    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    onClose={() => setOpen(false)}
+                    variant='drawer'
+
+                >
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
                         <IconButton onClick={() => setOpen(false)}>
                             <CloseIcon />
                         </IconButton>
                     </div>
-                    <List>
+                    <List >
                         <ListItem>
                             <Button
                                 component={Link}
                                 to="/"
+                                variant='listbutton'
                             >
                                 00 Home
                             </Button>
@@ -188,6 +243,7 @@ function NavBar() {
                             <Button
                                 component={Link}
                                 to="/destination"
+                                variant='listbutton'
                             >
                                 01 Destination
                             </Button>
@@ -196,6 +252,7 @@ function NavBar() {
                             <Button
                                 component={Link}
                                 to="/crew"
+                                variant='listbutton'
                             >
                                 02 Crew
                             </Button>
@@ -204,6 +261,7 @@ function NavBar() {
                             <Button
                                 component={Link}
                                 to="/technology"
+                                variant='listbutton'
                             >
                                 03 Technology
                             </Button>
