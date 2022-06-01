@@ -23,7 +23,6 @@ function Home() {
                 </Container>
                 <Box className="btn-container">
                     <Button component={Link} to="/destination" variant="exploreBtn" className="explore-btn">EXPLORE</Button>
-                    <Box className="btn-hover"></Box>
                 </Box>
             </Paper>
         </ThemeProvider>
