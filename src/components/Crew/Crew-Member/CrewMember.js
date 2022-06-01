@@ -59,28 +59,44 @@ const CrewMember = ({ crew }) => {
     if (selectedCrewmate === 0)
       return (
         <img
-          style={{ objectFit: "contain", position: "absolute" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateDouglas}
         ></img>
       );
     else if (selectedCrewmate === 1)
       return (
         <img
-          style={{ objectFit: "contain", position: "absolute" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateMark}
         ></img>
       );
     else if (selectedCrewmate === 2)
       return (
         <img
-          style={{ objectFit: "contain", position: "absolute" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateVictor}
         ></img>
       );
     else
       return (
         <img
-          style={{ objectFit: "contain", position: "absolute" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateAnsari}
         ></img>
       );
@@ -110,7 +126,7 @@ const CrewMember = ({ crew }) => {
           </TabsUnstyled>
         </Grid>
       </Grid>
-      <Grid item xs={5} sx={{}}>
+      <Grid item xs={5} sx={{ height: "inherit" }}>
         {crewmatePicture()}
       </Grid>
     </Grid>
