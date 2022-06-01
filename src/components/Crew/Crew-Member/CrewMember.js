@@ -57,10 +57,34 @@ const CrewMember = ({ crew }) => {
 
   let crewmateImage = "";
   function crewmatePicture() {
-    if (selectedCrewmate === 0) return <img src={crewmateDouglas}></img>;
-    else if (selectedCrewmate === 1) return <img src={crewmateMark}></img>;
-    else if (selectedCrewmate === 2) return <img src={crewmateVictor}></img>;
-    else return <img src={crewmateAnsari}></img>;
+    if (selectedCrewmate === 0)
+      return (
+        <img
+          style={{ height: "100%", objectFit: "contain" }}
+          src={crewmateDouglas}
+        ></img>
+      );
+    else if (selectedCrewmate === 1)
+      return (
+        <img
+          style={{ height: "100%", objectFit: "contain" }}
+          src={crewmateMark}
+        ></img>
+      );
+    else if (selectedCrewmate === 2)
+      return (
+        <img
+          style={{ height: "100%", objectFit: "contain" }}
+          src={crewmateVictor}
+        ></img>
+      );
+    else
+      return (
+        <img
+          style={{ height: "100%", objectFit: "contain" }}
+          src={crewmateAnsari}
+        ></img>
+      );
   }
 
   return (
@@ -87,18 +111,8 @@ const CrewMember = ({ crew }) => {
           </TabsUnstyled>
         </Grid>
       </Grid>
-      <Grid
-        item
-        xs={6}
-        sx={{
-          backgroundImage: `url(${crewmateImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          objectFit: "contain",
-        }}
-      >
-        ${crewmatePicture()}
+      <Grid item xs={6} sx={{}}>
+        {crewmatePicture()}
       </Grid>
     </Grid>
   );
