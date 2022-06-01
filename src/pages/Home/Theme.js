@@ -144,6 +144,8 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'relative',
+                        cursor: 'pointer',
+                        zIndex: '0',
                         width: '274px',
                         height: '274px', 
                         borderRadius: '50%', 
