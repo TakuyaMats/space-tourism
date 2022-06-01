@@ -66,7 +66,7 @@ const theme = createTheme({
                         width: '464px',
                         height: '382px',
                         left: '165px',
-                        top: '387px',
+                        top: '240px',
                         marginLeft: '0',
                         [breakpoints.down('desktop')]: {
                             top: '202px'
@@ -150,7 +150,7 @@ const theme = createTheme({
                         height: '274px', 
                         borderRadius: '50%', 
                         left: '1001px', 
-                        top: '88px', 
+                        top: '-80px', 
                         bottom: '131px', 
                         right: '165px', 
                         backgroundColor: '#FFFFFF', 
