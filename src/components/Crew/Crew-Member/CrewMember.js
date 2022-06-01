@@ -55,33 +55,48 @@ const CrewMember = ({ crew }) => {
   const crewmate = crew[selectedCrewmate];
   //Really ugly function, I'll make it prettier some other time
 
-  let crewmateImage = "";
   function crewmatePicture() {
     if (selectedCrewmate === 0)
       return (
         <img
-          style={{ height: "100%", objectFit: "contain" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateDouglas}
         ></img>
       );
     else if (selectedCrewmate === 1)
       return (
         <img
-          style={{ height: "100%", objectFit: "contain" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateMark}
         ></img>
       );
     else if (selectedCrewmate === 2)
       return (
         <img
-          style={{ height: "100%", objectFit: "contain" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateVictor}
         ></img>
       );
     else
       return (
         <img
-          style={{ height: "100%", objectFit: "contain" }}
+          style={{
+            height: "inherit",
+            objectFit: "contain",
+            position: "absolute",
+          }}
           src={crewmateAnsari}
         ></img>
       );
@@ -89,7 +104,7 @@ const CrewMember = ({ crew }) => {
 
   return (
     <Grid container sx={{ height: "80vh" }}>
-      <Grid item xs={6}>
+      <Grid item xs={7}>
         <Box sx={{ marginTop: "0px" }}>
           <h5 style={{ marginBottom: "4.5em" }}>02 MEET YOUR CREW</h5>
         </Box>
@@ -111,7 +126,7 @@ const CrewMember = ({ crew }) => {
           </TabsUnstyled>
         </Grid>
       </Grid>
-      <Grid item xs={6} sx={{}}>
+      <Grid item xs={5} sx={{ height: "inherit" }}>
         {crewmatePicture()}
       </Grid>
     </Grid>
