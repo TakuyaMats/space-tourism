@@ -19,6 +19,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
+import { grey } from "@mui/material/colors";
+
 
 const customBreakpointValues = {
     values: {
@@ -59,6 +61,18 @@ const theme = createTheme({
                 }
             ]
         },
+        MuiToolbar: {
+            variants: [
+                {
+                    props: {
+                        variant: 'toolbar'
+                    },
+                    style: {
+                        height: '96px'
+                    }
+                }
+            ]
+        },
         MuiIcon: {
             variants: [
                 {
@@ -67,7 +81,7 @@ const theme = createTheme({
                     },
                     style: {
                         display: 'flex',
-                        marginLeft: 2,
+                        marginLeft: 55,
                         marginRight: 'auto',
                     }
                 }
@@ -120,13 +134,24 @@ const theme = createTheme({
                 }
             ]
         },
+        MuiButtonBase: {
+            variants: [
+                {
+                    props: {
+                        variant: 'close-icon'
+                    },
+                    style: { 
+                        color: 'white'
+                    }
+                }
+            ]
+        },
         MuiPaper: {
             styleOverrides: {
                 root: {
                     "&.MuiPaper-root": {
                         backgroundColor: 'transparent',
-                        backdropFilter: "blur(4px)",
-
+                        backdropFilter: "blur(3px)"
                     }
                 }
             },
@@ -137,7 +162,6 @@ const theme = createTheme({
                     },
                     style: {
                         backdropFilter: "blur(4px)",
-
                     }
                 }
             ]
@@ -152,19 +176,18 @@ const theme = createTheme({
 
 
 function NavBar() {
-    const [open, setOpen] = useState(false)
 
+    const [open, setOpen] = useState(false)
 
     return (
         <ThemeProvider theme={theme}>
             <AppBar variant='body' >
-                <Container variant='body2'>
-                    <Toolbar disableGutters>
+                <Container>
+                    <Toolbar variant='toolbar' disableGutters>
                         {/* SPACE ICON */}
                         <Icon variant='icon' >
                             <img src={NavLogo} />
                         </Icon>
-
                         {/* NAVBAR LINKS */}
 
                         <Container sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
@@ -202,9 +225,7 @@ function NavBar() {
                             </Button>
                         </Container>
 
-
                         {/*  HAMBURGER MENU */}
-
 
                         <Container sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
 
@@ -222,11 +243,10 @@ function NavBar() {
                     onOpen={() => setOpen(true)}
                     onClose={() => setOpen(false)}
                     variant='drawer'
-
                 >
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                        <IconButton onClick={() => setOpen(false)}>
-                            <CloseIcon />
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px'}}>
+                        <IconButton sx={{ color: 'white' }} onClick={() => setOpen(false)}>
+                            <CloseIcon/>
                         </IconButton>
                     </div>
                     <List >
