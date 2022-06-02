@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
+import { keyframes } from "@mui/system";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
@@ -15,7 +16,17 @@ import crewmateDouglas from "../../../assets/crew/image-douglas-hurley.png";
 import crewmateMark from "../../../assets/crew/image-mark-shuttleworth.png";
 import crewmateVictor from "../../../assets/crew/image-victor-glover.png";
 import crewmateAnsari from "../../../assets/crew/image-anousheh-ansari.png";
+import Fade from "@mui/material/Fade";
 // import { crew } from "../../../assets/data";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+`;
 
 const TabsList = styled(TabsListUnstyled)`
   display: grid;
@@ -50,9 +61,28 @@ const CrewMember = ({ crew }) => {
   const handleChange = (event, newValue) => {
     setSelectedCrewmate(newValue);
   };
+
   const [selectedCrewmate, setSelectedCrewmate] = React.useState(0);
 
+  const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+  //   React.useEffect(() => {
+  //     console.log(`useEffect: ${selectedCrewmate}`);
+
+  //     return () => {
+  //       console.log("will unmount");
+  //     };
+  //   }, [selectedCrewmate]);
+
   const crewmate = crew[selectedCrewmate];
+
   //Really ugly function, I'll make it prettier some other time
 
   function crewmatePicture() {
@@ -103,7 +133,7 @@ const CrewMember = ({ crew }) => {
   }
 
   return (
-    <Grid container sx={{ height: "80vh" }}>
+    <Grid container sx={{ height: "90vh", animation: `${fadeIn} 2s ease` }}>
       <Grid item xs={7}>
         <Box sx={{ marginTop: "0px" }}>
           <h5 style={{ marginBottom: "4.5em" }}>02 MEET YOUR CREW</h5>
@@ -118,10 +148,10 @@ const CrewMember = ({ crew }) => {
         <Grid xs={4}>
           <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
             <TabsList>
-              <Tab></Tab>
-              <Tab></Tab>
-              <Tab></Tab>
-              <Tab></Tab>
+              <Tab />
+              <Tab />
+              <Tab />
+              <Tab />
             </TabsList>
           </TabsUnstyled>
         </Grid>
@@ -134,61 +164,3 @@ const CrewMember = ({ crew }) => {
 };
 
 export default CrewMember;
-
-// const CrewMember = ({ crewmate }) => {
-//     console.log(crewmate);
-//     return <div>{crewmate.name}</div>;
-//   };
-
-//   export default CrewMember;
-
-// {/* <Grid container sx={{ height: "80vh" }}>
-//   <Grid item xs={6}>
-//     <Box sx={{ marginTop: "0px" }}>
-//       <h5 style={{ marginBottom: "4.5em" }}>02 MEET YOUR CREW</h5>
-//     </Box>
-
-//     <div className="sub-heading">COMMANDER</div>
-//     <h3>DOUGLAS HURLEY</h3>
-
-//     <Grid item xs={8}>
-//       <p style={{ marginBottom: "4.5em" }}>
-//         Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
-//         and former NASA astronaut. He launched into space for the third time as
-//         commander of Crew Dragon Demo-2.
-//       </p>
-//     </Grid>
-//     <Grid item xs="4">
-//       {/* --FOR MY OWN MENTAL NOTES--
-//                 In order to accomplish the proper "tabs", I'll have to mix the "Basic Unstyled Tab" for the custom button styling, and the useState functionality from the regular Tab methods, so I can change the content on the page.
-
-//                 Look at the documentation about how useState is used, on the regular Tab import, however still import it
-
-//                 Tab will be defined as a const, and styled there.
-
-//                 TabPanel will pass the component with the Crewmate data as props*/}
-//       <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
-//         <TabsList>
-//           <Tab></Tab>
-//           <Tab></Tab>
-//           <Tab></Tab>
-//           <Tab></Tab>
-//         </TabsList>
-//         <TabPanelUnstyled value={0}>First page</TabPanelUnstyled>
-//         <TabPanelUnstyled value={1}>Second page</TabPanelUnstyled>
-//         <TabPanelUnstyled value={2}>Third page</TabPanelUnstyled>
-//       </TabsUnstyled>
-//     </Grid>
-//   </Grid>
-//   <Grid
-//     item
-//     xs={6}
-//     sx={{
-//       backgroundImage: `url(${crewmateImage})`,
-//       backgroundPosition: "center",
-//       backgroundSize: "contain",
-//       backgroundRepeat: "no-repeat",
-//       objectFit: "contain",
-//     }}
-//   ></Grid>
-// </Grid>; */}
