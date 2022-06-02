@@ -27,23 +27,15 @@ function Crew() {
         backgroundRepeat: "no-repeat",
         width: "100vw",
         height: "100vh",
+        position: "fixed",
       }}
     >
       {/* Grid pretending to be the Navbar */}
-      <Grid
-        container
-        sx={{
-          height: "20vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h5>NAVBAR</h5>
-      </Grid>
+
       {/* CrewMember component */}
       {/* <CrewMember crewmate={crew} /> */}
       <Container>
+        <NavBar />
         <CrewMember crew={crew} />
       </Container>
     </Paper>
