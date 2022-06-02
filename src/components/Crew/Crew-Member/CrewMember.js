@@ -62,7 +62,7 @@ const CrewMember = ({ crew }) => {
 
   React.useEffect(() => {
     !check
-      ? setTimeout(() => setCheck(true), 200)
+      ? setTimeout(() => setCheck(true), 300)
       : console.log(check + "is true");
   }, [selectedCrewmate]);
 
@@ -126,7 +126,7 @@ const CrewMember = ({ crew }) => {
           in={check}
           timeout={{
             appear: 0,
-            enter: 300,
+            enter: 400,
             exit: 0,
           }}
         >
@@ -137,7 +137,7 @@ const CrewMember = ({ crew }) => {
           in={check}
           timeout={{
             appear: 0,
-            enter: 300,
+            enter: 400,
             exit: 0,
           }}
         >
@@ -150,7 +150,7 @@ const CrewMember = ({ crew }) => {
           in={check}
           timeout={{
             appear: 0,
-            enter: 300,
+            enter: 400,
             exit: 0,
           }}
         >
