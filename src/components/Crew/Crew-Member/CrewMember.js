@@ -1,23 +1,15 @@
 import React from "react";
 import { styled } from "@mui/system";
 import { keyframes } from "@mui/system";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Item from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
-import TabPanelUnstyled from "@mui/base/TabPanelUnstyled";
 import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
-import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import crewmateDouglas from "../../../assets/crew/image-douglas-hurley.png";
 import crewmateMark from "../../../assets/crew/image-mark-shuttleworth.png";
 import crewmateVictor from "../../../assets/crew/image-victor-glover.png";
 import crewmateAnsari from "../../../assets/crew/image-anousheh-ansari.png";
-import Fade from "@mui/material/Fade";
-// import { crew } from "../../../assets/data";
 
 const fadeIn = keyframes`
   from {
@@ -55,31 +47,11 @@ const Tab = styled(TabUnstyled)`
 `;
 
 const CrewMember = ({ crew }) => {
-  //   const crewmateImage = crewmate.images.png;
-  //console.log(selectedCrewmate(crewmate));
-
   const handleChange = (event, newValue) => {
     setSelectedCrewmate(newValue);
   };
 
   const [selectedCrewmate, setSelectedCrewmate] = React.useState(0);
-
-  const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
-  //   React.useEffect(() => {
-  //     console.log(`useEffect: ${selectedCrewmate}`);
-
-  //     return () => {
-  //       console.log("will unmount");
-  //     };
-  //   }, [selectedCrewmate]);
 
   const crewmate = crew[selectedCrewmate];
 
@@ -145,6 +117,7 @@ const CrewMember = ({ crew }) => {
         <Grid item xs={8}>
           <p style={{ marginBottom: "4.5em" }}>{crewmate.bio}</p>
         </Grid>
+
         <Grid xs={4}>
           <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
             <TabsList>
