@@ -21,6 +21,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
 
 import './Navbar.css'
+
 const customBreakpointValues = {
     values: {
         xs: 0,
@@ -45,16 +46,15 @@ const theme = createTheme({
                         variant: 'body'
                     },
                     style: {
-                        position: 'static',
-                        // backdropFilter: "blur(5px)",
-                        // backgroundColor: grey,
-                        marginTop: '40px',
+                       position: 'static',
+                       marginTop: '1rem',
                         [breakpoints.down('lg')]: {
-                            minWidth: 100
+                            minWidth: 100,
+                          
                         },
                         [breakpoints.down('md')]: {
-                            minWidth: 100,
-                            marginTop: '1rem'
+                            minWidth: 10
+                            
                         },
                         [breakpoints.down('sm')]: {
                             minWidth: 100,
@@ -100,7 +100,7 @@ const theme = createTheme({
                         fontFamily: 'Barlow Condensed',
                         fontSize: '16px',
                         wordSpacing: 2.7,
-                        marginTop: 2,
+                        padding: '1rem',
                         display: 'flex',
                     }
                 },
@@ -113,7 +113,6 @@ const theme = createTheme({
                         fontFamily: 'Barlow Condensed',
                         fontSize: '16px',
                         wordSpacing: 2.7,
-                        marginTop: 2,
                         display: 'flex',
                     }
                 }
@@ -167,7 +166,7 @@ const theme = createTheme({
                 root: {
                     "&.MuiPaper-root": {
                         backgroundColor: 'rgba(225, 225, 225, 0.03)',
-                        backdropFilter: "blur(2px)"
+                        backdropFilter: "blur(2px)",
                     }
                 }
             }
@@ -204,7 +203,7 @@ function NavBar() {
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar variant='body' >
+            <AppBar variant='body'>
                 <Container>
                     <Toolbar variant='toolbar' disableGutters>
                         {/* SPACE ICON */}

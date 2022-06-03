@@ -1,6 +1,14 @@
 .navbarBttnDiv:hover {
-    border-bottom: 10px red solid;
-    border-start-end-radius: 80%;
+    color: gray;
+    border-bottom: 2px gray solid;
+
+    
+}
+
+.navbarBttnDiv:active {
+    border-bottom: 2px white solid;
+
+    
 }
 
 .navbarBttnDiv {
