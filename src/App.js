@@ -2,9 +2,9 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home/Home';
-import Destination from './pages/Destination';
+import Destination from './pages/Destination/Destination';
 import Crew from './pages/Crew';
-import Technology from './pages/Technology';
+import Technology from './pages/Technology/Technology';
 
 function App() {
   return (

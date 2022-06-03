@@ -1,32 +1,22 @@
 import React from "react";
 import { styled } from "@mui/system";
 import { keyframes } from "@mui/system";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
+
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Item from "@mui/material/Grid";
+
 import Typography from "@mui/material/Typography";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
-import TabPanelUnstyled from "@mui/base/TabPanelUnstyled";
+
 import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import crewmateDouglas from "../../../assets/crew/image-douglas-hurley.png";
 import crewmateMark from "../../../assets/crew/image-mark-shuttleworth.png";
 import crewmateVictor from "../../../assets/crew/image-victor-glover.png";
 import crewmateAnsari from "../../../assets/crew/image-anousheh-ansari.png";
-import Fade from "@mui/material/Fade";
-// import { crew } from "../../../assets/data";
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
-`;
+import Fade from "@mui/material/Fade";
 
 const TabsList = styled(TabsListUnstyled)`
   display: grid;
@@ -52,36 +42,29 @@ const Tab = styled(TabUnstyled)`
   &.${tabUnstyledClasses.selected} {
     background-color: #ffffff;
   }
+
+  &.${buttonUnstyledClasses.disabled} {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;
 
 const CrewMember = ({ crew }) => {
-  //   const crewmateImage = crewmate.images.png;
-  //console.log(selectedCrewmate(crewmate));
-
   const handleChange = (event, newValue) => {
     setSelectedCrewmate(newValue);
+    setCheck((prev) => !prev);
   };
 
   const [selectedCrewmate, setSelectedCrewmate] = React.useState(0);
-
-  const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
-  //   React.useEffect(() => {
-  //     console.log(`useEffect: ${selectedCrewmate}`);
-
-  //     return () => {
-  //       console.log("will unmount");
-  //     };
-  //   }, [selectedCrewmate]);
+  const [check, setCheck] = React.useState(false);
 
   const crewmate = crew[selectedCrewmate];
+
+  React.useEffect(() => {
+    !check
+      ? setTimeout(() => setCheck(true), 300)
+      : console.log(check + "is true");
+  }, [selectedCrewmate]);
 
   //Really ugly function, I'll make it prettier some other time
 
@@ -133,18 +116,49 @@ const CrewMember = ({ crew }) => {
   }
 
   return (
-    <Grid container sx={{ height: "90vh", animation: `${fadeIn} 2s ease` }}>
+    <Grid container sx={{ height: "90vh" }}>
       <Grid item xs={7}>
         <Box sx={{ marginTop: "0px" }}>
           <h5 style={{ marginBottom: "4.5em" }}>02 MEET YOUR CREW</h5>
         </Box>
 
-        <div className="sub-heading">{crewmate.role.toUpperCase()}</div>
-        <h3>{crewmate.name.toUpperCase()}</h3>
+        <Fade
+          in={check}
+          timeout={{
+            appear: 0,
+            enter: 400,
+            exit: 0,
+          }}
+        >
+          <Box className="sub-heading">{crewmate.role.toUpperCase()}</Box>
+        </Fade>
 
-        <Grid item xs={8}>
-          <p style={{ marginBottom: "4.5em" }}>{crewmate.bio}</p>
-        </Grid>
+        <Fade
+          in={check}
+          timeout={{
+            appear: 0,
+            enter: 400,
+            exit: 0,
+          }}
+        >
+          <Box>
+            <h3>{crewmate.name.toUpperCase()}</h3>
+          </Box>
+        </Fade>
+
+        <Fade
+          in={check}
+          timeout={{
+            appear: 0,
+            enter: 400,
+            exit: 0,
+          }}
+        >
+          <Grid item xs={8}>
+            <p style={{ marginBottom: "4.5em" }}>{crewmate.bio}</p>
+          </Grid>
+        </Fade>
+
         <Grid xs={4}>
           <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
             <TabsList>
@@ -156,9 +170,19 @@ const CrewMember = ({ crew }) => {
           </TabsUnstyled>
         </Grid>
       </Grid>
-      <Grid item xs={5} sx={{ height: "inherit" }}>
-        {crewmatePicture()}
-      </Grid>
+
+      <Fade
+        in={check}
+        timeout={{
+          appear: 0,
+          enter: 200,
+          exit: 0,
+        }}
+      >
+        <Grid item xs={5} sx={{ height: "inherit" }}>
+          {crewmatePicture()}
+        </Grid>
+      </Fade>
     </Grid>
   );
 };

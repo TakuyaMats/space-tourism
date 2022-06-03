@@ -53,11 +53,7 @@ const theme = createTheme({
                           
                         },
                         [breakpoints.down('md')]: {
-                            minWidth: 10
-                            
-                        },
-                        [breakpoints.down('sm')]: {
-                            minWidth: 100,
+                            minWidth: 100
                         }
                     }
                 }
@@ -100,7 +96,7 @@ const theme = createTheme({
                         fontFamily: 'Barlow Condensed',
                         fontSize: '16px',
                         wordSpacing: 2.7,
-                        padding: '1rem',
+                        padding: '2rem',
                         display: 'flex',
                     }
                 },
