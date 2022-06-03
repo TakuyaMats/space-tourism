@@ -54,7 +54,6 @@ const theme = createTheme({
                             minWidth: 100
                         },
                         [breakpoints.down('md')]: {
-
                             minWidth: 100
                         }
                     }
