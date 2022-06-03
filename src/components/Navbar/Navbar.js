@@ -19,9 +19,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from '@mui/icons-material/Menu';
-import { grey } from "@mui/material/colors";
 
-
+import './Navbar.css'
 const customBreakpointValues = {
     values: {
         xs: 0,
@@ -47,15 +46,18 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'static',
-                        backdropFilter: "blur(5px)",
-                        backgroundColor: "transparent",
-                        marginTop: 40,
+                        // backdropFilter: "blur(5px)",
+                        // backgroundColor: grey,
+                        marginTop: '40px',
                         [breakpoints.down('lg')]: {
                             minWidth: 100
                         },
                         [breakpoints.down('md')]: {
-
-                            minWidth: 100
+                            minWidth: 100,
+                            marginTop: '1rem'
+                        },
+                        [breakpoints.down('sm')]: {
+                            minWidth: 100,
                         }
                     }
                 }
@@ -91,28 +93,24 @@ const theme = createTheme({
             variants: [
                 {
                     props: {
-                        variant: 'button'
+                        variant: 'navbutton'
                     },
                     style: {
                         color: 'white',
-                        fontFamily: 'Barlow Condensed Regular',
+                        fontFamily: 'Barlow Condensed',
                         fontSize: '16px',
                         wordSpacing: 2.7,
                         marginTop: 2,
                         display: 'flex',
                     }
-                }
-            ]
-        },
-        MuiButton: {
-            variants: [
+                },
                 {
                     props: {
                         variant: 'listbutton'
                     },
                     style: {
                         color: 'white',
-                        fontFamily: 'Barlow Condensed Regular',
+                        fontFamily: 'Barlow Condensed',
                         fontSize: '16px',
                         wordSpacing: 2.7,
                         marginTop: 2,
@@ -121,6 +119,24 @@ const theme = createTheme({
                 }
             ]
         },
+
+        // MuiButton: {
+        //     variants: [
+        //         {
+        //             props: {
+        //                 variant: 'listbutton'
+        //             },
+        //             style: {
+        //                 color: 'white',
+        //                 fontFamily: 'Barlow Condensed Regular',
+        //                 fontSize: '16px',
+        //                 wordSpacing: 2.7,
+        //                 marginTop: 2,
+        //                 display: 'flex',
+        //             }
+        //         }
+        //     ]
+        // },
 
         MuiSvgIcon: {
             variants: [
@@ -140,7 +156,7 @@ const theme = createTheme({
                     props: {
                         variant: 'close-icon'
                     },
-                    style: { 
+                    style: {
                         color: 'white'
                     }
                 }
@@ -150,22 +166,29 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     "&.MuiPaper-root": {
-                        backgroundColor: 'transparent',
-                        backdropFilter: "blur(3px)"
+                        backgroundColor: 'rgba(225, 225, 225, 0.03)',
+                        backdropFilter: "blur(2px)"
                     }
                 }
-            },
-            variants: [
-                {
-                    props: {
-                        variant: 'drawer'
-                    },
-                    style: {
-                        backdropFilter: "blur(4px)",
-                    }
-                }
-            ]
-        }
+            }
+        },
+        // MuiButton: {
+        //     variants: [
+        //         {
+        //             props: {
+        //                 variant: 'listbutton'
+        //             },
+        //             style: {
+        //                 color: 'white',
+        //                 fontFamily: 'Barlow Condensed Regular',
+        //                 fontSize: '16px',
+        //                 wordSpacing: 2.7,
+        //                 marginTop: 2,
+        //                 display: 'flex',
+        //             }
+        //         }
+        //     ]
+        // },
 
 
     }
@@ -190,39 +213,43 @@ function NavBar() {
                         </Icon>
                         {/* NAVBAR LINKS */}
 
-                        <Container sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-                            <Button
-                                component={Link}
-                                to="/"
-                                variant="button"
-                                className="on-hover"
-                            >
-                                00 Home
-                            </Button>
-                            <Button
-                                component={Link}
-                                to="/destination"
-                                variant="button"
-                                className="on-hover"
-                            >
-                                01 Destination
-                            </Button>
-                            <Button
-                                component={Link}
-                                to="/crew"
-                                variant="button"
-                                className="on-hover"
-                            >
-                                02 Crew
-                            </Button>
-                            <Button
-                                component={Link}
-                                to="/technology"
-                                variant="button"
-                                className="on-hover"
-                            >
-                                03 Technology
-                            </Button>
+                        <Container sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', alignItems: 'center', height: '100%' }}>
+                            <div className="navbarBttnDiv">
+                                <Button
+                                    component={Link}
+                                    to="/"
+                                    variant="navbutton"
+                                >
+                                    00 Home
+                                </Button>
+                            </div>
+                            <div className="navbarBttnDiv">
+                                <Button
+                                    component={Link}
+                                    to="/destination"
+                                    variant="navbutton"
+                                >
+                                    01 Destination
+                                </Button>
+                            </div>
+                            <div className="navbarBttnDiv">
+                                <Button
+                                    component={Link}
+                                    to="/crew"
+                                    variant="navbutton"
+                                >
+                                    02 Crew
+                                </Button>
+                            </div>
+                            <div className="navbarBttnDiv">
+                                <Button
+                                    component={Link}
+                                    to="/technology"
+                                    variant="navbutton"
+                                >
+                                    03 Technology
+                                </Button>
+                            </div>
                         </Container>
 
                         {/*  HAMBURGER MENU */}
@@ -242,11 +269,10 @@ function NavBar() {
                     open={open}
                     onOpen={() => setOpen(true)}
                     onClose={() => setOpen(false)}
-                    variant='drawer'
                 >
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px'}}>
+                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
                         <IconButton sx={{ color: 'white' }} onClick={() => setOpen(false)}>
-                            <CloseIcon/>
+                            <CloseIcon />
                         </IconButton>
                     </div>
                     <List >

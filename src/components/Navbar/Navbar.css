@@ -1,0 +1,10 @@
+.navbarBttnDiv:hover {
+    border-bottom: 10px red solid;
+    border-start-end-radius: 80%;
+}
+
+.navbarBttnDiv {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
