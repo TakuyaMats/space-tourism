@@ -1,6 +1,8 @@
 import React from "react";
+import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import theme from './Theme';
 
 function Rocket({ data }) {
 
@@ -15,11 +17,13 @@ function Rocket({ data }) {
     }
 
     return (
-        <Container>
-            <Typography>THE TERMINOLOGY...</Typography>
-            <Typography>{capitalize(data)[0]}</Typography>
-            <Typography>{data[0].description}</Typography>
-        </Container>
+        <ThemeProvider theme={theme}>
+            <Container variant="container">
+                <Typography variant="h5">THE TERMINOLOGY...</Typography>
+                <Typography variant="h1">{capitalize(data)[0]}</Typography>
+                <Typography variant="p">{data[0].description}</Typography>
+            </Container>
+        </ThemeProvider>
     )
 }
 
