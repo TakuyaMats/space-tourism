@@ -1,0 +1,18 @@
+.navbarBttnDiv:hover {
+    color: gray;
+    border-bottom: 2px gray solid;
+
+    
+}
+
+.navbarBttnDiv:active {
+    border-bottom: 2px white solid;
+
+    
+}
+
+.navbarBttnDiv {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
