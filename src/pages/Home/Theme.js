@@ -147,23 +147,23 @@ const theme = createTheme({
                         cursor: 'pointer',
                         zIndex: '0',
                         width: '274px',
-                        height: '274px', 
-                        borderRadius: '50%', 
-                        left: '1001px', 
-                        top: '-80px', 
-                        bottom: '131px', 
-                        right: '165px', 
-                        backgroundColor: '#FFFFFF', 
+                        height: '274px',
+                        borderRadius: '50%',
+                        left: '1001px',
+                        top: '-80px',
+                        bottom: '131px',
+                        right: '165px',
+                        backgroundColor: '#FFFFFF',
                         borderStyle: 'none',
                         fontSize: '32px',
                         fontFamily: 'Bellefair',
-                        color: '#0B0D17', 
-                        fontWeight: '400', 
-                        lineHeight: '36.67px', 
+                        color: '#0B0D17',
+                        fontWeight: '400',
+                        lineHeight: '36.67px',
                         letterSpacing: '2px',
                         // zIndex: '2',
                         [breakpoints.down('desktop')]: {
-                            left: '263px', 
+                            left: '263px',
                             top: '292px',
                         },
                         [breakpoints.only('surfacePro7')]: {
@@ -188,7 +188,7 @@ const theme = createTheme({
                             // top: '200px',
                             left: '132px',
                             fontSize: '20px',
-                            lineHeight: '22.92px', 
+                            lineHeight: '22.92px',
                             letterSpacing: '1.25px',
                         },
                         [breakpoints.only('iphoneSE')]: {
@@ -197,7 +197,7 @@ const theme = createTheme({
                             left: '112px',
                             top: '110px',
                             fontSize: '20px',
-                            lineHeight: '22.92px', 
+                            lineHeight: '22.92px',
                             letterSpacing: '1.25px',
                         },
                         [breakpoints.only('iphone12Pro')]: {
@@ -206,7 +206,7 @@ const theme = createTheme({
                             left: '120px',
                             top: '250px',
                             fontSize: '20px',
-                            lineHeight: '22.92px', 
+                            lineHeight: '22.92px',
                             letterSpacing: '1.25px',
                         },
                         [breakpoints.only('pixel5')]: {
@@ -215,7 +215,7 @@ const theme = createTheme({
                             left: '121px',
                             top: '250px',
                             fontSize: '20px',
-                            lineHeight: '22.92px', 
+                            lineHeight: '22.92px',
                             letterSpacing: '1.25px',
                         },
                         [breakpoints.only('samsungGalaxyS8')]: {
@@ -224,7 +224,7 @@ const theme = createTheme({
                             left: '105px',
                             top: '180px',
                             fontSize: '20px',
-                            lineHeight: '22.92px', 
+                            lineHeight: '22.92px',
                             letterSpacing: '1.25px',
                         },
                         [breakpoints.only('samsungGalaxyS20')]: {
@@ -233,7 +233,7 @@ const theme = createTheme({
                             left: '131px',
                             top: '300px',
                             fontSize: '20px',
-                            lineHeight: '22.92px', 
+                            lineHeight: '22.92px',
                             letterSpacing: '1.25px',
                         },
                     }
@@ -247,7 +247,7 @@ theme.typography.h1 = {
     lineHeight: '172px',
     fontStyle: 'normal',
     marginTop: '24px',
-    marginBottom: '24px', 
+    marginBottom: '24px',
     [breakpoints.down('desktop')]: {
         display: 'flex',
         justifyContent: 'center',
@@ -311,15 +311,15 @@ theme.typography.p = {
         fontSize: '16px',
         color: '#D0D6F9',
         lineHeight: '28px',
-    [breakpoints.down('iphoneXR')]: {
-        fontSize: '15px',
-        lineHeight: '25px'
-    },
-    [breakpoints.only('iphoneSE')]: {
-        fontSize: '15px',
-        lineHeight: '25px',
-        // width: '327px'
-    },
+        [breakpoints.down('iphoneXR')]: {
+            fontSize: '15px',
+            lineHeight: '25px'
+        },
+        [breakpoints.only('iphoneSE')]: {
+            fontSize: '15px',
+            lineHeight: '25px',
+            // width: '327px'
+        },
     },
 }
 

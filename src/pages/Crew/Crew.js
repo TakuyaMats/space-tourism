@@ -16,29 +16,34 @@ import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import CrewMember from "../../components/Crew/Crew-Member/CrewMember";
 import { crew } from "../../assets/data";
+import theme from './Theme';
+import { ThemeProvider } from '@mui/material/styles';
+import './Crew.css';
 
 function Crew() {
   return (
-    <Paper
-      sx={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        height: "100vh",
-        position: "fixed",
-      }}
-    >
-      {/* Grid pretending to be the Navbar */}
 
-      {/* CrewMember component */}
-      {/* <CrewMember crewmate={crew} /> */}
-      <Container>
-        <NavBar />
-        <CrewMember crew={crew} />
-      </Container>
-    </Paper>
+    <ThemeProvider theme={theme}>
+      <Paper variant="body1"
+        sx={{
+          // backgroundImage: `url(${backgroundImage})`,
+          // backgroundPosition: "center",
+          // backgroundSize: "cover",
+          // backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "100vh",
+          // position: "fixed",
+        }}
+      >
+        <Container variant="container1">
+          <NavBar />
+          <CrewMember crew={crew} />
+        </Container>
+      </Paper>
+    </ThemeProvider>
+
+
+
   );
 }
 
