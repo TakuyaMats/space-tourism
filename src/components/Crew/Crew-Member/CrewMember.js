@@ -73,56 +73,41 @@ const CrewMember = ({ crew }) => {
   React.useEffect(() => {
     !check
       ? setTimeout(() => setCheck(true), 300)
-      : setCheck(true)
+      : console.log('yes');
   }, [selectedCrewmate]);
 
   //Really ugly function, I'll make it prettier some other time
 
   function crewmatePicture() {
-    if (selectedCrewmate === 0)
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateDouglas}
-        ></img>
-      );
-    else if (selectedCrewmate === 1)
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateMark}
-        ></img>
-      );
-    else if (selectedCrewmate === 2)
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateVictor}
-        ></img>
-      );
-    else
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateAnsari}
-        ></img>
-      );
+    let crewmateImage = ''
+    //Switch Statement
+    switch (selectedCrewmate) {
+      case 0:
+        crewmateImage = crewmateDouglas
+        break;
+      case 1:
+        crewmateImage = crewmateMark
+        break;
+      case 2:
+        crewmateImage = crewmateVictor
+        break;
+      case 3:
+        crewmateImage = crewmateAnsari
+        break;
+    }
+    return (
+      <Box
+        component="img"
+        sx={{
+          height: "inherit",
+          objectFit: "contain",
+          position: "absolute",
+        }}
+        alt="Crewmate Image"
+        src={crewmateImage}
+      />
+    );
+
   }
 
   return (
@@ -172,7 +157,7 @@ const CrewMember = ({ crew }) => {
             </Grid>
           </Fade>
 
-          <Grid lg={4} xs={3} variant="slides">
+          <Grid item lg={4} xs={3} variant="slides">
             <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
               <TabsList>
                 <Tab />
@@ -192,7 +177,7 @@ const CrewMember = ({ crew }) => {
             exit: 0,
           }}
         >
-          <Grid item lg={5} xs={8} sx={{ height: "inherit" }}>
+          <Grid item variant="crewmate-picture" item lg={5} xs={12}>
             {crewmatePicture()}
           </Grid>
         </Fade>

@@ -23,7 +23,7 @@ const customBreakpointValues = {
         // iPadMini: 768,
         // iPadAir: 820,
         // surfacePro7: 912,
-        tablet: 768,
+        tablet: 821,
         desktop: 1200,
         // xl: 1680,
     },
@@ -66,13 +66,14 @@ const theme = createTheme({
                         variant: 'crewmate-description'
                     },
                     style: {
+                        marginBottom: "10%",
                         marginLeft: "0",
                         marginRight: "0",
                         [breakpoints.down('tablet')]: {
                             textAlign: 'center',
-                            marginLeft: "10vh",
-                            marginRight: "10vh",
-                            marginBottom: "2.5em"
+                            marginLeft: "10%",
+                            marginRight: "10%",
+
 
                         },
                     }
@@ -85,10 +86,23 @@ const theme = createTheme({
                     style: {
                         [breakpoints.down('tablet')]: {
                             textAlign: 'center',
-                            marginLeft: "25vh",
-                            marginRight: "25vh",
-                            marginTop: "5vh",
+                            marginLeft: "40%",
+                            marginRight: "40%",
+                            marginTop: "5%",
                             maxWidth: "100%",
+
+                        },
+                    }
+
+                },
+                {
+                    props: {
+                        variant: 'crewmate-picture'
+                    },
+                    style: {
+                        height: "inherit",
+                        [breakpoints.down('tablet')]: {
+                            textAlign: 'center',
 
                         },
                     }
