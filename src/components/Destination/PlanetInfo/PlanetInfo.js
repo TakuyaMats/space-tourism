@@ -12,7 +12,7 @@ import Box from '@mui/material/Box';
 
 function PlanetInfo({ data }) {
     console.log(data)
-    const [value, setValue] = useState('moon');
+    const [value, setValue] = useState('Moon');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -22,17 +22,6 @@ function PlanetInfo({ data }) {
         console.log('click !')
     }
 
-    
-
-    let capitalize = (data) => {
-        let arrName = [];
-        
-        data.forEach(info => {
-            let capital = info.name.toUpperCase();
-            arrName.push(capital)
-        })
-        return arrName;
-    }
 
     return (
         <Box sx={{ borderStyle: 'groove', borderColor: 'white', borderWidth: '2px', width: '445px', height: '472px', marginLeft: '70px'}}>
@@ -54,11 +43,11 @@ function PlanetInfo({ data }) {
                     </TabList>
                 </Box>
                 {data.map((planet, index) => {
-                    console.log(index)
+                    let capName = planet.name.toUpperCase()
                     return(
                         <TabPanel key={index} value={planet.name}>
                             <Typography variant="h1">
-                                {planet.name}
+                                {capName}
                             </Typography>
                             <Typography variant='p'>
                             {planet.description}
