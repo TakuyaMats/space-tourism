@@ -1,0 +1,5 @@
+.crewmate-image {
+    height: "inherit";
+    object-fit: "contain";
+    position: "absolute"
+}

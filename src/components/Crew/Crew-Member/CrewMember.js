@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/system";
+import { styled, ThemeProvider } from "@mui/system";
 import { keyframes } from "@mui/system";
 
 import Grid from "@mui/material/Grid";
@@ -17,11 +17,15 @@ import crewmateVictor from "../../../assets/crew/image-victor-glover.png";
 import crewmateAnsari from "../../../assets/crew/image-anousheh-ansari.png";
 
 import Fade from "@mui/material/Fade";
+import theme from './Theme'
 
 const TabsList = styled(TabsListUnstyled)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   grid-gap: 10px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+    }
 `;
 
 const Tab = styled(TabUnstyled)`
@@ -39,6 +43,12 @@ const Tab = styled(TabUnstyled)`
     background-color: #333333;
   }
 
+
+  @media (max-width: 800px) {
+    width: 15px;
+    height: 15px;
+    }
+  
   &.${tabUnstyledClasses.selected} {
     background-color: #ffffff;
   }
@@ -63,7 +73,7 @@ const CrewMember = ({ crew }) => {
   React.useEffect(() => {
     !check
       ? setTimeout(() => setCheck(true), 300)
-      : console.log(check + "is true");
+      : setCheck(true)
   }, [selectedCrewmate]);
 
   //Really ugly function, I'll make it prettier some other time
@@ -116,74 +126,79 @@ const CrewMember = ({ crew }) => {
   }
 
   return (
-    <Grid container sx={{ height: "90vh" }}>
-      <Grid item xs={7}>
-        <Box sx={{ marginTop: "0px" }}>
-          <h5 style={{ marginBottom: "4.5em" }}>02 MEET YOUR CREW</h5>
-        </Box>
-
-        <Fade
-          in={check}
-          timeout={{
-            appear: 0,
-            enter: 400,
-            exit: 0,
-          }}
-        >
-          <Box className="sub-heading">{crewmate.role.toUpperCase()}</Box>
-        </Fade>
-
-        <Fade
-          in={check}
-          timeout={{
-            appear: 0,
-            enter: 400,
-            exit: 0,
-          }}
-        >
-          <Box>
-            <h3>{crewmate.name.toUpperCase()}</h3>
+    <ThemeProvider theme={theme}>
+      <Grid container variant='crew'>
+        {/* <Grid container sx={{ height: "90vh" }}> */}
+        <Grid item xs={12} lg={7} variant="crewmate-info">
+          {/* <Grid item xs={12} lg={7}> */}
+          <Box variant="title">
+            <Typography variant="h5" >02 MEET YOUR CREW</Typography>
           </Box>
-        </Fade>
+
+          <Fade
+            in={check}
+            timeout={{
+              appear: 0,
+              enter: 400,
+              exit: 0,
+            }}
+          >
+            <Box className="sub-heading" style={{ color: "#979797" }}>{crewmate.role.toUpperCase()}</Box>
+          </Fade>
+
+          <Fade
+            in={check}
+            timeout={{
+              appear: 0,
+              enter: 400,
+              exit: 0,
+            }}
+          >
+            <Box>
+              <Typography variant="h3">{crewmate.name.toUpperCase()}</Typography>
+            </Box>
+          </Fade>
+
+          <Fade
+            in={check}
+            timeout={{
+              appear: 0,
+              enter: 400,
+              exit: 0,
+            }}
+          >
+            <Grid item lg={8} variant="crewmate-description">
+              <Typography variant="paragraph">{crewmate.bio}</Typography>
+            </Grid>
+          </Fade>
+
+          <Grid lg={4} xs={3} variant="slides">
+            <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
+              <TabsList>
+                <Tab />
+                <Tab />
+                <Tab />
+                <Tab />
+              </TabsList>
+            </TabsUnstyled>
+          </Grid>
+        </Grid>
 
         <Fade
           in={check}
           timeout={{
             appear: 0,
-            enter: 400,
+            enter: 200,
             exit: 0,
           }}
         >
-          <Grid item xs={8}>
-            <p style={{ marginBottom: "4.5em" }}>{crewmate.bio}</p>
+          <Grid item lg={5} xs={8} sx={{ height: "inherit" }}>
+            {crewmatePicture()}
           </Grid>
         </Fade>
-
-        <Grid xs={4}>
-          <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
-            <TabsList>
-              <Tab />
-              <Tab />
-              <Tab />
-              <Tab />
-            </TabsList>
-          </TabsUnstyled>
-        </Grid>
       </Grid>
+    </ThemeProvider>
 
-      <Fade
-        in={check}
-        timeout={{
-          appear: 0,
-          enter: 200,
-          exit: 0,
-        }}
-      >
-        <Grid item xs={5} sx={{ height: "inherit" }}>
-          {crewmatePicture()}
-        </Grid>
-      </Fade>
-    </Grid>
   );
 };
 
