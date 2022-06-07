@@ -204,7 +204,7 @@ function NavBar() {
                     <Toolbar variant='toolbar' disableGutters>
                         {/* SPACE ICON */}
                         <Icon variant='icon' >
-                            <img src={NavLogo} />
+                            <img src={NavLogo} alt='star'/>
                         </Icon>
                         {/* NAVBAR LINKS */}
 
