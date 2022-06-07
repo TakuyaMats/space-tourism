@@ -32,6 +32,15 @@ const theme = createTheme({
         ...customBreakpointValues,
     },
     components: {
+        MuiTabs: {
+            styleOverrides: {
+                flexContainer: {
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    justifyContent: 'center',
+                }
+            },
+        },
         MuiContainer: {
             variants: [
                 {
@@ -43,11 +52,27 @@ const theme = createTheme({
                         width: '470px',
                         height: '382px',
                         left: '325px',
-                        top: '325px',
+                        top: '383px',
                     }
                 }
             ]
         },
+        img: {
+            variants: [
+                {
+                    props: {
+                        variant: 'img'
+                    },
+                    style: {
+                        position: 'absolute',
+                        width: '470px',
+                        height: '382px',
+                        left: '325px',
+                        top: '325px',
+                    }
+                }
+            ]
+        }
     },
 })
 

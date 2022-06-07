@@ -30,7 +30,6 @@ const customBreakpointValues = {
     },
 }
 
-
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
 
 const theme = createTheme({
