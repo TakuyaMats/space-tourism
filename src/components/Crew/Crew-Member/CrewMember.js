@@ -95,18 +95,15 @@ const CrewMember = ({ crew }) => {
         crewmateImage = crewmateAnsari
         break;
     }
-    return (
-      <Box
-        component="img"
-        sx={{
-          height: "inherit",
-          objectFit: "contain",
-          position: "absolute",
-        }}
-        alt="Crewmate Image"
-        src={crewmateImage}
-      />
-    );
+    return crewmateImage
+    // return (
+    //   <img style={{
+    //     height: "inherit",
+    //   }}
+    //     alt="Crewmate Image"
+    //     src={crewmateImage}
+    //   />
+    // )
 
   }
 
@@ -114,9 +111,9 @@ const CrewMember = ({ crew }) => {
     <ThemeProvider theme={theme}>
       <Grid container variant='crew'>
         {/* <Grid container sx={{ height: "90vh" }}> */}
-        <Grid item xs={12} lg={7} variant="crewmate-info">
+        <Grid item xs={12} lg={6} variant="crewmate-info">
           {/* <Grid item xs={12} lg={7}> */}
-          <Box variant="title">
+          <Box>
             <Typography variant="h5" >02 MEET YOUR CREW</Typography>
           </Box>
 
@@ -177,8 +174,8 @@ const CrewMember = ({ crew }) => {
             exit: 0,
           }}
         >
-          <Grid item variant="crewmate-picture" item lg={5} xs={12}>
-            {crewmatePicture()}
+          <Grid item variant="crewmate-picture" sx={{ backgroundImage: `url(${crewmatePicture()})` }} lg={6} xs={12}>
+
           </Grid>
         </Fade>
       </Grid>

@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 
+
 const customBreakpointValues = {
     values: {
         xs: 0,
@@ -27,6 +28,35 @@ const customBreakpointValues = {
         desktop: 1200,
         // xl: 1680,
     },
+}
+
+function crewmatePicture() {
+    let crewmateImage = ''
+    //Switch Statement
+    switch (selectedCrewmate) {
+        case 0:
+            crewmateImage = crewmateDouglas
+            break;
+        case 1:
+            crewmateImage = crewmateMark
+            break;
+        case 2:
+            crewmateImage = crewmateVictor
+            break;
+        case 3:
+            crewmateImage = crewmateAnsari
+            break;
+    }
+    return crewmateImage
+    // return (
+    //   <img style={{
+    //     height: "inherit",
+    //   }}
+    //     alt="Crewmate Image"
+    //     src={crewmateImage}
+    //   />
+    // )
+
 }
 
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
@@ -89,6 +119,7 @@ const theme = createTheme({
                             marginLeft: "40%",
                             marginRight: "40%",
                             marginTop: "5%",
+                            marginBottom: "5%",
                             maxWidth: "100%",
 
                         },
@@ -101,8 +132,11 @@ const theme = createTheme({
                     },
                     style: {
                         height: "inherit",
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
                         [breakpoints.down('tablet')]: {
-                            textAlign: 'center',
+                            backgroundPosition: 'center',
+                            height: 'auto'
 
                         },
                     }
@@ -118,6 +152,17 @@ const theme = createTheme({
                     },
                     style: {
                         marginTop: "0px",
+                        [breakpoints.down('tablet')]: {
+                            textAlign: 'left'
+                        },
+                    }
+                },
+                {
+                    props: {
+                        variant: 'image'
+                    },
+                    style: {
+                        height: "inherit",
                         [breakpoints.down('tablet')]: {
                             textAlign: 'left'
                         },
