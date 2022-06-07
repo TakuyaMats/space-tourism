@@ -30,34 +30,6 @@ const customBreakpointValues = {
     },
 }
 
-function crewmatePicture() {
-    let crewmateImage = ''
-    //Switch Statement
-    switch (selectedCrewmate) {
-        case 0:
-            crewmateImage = crewmateDouglas
-            break;
-        case 1:
-            crewmateImage = crewmateMark
-            break;
-        case 2:
-            crewmateImage = crewmateVictor
-            break;
-        case 3:
-            crewmateImage = crewmateAnsari
-            break;
-    }
-    return crewmateImage
-    // return (
-    //   <img style={{
-    //     height: "inherit",
-    //   }}
-    //     alt="Crewmate Image"
-    //     src={crewmateImage}
-    //   />
-    // )
-
-}
 
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
 
