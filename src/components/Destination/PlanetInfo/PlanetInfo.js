@@ -5,7 +5,6 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Typography from '@mui/material/Typography';
-// import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
@@ -17,16 +16,16 @@ function PlanetInfo({ data }) {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     }
-    
+
     const handleClick = (event) => {
         console.log('click !')
     }
 
 
     return (
-        <Box sx={{ borderStyle: 'groove', borderColor: 'white', borderWidth: '2px', width: '445px', height: '472px', marginLeft: '70px'}}>
+        <Box sx={{ borderStyle: 'groove', borderColor: 'white', borderWidth: '2px', width: '445px', height: '472px', marginLeft: '70px' }}>
             <Box >
-                <img />
+                <img alt='Destination' />
             </Box>
             <TabContext value={value}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -44,20 +43,34 @@ function PlanetInfo({ data }) {
                 </Box>
                 {data.map((planet, index) => {
                     let capName = planet.name.toUpperCase()
-                    return(
-                        <TabPanel key={index} value={planet.name}>
-                            <Typography variant="h1">
+                    return (
+                        <TabPanel
+                            key={index}
+                            value={planet.name}
+                        >
+                            <Typography
+                                variant="h1"
+                            >
                                 {capName}
                             </Typography>
-                            <Typography variant='p'>
-                            {planet.description}
+                            <Typography
+                                variant='p'
+                            >
+                                {planet.description}
+                            </Typography>
+                            <Typography
+                                variant='subsubheading2'
+                            >
+                                {planet.distance}
+                            </Typography>
+                            <Typography
+                                variant='subheading2'
+                            >
+                                {planet.travel}
                             </Typography>
                         </TabPanel>
                     )
                 })}
-                {/* <TabPanel value="moon"><h3>hello</h3></TabPanel> */}
-                {/* <TabPanel value="mars">Item Two</TabPanel>
-                <TabPanel value="europa">Item Three</TabPanel> */}
             </TabContext>
         </Box>
     )
