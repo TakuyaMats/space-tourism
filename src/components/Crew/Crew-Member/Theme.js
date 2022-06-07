@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 
+
 const customBreakpointValues = {
     values: {
         xs: 0,
@@ -23,10 +24,39 @@ const customBreakpointValues = {
         // iPadMini: 768,
         // iPadAir: 820,
         // surfacePro7: 912,
-        tablet: 768,
+        tablet: 821,
         desktop: 1200,
         // xl: 1680,
     },
+}
+
+function crewmatePicture() {
+    let crewmateImage = ''
+    //Switch Statement
+    switch (selectedCrewmate) {
+        case 0:
+            crewmateImage = crewmateDouglas
+            break;
+        case 1:
+            crewmateImage = crewmateMark
+            break;
+        case 2:
+            crewmateImage = crewmateVictor
+            break;
+        case 3:
+            crewmateImage = crewmateAnsari
+            break;
+    }
+    return crewmateImage
+    // return (
+    //   <img style={{
+    //     height: "inherit",
+    //   }}
+    //     alt="Crewmate Image"
+    //     src={crewmateImage}
+    //   />
+    // )
+
 }
 
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
@@ -66,13 +96,14 @@ const theme = createTheme({
                         variant: 'crewmate-description'
                     },
                     style: {
+                        marginBottom: "10%",
                         marginLeft: "0",
                         marginRight: "0",
                         [breakpoints.down('tablet')]: {
                             textAlign: 'center',
-                            marginLeft: "10vh",
-                            marginRight: "10vh",
-                            marginBottom: "2.5em"
+                            marginLeft: "10%",
+                            marginRight: "10%",
+
 
                         },
                     }
@@ -85,10 +116,27 @@ const theme = createTheme({
                     style: {
                         [breakpoints.down('tablet')]: {
                             textAlign: 'center',
-                            marginLeft: "25vh",
-                            marginRight: "25vh",
-                            marginTop: "5vh",
+                            marginLeft: "40%",
+                            marginRight: "40%",
+                            marginTop: "5%",
+                            marginBottom: "5%",
                             maxWidth: "100%",
+
+                        },
+                    }
+
+                },
+                {
+                    props: {
+                        variant: 'crewmate-picture'
+                    },
+                    style: {
+                        height: "inherit",
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        [breakpoints.down('tablet')]: {
+                            backgroundPosition: 'center',
+                            height: 'auto'
 
                         },
                     }
@@ -104,6 +152,17 @@ const theme = createTheme({
                     },
                     style: {
                         marginTop: "0px",
+                        [breakpoints.down('tablet')]: {
+                            textAlign: 'left'
+                        },
+                    }
+                },
+                {
+                    props: {
+                        variant: 'image'
+                    },
+                    style: {
+                        height: "inherit",
                         [breakpoints.down('tablet')]: {
                             textAlign: 'left'
                         },

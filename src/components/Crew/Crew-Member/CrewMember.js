@@ -73,65 +73,47 @@ const CrewMember = ({ crew }) => {
   React.useEffect(() => {
     !check
       ? setTimeout(() => setCheck(true), 300)
-      : setCheck(true)
+      : console.log('yes');
   }, [selectedCrewmate]);
 
   //Really ugly function, I'll make it prettier some other time
 
   function crewmatePicture() {
-    if (selectedCrewmate === 0)
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateDouglas}
-        ></img>
-      );
-    else if (selectedCrewmate === 1)
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateMark}
-        ></img>
-      );
-    else if (selectedCrewmate === 2)
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateVictor}
-        ></img>
-      );
-    else
-      return (
-        <img
-          style={{
-            height: "inherit",
-            objectFit: "contain",
-            position: "absolute",
-          }}
-          src={crewmateAnsari}
-        ></img>
-      );
+    let crewmateImage = ''
+    //Switch Statement
+    switch (selectedCrewmate) {
+      case 0:
+        crewmateImage = crewmateDouglas
+        break;
+      case 1:
+        crewmateImage = crewmateMark
+        break;
+      case 2:
+        crewmateImage = crewmateVictor
+        break;
+      case 3:
+        crewmateImage = crewmateAnsari
+        break;
+    }
+    return crewmateImage
+    // return (
+    //   <img style={{
+    //     height: "inherit",
+    //   }}
+    //     alt="Crewmate Image"
+    //     src={crewmateImage}
+    //   />
+    // )
+
   }
 
   return (
     <ThemeProvider theme={theme}>
       <Grid container variant='crew'>
         {/* <Grid container sx={{ height: "90vh" }}> */}
-        <Grid item xs={12} lg={7} variant="crewmate-info">
+        <Grid item xs={12} lg={6} variant="crewmate-info">
           {/* <Grid item xs={12} lg={7}> */}
-          <Box variant="title">
+          <Box>
             <Typography variant="h5" >02 MEET YOUR CREW</Typography>
           </Box>
 
@@ -172,7 +154,7 @@ const CrewMember = ({ crew }) => {
             </Grid>
           </Fade>
 
-          <Grid lg={4} xs={3} variant="slides">
+          <Grid item lg={4} xs={3} variant="slides">
             <TabsUnstyled value={selectedCrewmate} onChange={handleChange}>
               <TabsList>
                 <Tab />
@@ -192,8 +174,8 @@ const CrewMember = ({ crew }) => {
             exit: 0,
           }}
         >
-          <Grid item lg={5} xs={8} sx={{ height: "inherit" }}>
-            {crewmatePicture()}
+          <Grid item variant="crewmate-picture" sx={{ backgroundImage: `url(${crewmatePicture()})` }} lg={6} xs={12}>
+
           </Grid>
         </Fade>
       </Grid>
