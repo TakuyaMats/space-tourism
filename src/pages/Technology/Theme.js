@@ -48,6 +48,7 @@ const theme = createTheme({
                         minWidth: '100%',
                         minHeight: '100%',
                         position: 'fixed',
+                        overflow: 'auto',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                         },
@@ -65,6 +66,7 @@ const theme = createTheme({
                         position: 'absolute',
                         color: 'white',
                         width: '305px',
+                        minWidth: '305px',
                         height: '34px',
                         top: '212px',
                         left: '166.5px',
