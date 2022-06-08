@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import TabContext from '@mui/lab/TabContext';
+import Paper from '@mui/material/Paper';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Tab from '@mui/material/Tab';
@@ -15,6 +16,7 @@ import spaceportPortrait from '../../../assets/technology/image-spaceport-portra
 import spaceportLandscape from '../../../assets/technology/image-spaceport-landscape.jpg';
 import spaceCapsulePortrait from '../../../assets/technology/image-space-capsule-portrait.jpg';
 import spaceCapsuleLandscape from '../../../assets/technology/image-space-capsule-landscape.jpg';
+import './Rocket.css';
 
 
 function Rocket({ data }) {
@@ -31,22 +33,38 @@ function Rocket({ data }) {
     }
 
     function terminologyPicture() {
-        let terminologyImage = ''
-        switch (selectedTerminology) {
-            case 'Launch vehicle':
-                terminologyImage = launchVehiclePortrait
-                break;
-            case 'Spaceport':
-                terminologyImage = spaceportPortrait
-                break;
-            case 'Space capsule':
-                terminologyImage = spaceCapsulePortrait
-                break;
-            default:
-                terminologyImage = launchVehiclePortrait
-        }
-        return terminologyImage
+        let terminologyImage = '';
+        if (window.innerWidth > '1140') {
+            switch (selectedTerminology) {
+                case 'Launch vehicle':
+                    terminologyImage = launchVehiclePortrait;
+                    break;
+                case 'Spaceport':
+                    terminologyImage = spaceportPortrait;
+                    break;
+                case 'Space capsule':
+                    terminologyImage = spaceCapsulePortrait;
+                    break;
+                default:
+                    terminologyImage = launchVehiclePortrait;
+            }
+        } else {
+            switch (selectedTerminology) {
+                case 'Launch vehicle':
+                    terminologyImage = launchVehicleLandscape;
+                    break;
+                case 'Spaceport':
+                    terminologyImage = spaceportLandscape;
+                    break;
+                case 'Space capsule':
+                    terminologyImage = spaceCapsuleLandscape;
+                    break;
+                default:
+                    terminologyImage = launchVehicleLandscape;
+            }
     }
+    return terminologyImage
+}
 
     return (
         <ThemeProvider theme={theme}>
@@ -61,9 +79,9 @@ function Rocket({ data }) {
                                 sx={{ position: 'absolute', left: '165px', top: '383px' }}
                             >
                                 <Tabs variant="tabs">
-                                    <Tab sx={{ color: '#0B0D17', marginBottom: '32px', backgroundColor: '#FFFFFF', borderRadius: '50%', width: '80px', height: '80px', mixBlendMode: 'difference' }} value='Launch vehicle' onClick={handleClick} label="1" />
-                                    <Tab sx={{ color: '#0B0D17', marginBottom: '32px', backgroundColor: '#FFFFFF', borderRadius: '50%', width: '80px', height: '80px', mixBlendMode: 'difference'}} value='Spaceport' onClick={handleClick} label="2" />
-                                    <Tab sx={{ color: '#0B0D17', backgroundColor: '#FFFFFF', borderRadius: '50%', width: '80px', height: '80px', mixBlendMode: 'difference'}} value='Space capsule' onClick={handleClick} label="3" />
+                                    <Tab variant="tab" value='Launch vehicle' onClick={handleClick} label="1" />
+                                    <Tab variant="tab" value='Spaceport' onClick={handleClick} label="2" />
+                                    <Tab variant="tab" value='Space capsule' onClick={handleClick} label="3" />
                                 </Tabs>
                             </TabList>
                         </Box>
@@ -75,8 +93,14 @@ function Rocket({ data }) {
                                         <Typography variant="h5">THE TERMINOLOGY...</Typography>
                                         <Typography variant="h1">{capName}</Typography>
                                         <Typography variant="p">{launch.description}</Typography>
-                                        <img style={{ position: 'absolute', width: '515px', height: '527px', left: '600px', bottom: '-90px' }} src={terminologyPicture()} alt={launch.name}/>
                                     </Container>
+                                </TabPanel>
+                            )
+                    })}
+                    {data.map((launch, index) => {
+                            return (
+                                <TabPanel key={index} value={launch.name}>
+                                    <Paper variant="image" sx={{ backgroundImage: `url(${terminologyPicture()})` }} />
                                 </TabPanel>
                             )
                     })}
