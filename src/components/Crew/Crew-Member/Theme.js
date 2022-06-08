@@ -57,7 +57,8 @@ const theme = createTheme({
                     },
                     style: {
                         [breakpoints.down('tablet')]: {
-                            textAlign: 'center'
+                            textAlign: 'center',
+                            height: '0'
                         },
                     }
 
@@ -74,6 +75,7 @@ const theme = createTheme({
                             textAlign: 'center',
                             marginLeft: "10%",
                             marginRight: "10%",
+                            marginBottom: "5%",
 
 
                         },
