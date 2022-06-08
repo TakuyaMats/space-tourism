@@ -23,14 +23,7 @@ function Destination() {
                         PICK YOUR DESTINATION
                     </Typography>
                 </Container>
-                <Container sx={{ borderStyle: 'groove', borderColor: 'red', display: 'flex', justifyContent: 'space-around' }}>
-                    {/* <Box sx={{ borderStyle: 'groove', borderColor: 'yellow', display: 'flex' }}>
-                        <Typography sx={{ width: '445px', height: '445px' }}>
-                            Planet IMG
-                        </Typography>
-                    </Box> */}
                     <PlanetInfo data={Destinations} />
-                </Container> 
             </Paper>
         </ThemeProvider>
     )
