@@ -9,7 +9,7 @@ const customBreakpointValues = {
         md: 900,
         lg: 1200,
         xl: 1536,
-        // mobile
+        mobile: 420,
         // galaxyFold: 280,
         // samsungGalaxyS8: 360,
         // iphoneSE: 375,
@@ -33,6 +33,18 @@ const customBreakpointValues = {
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
 
 const theme = createTheme({
+    typography: {
+        subHeading: {
+            fontSize: '1.8em',
+            fontFamily: 'Bellefair',
+            color: ' #979797',
+            [breakpoints.down('mobile')]: {
+                textAlign: 'center',
+                fontSize: '1.4em'
+            },
+        },
+
+    },
     breakpoints: {
         ...customBreakpointValues,
     },
@@ -46,7 +58,7 @@ const theme = createTheme({
                     style: {
                         height: "90vh",
                         [breakpoints.down('tablet')]: {
-
+                            height: "80vh",
                         },
                     }
 
@@ -76,8 +88,12 @@ const theme = createTheme({
                             marginLeft: "10%",
                             marginRight: "10%",
                             marginBottom: "5%",
-
-
+                        },
+                        [breakpoints.down('mobile')]: {
+                            textAlign: 'center',
+                            marginLeft: "5%",
+                            marginRight: "5%",
+                            marginBottom: "5%",
                         },
                     }
 
@@ -95,6 +111,14 @@ const theme = createTheme({
                             marginBottom: "5%",
                             maxWidth: "100%",
 
+                        },
+                        [breakpoints.down('mobile')]: {
+                            textAlign: 'center',
+                            marginLeft: "0%",
+                            marginRight: "0%",
+                            marginTop: "0%",
+                            marginBottom: "0%",
+                            maxWidth: "100%",
                         },
                     }
 
@@ -153,22 +177,28 @@ theme.typography.h3 = {
     [breakpoints.down('tablet')]: {
         fontSize: '46px'
     },
+    [breakpoints.down('mobile')]: {
+        textAlign: 'center',
+        fontSize: '2em'
+    },
 }
 theme.typography.h5 = {
-    marginBottom: "4.5em",
-
-    [breakpoints.down('tablet')]: {
-        marginBottom: '2.5em',
-        textAlign: 'left'
+    margin: "1em 1em 2em 1em",
+    [breakpoints.down('mobile')]: {
+        textAlign: 'center',
+        fontSize: '1.6em'
     },
 }
 theme.typography.paragraph = {
-    fontSize: '16px',
+    fontSize: '1em',
     fontFamily: 'Barlow, sans-serif',
     lineHeight: '32px',
     color: '#D0D6F9',
     [breakpoints.down('tablet')]: {
         textAlign: 'center'
+    },
+    [breakpoints.down('tablet')]: {
+        fontSize: '0.8em'
     },
 }
 

@@ -19,12 +19,18 @@ import crewmateAnsari from "../../../assets/crew/image-anousheh-ansari.png";
 import Fade from "@mui/material/Fade";
 import theme from './Theme'
 
+
+//Merge the media queries in here and Theme.js (MuiGrid slides)
 const TabsList = styled(TabsListUnstyled)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   grid-gap: 10px;
   @media (max-width: 800px) {
     grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+    }
+  @media (max-width: 420px) {
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+    margin-left: 25%;
     }
 `;
 
@@ -76,11 +82,9 @@ const CrewMember = ({ crew }) => {
       : console.log('yes');
   }, [selectedCrewmate]);
 
-  //Really ugly function, I'll make it prettier some other time
-
   function crewmatePicture() {
     let crewmateImage = ''
-    //Switch Statement
+    //Switch Statement 
     switch (selectedCrewmate) {
       case 0:
         crewmateImage = crewmateDouglas
@@ -96,27 +100,18 @@ const CrewMember = ({ crew }) => {
         break;
     }
     return crewmateImage
-    // return (
-    //   <img style={{
-    //     height: "inherit",
-    //   }}
-    //     alt="Crewmate Image"
-    //     src={crewmateImage}
-    //   />
-    // )
-
   }
+
+  //Move the Fade effect inside a function later so you dont write the whole thing 3 times 
+
 
   return (
     <ThemeProvider theme={theme}>
+      <Box>
+        <Typography variant="h5" >02 MEET YOUR CREW</Typography>
+      </Box>
       <Grid container variant='crew'>
-        {/* <Grid container sx={{ height: "90vh" }}> */}
         <Grid item xs={12} lg={6} variant="crewmate-info">
-          {/* <Grid item xs={12} lg={7}> */}
-          <Box>
-            <Typography variant="h5" >02 MEET YOUR CREW</Typography>
-          </Box>
-
           <Fade
             in={check}
             timeout={{
@@ -125,7 +120,7 @@ const CrewMember = ({ crew }) => {
               exit: 0,
             }}
           >
-            <Box className="sub-heading" style={{ color: "#979797" }}>{crewmate.role.toUpperCase()}</Box>
+            <Typography variant="subHeading">{crewmate.role.toUpperCase()}</Typography>
           </Fade>
 
           <Fade
@@ -149,7 +144,7 @@ const CrewMember = ({ crew }) => {
               exit: 0,
             }}
           >
-            <Grid item lg={8} variant="crewmate-description">
+            <Grid item lg={8} xs={12} variant="crewmate-description">
               <Typography variant="paragraph">{crewmate.bio}</Typography>
             </Grid>
           </Fade>
