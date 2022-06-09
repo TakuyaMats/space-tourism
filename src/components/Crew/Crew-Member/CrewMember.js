@@ -120,7 +120,10 @@ const CrewMember = ({ crew }) => {
               exit: 0,
             }}
           >
-            <Typography variant="subHeading">{crewmate.role.toUpperCase()}</Typography>
+            <Grid item variant="crewmate-role">
+              <Typography variant="subHeading">{crewmate.role.toUpperCase()}</Typography>
+            </Grid>
+
           </Fade>
 
           <Fade
@@ -131,9 +134,9 @@ const CrewMember = ({ crew }) => {
               exit: 0,
             }}
           >
-            <Box>
+            <Grid item variant="crewmate-name">
               <Typography variant="h3">{crewmate.name.toUpperCase()}</Typography>
-            </Box>
+            </Grid>
           </Fade>
 
           <Fade

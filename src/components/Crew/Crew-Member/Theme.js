@@ -40,7 +40,7 @@ const theme = createTheme({
             color: ' #979797',
             [breakpoints.down('mobile')]: {
                 textAlign: 'center',
-                fontSize: '1.4em'
+                fontSize: '1em'
             },
         },
 
@@ -60,6 +60,9 @@ const theme = createTheme({
                         [breakpoints.down('tablet')]: {
                             height: "80vh",
                         },
+                        [breakpoints.down('mobile')]: {
+                            height: "35vh",
+                        },
                     }
 
                 },
@@ -68,9 +71,15 @@ const theme = createTheme({
                         variant: 'crewmate-info'
                     },
                     style: {
+                        display: 'block',
                         [breakpoints.down('tablet')]: {
                             textAlign: 'center',
                             height: '0'
+                        },
+                        [breakpoints.down('mobile')]: {
+                            order: '2',
+                            display: 'flex',
+                            flexDirection: 'column'
                         },
                     }
 
@@ -91,9 +100,10 @@ const theme = createTheme({
                         },
                         [breakpoints.down('mobile')]: {
                             textAlign: 'center',
-                            marginLeft: "5%",
-                            marginRight: "5%",
-                            marginBottom: "5%",
+                            marginLeft: "0%",
+                            marginRight: "0%",
+                            marginBottom: "0%",
+                            order: '4'
                         },
                     }
 
@@ -113,12 +123,13 @@ const theme = createTheme({
 
                         },
                         [breakpoints.down('mobile')]: {
-                            textAlign: 'center',
+                            order: '1',
                             marginLeft: "0%",
                             marginRight: "0%",
-                            marginTop: "0%",
-                            marginBottom: "0%",
-                            maxWidth: "100%",
+                            marginTop: "10%",
+                            marginBottom: "10%",
+
+
                         },
                     }
 
@@ -135,6 +146,35 @@ const theme = createTheme({
                             backgroundPosition: 'center',
                             height: 'auto'
 
+                        },
+                        [breakpoints.down('mobile')]: {
+                            order: '1',
+                            height: '40vh',
+                            borderBottom: '1px double #D0D6F9'
+
+                        },
+                    }
+
+                },
+                {
+                    props: {
+                        variant: 'crewmate-role'
+                    },
+                    style: {
+                        [breakpoints.down('mobile')]: {
+                            order: '2'
+                        },
+                    }
+
+                },
+                {
+                    props: {
+                        variant: 'crewmate-name'
+                    },
+                    style: {
+
+                        [breakpoints.down('mobile')]: {
+                            order: '3'
                         },
                     }
 
@@ -164,7 +204,7 @@ const theme = createTheme({
                             textAlign: 'left'
                         },
                     }
-                }
+                },
             ]
         }
 
@@ -179,14 +219,14 @@ theme.typography.h3 = {
     },
     [breakpoints.down('mobile')]: {
         textAlign: 'center',
-        fontSize: '2em'
+        fontSize: '1.6em'
     },
 }
 theme.typography.h5 = {
     margin: "1em 1em 2em 1em",
     [breakpoints.down('mobile')]: {
         textAlign: 'center',
-        fontSize: '1.6em'
+        fontSize: '1.2em'
     },
 }
 theme.typography.paragraph = {
@@ -195,9 +235,11 @@ theme.typography.paragraph = {
     lineHeight: '32px',
     color: '#D0D6F9',
     [breakpoints.down('tablet')]: {
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: '1em'
     },
-    [breakpoints.down('tablet')]: {
+    [breakpoints.down('mobile')]: {
+        textAlign: 'center',
         fontSize: '0.8em'
     },
 }
