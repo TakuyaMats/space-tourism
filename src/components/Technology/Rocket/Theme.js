@@ -36,17 +36,27 @@ const theme = createTheme({
         MuiTabs: {
             styleOverrides: {
                 flexContainer: {
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'center',
-                    [breakpoints.down('desktop')]: {
-                        flexDirection: 'row',
-                    },
-                    [breakpoints.only('iPadAir')]: {
+                        "&.MuiTabs-flexContainer": {
+                        display: 'flex', 
+                        flexDirection: 'column', 
                         justifyContent: 'center',
-                        marginTop: '130px',
-                        marginLeft: '45px'
+                        textDecoration: 'none',
+                        [breakpoints.down('desktop')]: {
+                            flexDirection: 'row',
+                        },
+                        [breakpoints.only('iPadAir')]: {
+                            textDecoration: 'none',
+                            justifyContent: 'center',
+                            marginTop: '130px',
+                            marginLeft: '45px'
+                        },
                     },
+                        "&.MuiTabs-flexContainer:after": {
+                            textDecoration: 'none',
+                            [breakpoints.only('iPadAir')]: {
+                                textDecoration: 'none',
+                            },
+                        }
                 }
             },
         },
@@ -66,6 +76,7 @@ const theme = createTheme({
                         width: '80px', 
                         height: '80px', 
                         mixBlendMode: 'difference',
+                        textColorPrimary: 'none',
                         [breakpoints.only('iPadAir')]: {
                             marginRight: '16px'
                         },
@@ -105,6 +116,9 @@ const theme = createTheme({
                         variant: 'image'
                     },
                     style: {
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
                         position: 'absolute',
                         width: '515px',
                         height: '527px',
@@ -123,7 +137,7 @@ const theme = createTheme({
                     }
                 }
             ]
-        }
+        },
     },
 })
 
