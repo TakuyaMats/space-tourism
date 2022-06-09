@@ -9,7 +9,7 @@ const customBreakpointValues = {
         md: 900,
         lg: 1200,
         xl: 1536,
-        // mobile
+        mobile: 420,
         // galaxyFold: 280,
         // samsungGalaxyS8: 360,
         // iphoneSE: 375,
@@ -33,6 +33,18 @@ const customBreakpointValues = {
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
 
 const theme = createTheme({
+    typography: {
+        subHeading: {
+            fontSize: '1.8em',
+            fontFamily: 'Bellefair',
+            color: ' #979797',
+            [breakpoints.down('mobile')]: {
+                textAlign: 'center',
+                fontSize: '1em'
+            },
+        },
+
+    },
     breakpoints: {
         ...customBreakpointValues,
     },
@@ -46,7 +58,10 @@ const theme = createTheme({
                     style: {
                         height: "90vh",
                         [breakpoints.down('tablet')]: {
-
+                            height: "80vh",
+                        },
+                        [breakpoints.down('mobile')]: {
+                            height: "35vh",
                         },
                     }
 
@@ -56,9 +71,15 @@ const theme = createTheme({
                         variant: 'crewmate-info'
                     },
                     style: {
+                        display: 'block',
                         [breakpoints.down('tablet')]: {
                             textAlign: 'center',
                             height: '0'
+                        },
+                        [breakpoints.down('mobile')]: {
+                            order: '2',
+                            display: 'flex',
+                            flexDirection: 'column'
                         },
                     }
 
@@ -76,8 +97,13 @@ const theme = createTheme({
                             marginLeft: "10%",
                             marginRight: "10%",
                             marginBottom: "5%",
-
-
+                        },
+                        [breakpoints.down('mobile')]: {
+                            textAlign: 'center',
+                            marginLeft: "0%",
+                            marginRight: "0%",
+                            marginBottom: "0%",
+                            order: '4'
                         },
                     }
 
@@ -96,6 +122,15 @@ const theme = createTheme({
                             maxWidth: "100%",
 
                         },
+                        [breakpoints.down('mobile')]: {
+                            order: '1',
+                            marginLeft: "0%",
+                            marginRight: "0%",
+                            marginTop: "10%",
+                            marginBottom: "10%",
+
+
+                        },
                     }
 
                 },
@@ -111,6 +146,35 @@ const theme = createTheme({
                             backgroundPosition: 'center',
                             height: 'auto'
 
+                        },
+                        [breakpoints.down('mobile')]: {
+                            order: '1',
+                            height: '40vh',
+                            borderBottom: '1px double #D0D6F9'
+
+                        },
+                    }
+
+                },
+                {
+                    props: {
+                        variant: 'crewmate-role'
+                    },
+                    style: {
+                        [breakpoints.down('mobile')]: {
+                            order: '2'
+                        },
+                    }
+
+                },
+                {
+                    props: {
+                        variant: 'crewmate-name'
+                    },
+                    style: {
+
+                        [breakpoints.down('mobile')]: {
+                            order: '3'
                         },
                     }
 
@@ -140,7 +204,7 @@ const theme = createTheme({
                             textAlign: 'left'
                         },
                     }
-                }
+                },
             ]
         }
 
@@ -153,22 +217,30 @@ theme.typography.h3 = {
     [breakpoints.down('tablet')]: {
         fontSize: '46px'
     },
+    [breakpoints.down('mobile')]: {
+        textAlign: 'center',
+        fontSize: '1.6em'
+    },
 }
 theme.typography.h5 = {
-    marginBottom: "4.5em",
-
-    [breakpoints.down('tablet')]: {
-        marginBottom: '2.5em',
-        textAlign: 'left'
+    margin: "1em 1em 2em 1em",
+    [breakpoints.down('mobile')]: {
+        textAlign: 'center',
+        fontSize: '1.2em'
     },
 }
 theme.typography.paragraph = {
-    fontSize: '16px',
+    fontSize: '1em',
     fontFamily: 'Barlow, sans-serif',
     lineHeight: '32px',
     color: '#D0D6F9',
     [breakpoints.down('tablet')]: {
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: '1em'
+    },
+    [breakpoints.down('mobile')]: {
+        textAlign: 'center',
+        fontSize: '0.8em'
     },
 }
 
