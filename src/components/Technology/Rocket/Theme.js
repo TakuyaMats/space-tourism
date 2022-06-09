@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
+import launchVehicleLandscape from '../../../assets/technology/image-launch-vehicle-landscape.jpg';
 
 const customBreakpointValues = {
     values: {
@@ -35,11 +36,53 @@ const theme = createTheme({
         MuiTabs: {
             styleOverrides: {
                 flexContainer: {
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'center',
+                        "&.MuiTabs-flexContainer": {
+                        display: 'flex', 
+                        flexDirection: 'column', 
+                        justifyContent: 'center',
+                        textDecoration: 'none',
+                        [breakpoints.down('desktop')]: {
+                            flexDirection: 'row',
+                        },
+                        [breakpoints.only('iPadAir')]: {
+                            textDecoration: 'none',
+                            justifyContent: 'center',
+                            marginTop: '130px',
+                            marginLeft: '45px'
+                        },
+                    },
+                        "&.MuiTabs-flexContainer:after": {
+                            textDecoration: 'none',
+                            [breakpoints.only('iPadAir')]: {
+                                textDecoration: 'none',
+                            },
+                        }
                 }
             },
+        },
+        MuiTab: {
+            variants: [
+                {
+                    props: {
+                        variant: 'tab'
+                    },
+                    style: {
+                        fontFamily: 'Bellefair',
+                        fontSize: '24px',
+                        color: '#0B0D17', 
+                        marginBottom: '32px', 
+                        backgroundColor: '#FFFFFF', 
+                        borderRadius: '50%', 
+                        width: '80px', 
+                        height: '80px', 
+                        mixBlendMode: 'difference',
+                        textColorPrimary: 'none',
+                        [breakpoints.only('iPadAir')]: {
+                            marginRight: '16px'
+                        },
+                    }
+                }
+            ]
         },
         MuiContainer: {
             variants: [
@@ -53,26 +96,48 @@ const theme = createTheme({
                         height: '382px',
                         left: '325px',
                         top: '383px',
+                        [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            textAlign: 'center',
+                            width: '490px',
+                            height: '237px',
+                            top: '800px',
+                            left: '160px',
+                        },
                     }
                 }
             ]
         },
-        img: {
+        MuiPaper: {
             variants: [
                 {
                     props: {
-                        variant: 'img'
+                        variant: 'image'
                     },
                     style: {
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
                         position: 'absolute',
-                        width: '470px',
-                        height: '382px',
-                        left: '325px',
-                        top: '325px',
+                        width: '515px',
+                        height: '527px',
+                        left: '925px',
+                        top: '272px',
+                        [breakpoints.down('desktop')]: {
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            width: '100vw',
+                            height: '310px',
+                            left: '0',
+                            bottom: '0px',
+                            top: '220px'
+                        },
                     }
                 }
             ]
-        }
+        },
     },
 })
 
@@ -83,37 +148,13 @@ theme.typography.h1 = {
     fontSize: '56px',
     lineHeight: '64px',
     color: '#FFFFFF',
-    width: '470px',
+    // width: '470px',
     marginBottom: '11px',
-    mixBlendMode: 'difference'
-    // [breakpoints.down('desktop')]: {
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    // },
-    // [breakpoints.only('iphoneXR')]: {
-    //     fontSize: '80px',
-    //     lineHeight: '100px'
-    // },
-    // [breakpoints.only('iphoneSE')]: {
-    //     fontSize: '80px',
-    //     lineHeight: '100px'
-    // },
-    // [breakpoints.only('iphone12Pro')]: {
-    //     fontSize: '80px',
-    //     lineHeight: '100px'
-    // },
-    // [breakpoints.only('pixel5')]: {
-    //     fontSize: '80px',
-    //     lineHeight: '100px'
-    // },
-    // [breakpoints.only('samsungGalaxyS8')]: {
-    //     fontSize: '80px',
-    //     lineHeight: '100px'
-    // },
-    // [breakpoints.only('samsungGalaxyS20')]: {
-    //     fontSize: '80px',
-    //     lineHeight: '100px'
-    // },
+    mixBlendMode: 'difference',
+    [breakpoints.only('iPadAir')]: {
+        fontSize: '40px',
+        // width: '420px'
+    },
 }
 
 theme.typography.h5 = {
@@ -125,23 +166,6 @@ theme.typography.h5 = {
     marginBottom: '11px',
     color: '#D0D6F9',
     mixBlendMode: 'difference'
-    // height: '19px',
-    // [breakpoints.down('desktop')]: {
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     textAlign: 'center',
-    //     fontSize: '20px',
-    // },
-    // [breakpoints.only('surfacePro7')]: {
-    //     fontSize: '20px',
-    // },
-    // [breakpoints.down('iphoneXR')]: {
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     fontSize: '16px',
-    //     letterSpacing: '2.7px',
-    //     lineHeight: '19px'
-    // },
 }
 
 theme.typography.p = {
@@ -151,25 +175,7 @@ theme.typography.p = {
     fontSize: '18px',
     lineHeight: '32px',
     color: '#D0D6F9',
-    mixBlendMode: 'difference'
-    // [breakpoints.down('desktop')]: {
-    //     fontFamily: 'Barlow',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     textAlign: 'center',
-    //     fontSize: '16px',
-    //     color: '#D0D6F9',
-    //     lineHeight: '28px',
-    // [breakpoints.down('iphoneXR')]: {
-    //     fontSize: '15px',
-    //     lineHeight: '25px'
-    // },
-    // [breakpoints.only('iphoneSE')]: {
-    //     fontSize: '15px',
-    //     lineHeight: '25px',
-    //     // width: '327px'
-    // },
-    // },
+    mixBlendMode: 'difference',
 }
 
 

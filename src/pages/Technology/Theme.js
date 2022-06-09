@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 import desktopBackgroundImage from '../../assets/technology/background-technology-desktop.jpg';
-import tabletBackgroundImage from '../../assets/home/background-home-tablet.jpg';
+import tabletBackgroundImage from '../../assets/technology/background-technology-tablet.jpg';
 
 const customBreakpointValues = {
     values: {
@@ -48,7 +48,7 @@ const theme = createTheme({
                         minWidth: '100%',
                         minHeight: '100%',
                         position: 'fixed',
-                        overflow: 'auto',
+                        // overflow: 'auto',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                         },
@@ -70,7 +70,7 @@ const theme = createTheme({
                         height: '34px',
                         top: '212px',
                         left: '166.5px',
-                        fontSize: '28px'
+                        fontSize: '28px',
                     }
                 },
                 {
@@ -88,6 +88,11 @@ const theme = createTheme({
                         fontSize: '28px',
                         letterSpacing: '4.725px',
                         opacity: '0.25',
+                        [breakpoints.only('iPadAir')]: {
+                            top: '136px',
+                            fontSize: '20px',
+                            left: '38px'
+                        },
                     }
                 },
                 {
@@ -103,7 +108,14 @@ const theme = createTheme({
                         right: '2.3%',
                         fontSize: '28px',
                         letterSpacing: '4.725px',
-                        lineHeight: '34px'
+                        lineHeight: '34px',
+                        [breakpoints.only('iPadAir')]: {
+                            top: '136px',
+                            fontSize: '20px',
+                            left: '76px',
+                            letterSpacing: '3.375px',
+                            lineHeight: '24px',
+                        },
                     }
                 },
             ],
