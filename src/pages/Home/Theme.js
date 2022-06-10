@@ -50,6 +50,7 @@ const theme = createTheme({
                         position: 'fixed',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
+                            borderRadius: '0px'
                         },
                     }
                 },

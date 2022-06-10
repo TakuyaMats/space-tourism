@@ -46,11 +46,11 @@ const theme = createTheme({
                         variant: 'body'
                     },
                     style: {
-                       position: 'static',
-                       marginTop: '1rem',
+                        position: 'static',
+                        marginTop: '1rem',
                         [breakpoints.down('lg')]: {
                             minWidth: 100,
-                          
+                        
                         },
                         [breakpoints.down('md')]: {
                             minWidth: 100
