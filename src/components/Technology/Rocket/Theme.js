@@ -61,6 +61,17 @@ const theme = createTheme({
             },
         },
         MuiTab: {
+            styleOverrides: {
+                root: {
+                    "&.MuiTab-root": {
+                        border: '1px solid rgba(255,255,255, 0.2)',
+                        '&:hover': {
+                            background: '#FFFFFF',
+                            color: '#0B0D17'
+                        }
+                    }
+                },
+            },
             variants: [
                 {
                     props: {
@@ -68,10 +79,10 @@ const theme = createTheme({
                     },
                     style: {
                         fontFamily: 'Bellefair',
-                        fontSize: '24px',
-                        color: '#0B0D17', 
+                        fontSize: '32px',
+                        color: 'white', 
                         marginBottom: '32px', 
-                        backgroundColor: '#FFFFFF', 
+                        borderColor: 'white',
                         borderRadius: '50%', 
                         width: '80px', 
                         height: '80px', 
