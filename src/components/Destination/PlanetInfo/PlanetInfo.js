@@ -6,10 +6,11 @@ import moonImg from '../../../assets/destination/image-moon.webp'
 import europaImg from '../../../assets/destination/image-europa.webp'
 import marsImg from '../../../assets/destination/image-mars.webp'
 import titanImg from '../../../assets/destination/image-titan.webp'
-
+// import { grey } from '@mui/material/colors';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import Tabs from '@mui/material/Tabs'
 import Typography from '@mui/material/Typography';
 import Tab from '@mui/material/Tab';
 import Container from '@mui/material/Container';
@@ -49,26 +50,30 @@ function PlanetInfo({ data }) {
         return planetImg;
     }
 
+    // const primary = grey[50];
+
+
 
 
     return (
         <ThemeProvider theme={theme}>
-      
+
             <Container variant='image'>
-                <img src={planetWebp()} alt='Destination'/>
+                <img src={planetWebp()} alt='Destination' />
             </Container>
             <Container variant='info' className="aboveContext">
-                <TabContext className='here' value={value}>
+                <TabContext value={value}>
                     <Container>
-                        <TabList 
+                        <TabList
                             value={value}
                             onChange={handleChange}
-                            indicatorColor="primary"
                         >
-                            <Tab sx={{ color: 'white' }} value='Moon' onClick={handleClick} label="Moon" />
-                            <Tab sx={{ color: 'white' }} value='Mars' onClick={handleClick} label="Mars" />
-                            <Tab sx={{ color: 'white' }} value='Europa' onClick={handleClick} label="Europa" />
-                            <Tab sx={{ color: 'white' }} value='Titan' onClick={handleClick} label="Titan" />
+
+                            <Tab sx={{ color: '#D0D6F9' }} variant='bttn' value='Moon' onClick={handleClick} label="Moon" />
+                            <Tab sx={{ color: '#D0D6F9' }} value='Mars' onClick={handleClick} label="Mars" />
+                            <Tab sx={{ color: '#D0D6F9' }} value='Europa' onClick={handleClick} label="Europa" />
+                            <Tab sx={{ color: '#D0D6F9' }} value='Titan' onClick={handleClick} label="Titan" />
+
                         </TabList>
                     </Container>
                     {data.map((planet, index) => {
@@ -104,7 +109,6 @@ function PlanetInfo({ data }) {
                     })}
                 </TabContext>
             </Container>
-            {/* </Container> */}
         </ThemeProvider>
     )
 }
