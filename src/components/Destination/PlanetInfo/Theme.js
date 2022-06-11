@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
+import { grey } from '@mui/material/colors';
 
 const customBreakpointValues = {
     values: {
@@ -26,10 +27,16 @@ const customBreakpointValues = {
 }
 
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
+// const primary = grey[50];
 
 const theme = createTheme({
     breakpoints: {
         ...customBreakpointValues,
+    },
+    palette: {
+        primary: {
+            main: grey[50],
+        },
     },
     components: {
         MuiContainer: {
@@ -53,7 +60,7 @@ const theme = createTheme({
                     style: {
                         width: '33em',
                         position: 'absolute',
-                        left:'51.875em',
+                        left: '51.875em',
                         bottom: '10em',
                         height: '30em',
                     }
@@ -64,7 +71,7 @@ const theme = createTheme({
                     },
                     style: {
 
-                        
+
                     }
                 },
                 {
@@ -163,7 +170,7 @@ const theme = createTheme({
                         variant: 'avgDist'
                     },
                     style: {
-                       
+
                         display: 'flex',
                         fontFamily: 'Barlow Condensed',
                         width: '6.06em',
@@ -178,7 +185,7 @@ const theme = createTheme({
                         variant: 'estTime'
                     },
                     style: {
-                        
+
                         display: 'flex',
                         fontFamily: 'Barlow Condensed',
                         fontSize: '1.12em',
@@ -189,7 +196,32 @@ const theme = createTheme({
                     }
                 },
             ]
-        }
+        },
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    "&.MuiTab-root": {
+                        '&:hover': {
+                            color: 'gray',
+                        },
+                        
+
+                        fontSize: '1em',
+                        fontFamily: 'Barlow Condensed',
+                        fontWeight: '400',
+                        height: '1.1em',
+                        lineHeight: '1.1em',
+                        letterSpacing: '.169em'
+                    },
+                    // "&.MuiButtonBase-root": {
+                    //     display: 'flex',
+
+
+
+                    // }
+                }
+            }
+        },
     },
 })
 export default theme;
