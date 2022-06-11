@@ -35,8 +35,9 @@ function Crew() {
           // position: "fixed",
         }}
       >
+        <NavBar />
         <Container variant="container1">
-          <NavBar />
+          {/* <NavBar /> */}
           <CrewMember crew={crew} />
         </Container>
       </Paper>
