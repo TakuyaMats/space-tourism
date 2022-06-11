@@ -55,31 +55,34 @@ const theme = createTheme({
                 },
             ],
         },
-        MuiContainer: {
-            // styleOverrides: {
-            //     ".MuiContainer-root": {
-            //         position: 'absolute',
-            //         width: '23.87em',
-            //         height: '2.12rem',
-            //         margin: '10.4em',
-            //         marginBottom: '10em'
-            //     }
-            // },
-            variants: [
-                {
-                    props: {
-                        variant: 'title'
-                    },
-                    style: {
-                        // width: '23.87em',
-                        height: '2.12rem',
-                        marginTop: '4.7em',
-                        marginLeft: '10.4em',
-                        marginBottom: '7em'
-                    }
-                }
-            ]
-        },
+        // MuiContainer: {
+        //     // styleOverrides: {
+        //     //     ".MuiContainer-root": {
+        //     //         position: 'absolute',
+        //     //         width: '23.87em',
+        //     //         height: '2.12rem',
+        //     //         margin: '10.4em',
+        //     //         marginBottom: '10em'
+        //     //     }
+        //     // },
+        //     variants: [
+        //         {
+        //             props: {
+        //                 variant: 'title'
+        //             },
+        //             style: {
+        //                 // display: 'inline-flex',
+        //                 // justifyContent: 'flex-start',
+                        
+        //                 // width: '23.87em',
+        //                 height: '2.12rem',
+        //                 marginTop: '4.7em',
+        //                 marginLeft: '10.4em',
+        //                 marginBottom: '7em'
+        //             }
+        //         }
+        //     ]
+        // },
         MuiTypography: {
             variants: [
                 {

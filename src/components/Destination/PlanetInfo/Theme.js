@@ -36,32 +36,12 @@ const theme = createTheme({
             variants: [
                 {
                     props: {
-                        variant: 'imgInfo'
-                    },
-                    style: {
-                        display: 'flex',
-                        justifyContent: 'center',
-                        // justifyContent: 'flex-end',
-                        // margin: '0',
-                        [breakpoints.down('desktop')]: {
-                            borderStyle: 'dotted',
-                            // display: 'flex',
-                            // justifyContent: 'center',
-                        },
-                    }
-                },
-                {
-                    props: {
                         variant: 'image'
                     },
                     style: {
-                        // display: 'inline-block',
-                        // justifyContent: 'center',
-                        // postion: 'relative',
-                        marginRight: '9.6em',
+                        postion: 'absolute',
+                        marginRight: '47.8em',
                         marginLeft: '14.3em',
-                        // marginBottom: '7em',
-                        marginTop: 'auto',
                         width: '27.8em',
                         height: '27.8em',
                     }
@@ -71,15 +51,11 @@ const theme = createTheme({
                         variant: 'info'
                     },
                     style: {
-                        // display: 'block',
-                        // justifyContent: 'flex-end',
-                        // marginBottom: 'auto',
-                        // borderStyle: 'groove', 
-                        // borderColor: 'white', 
-                        // borderWidth: '2px', 
-                        // width: '27.8em', 
-                        // height: '29.5em',
-                       
+                        width: '33em',
+                        position: 'absolute',
+                        left:'51.875em',
+                        bottom: '10em',
+                        height: '30em',
                     }
                 },
                 {
@@ -91,28 +67,44 @@ const theme = createTheme({
                         
                     }
                 },
+                {
+                    props: {
+                        variant: 'subInfo'
+                    },
+                    style: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        paddingRight: 0,
+                        paddingLeft: 0
+
+                    }
+                },
+                {
+                    props: {
+                        variant: 'subDistance'
+                    },
+                    style: {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        paddingRight: 0,
+                        paddingLeft: 0
+                    }
+                },
+                {
+                    props: {
+                        variant: 'subTime'
+                    },
+                    style: {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        paddingRight: 0,
+                        paddingLeft: 0
+                    }
+                }
             ],
         },
-        // MuiBox: {
-        //     variants: [
-        //         {
-        //             props: {
-        //                 variant: 'info'
-        //             },
-        //             style: {
-        //                 marginBottom: 'auto',
-        //                 // borderStyle: 'groove', 
-        //                 // borderColor: 'white', 
-        //                 // borderWidth: '2px', 
-        //                 width: '27.8em', 
-        //                 height: '29.5em',
-        //                 [breakpoints.down('lg')]: {
-        //                     borderStyle: 'dotted'
-        //                 },
-        //             }
-        //         },
-        //     ]
-        // },
         MuiTypography: {
             variants: [
                 {
@@ -137,7 +129,9 @@ const theme = createTheme({
                         fontSize: '1.12em',
                         fontWeight: '400',
                         color: '#FFFFFF',
-                        lineHeight: '1.4em'
+                        lineHeight: '1.4em',
+                        marginTop: '14px',
+                        marginBottom: '54px'
                     }
                 },
                 {
@@ -157,14 +151,43 @@ const theme = createTheme({
                         variant: 'travel'
                     },
                     style: {
-                        marginLeft: '4.9em',
-                        fontFamily: 'Barlow',
+                        fontFamily: 'Bellefair',
                         fontSize: '1.75em',
                         fontWeight: '400',
                         color: '#FFFFFF',
                         lineHeight: '2em'
                     }
-                }
+                },
+                {
+                    props: {
+                        variant: 'avgDist'
+                    },
+                    style: {
+                       
+                        display: 'flex',
+                        fontFamily: 'Barlow Condensed',
+                        width: '6.06em',
+                        fontSize: '.875em',
+                        fontWeight: '400',
+                        color: 'rgba(208, 214, 249, 1)',
+                        lineHeight: '1.4em',
+                    }
+                },
+                {
+                    props: {
+                        variant: 'estTime'
+                    },
+                    style: {
+                        
+                        display: 'flex',
+                        fontFamily: 'Barlow Condensed',
+                        fontSize: '1.12em',
+                        width: '6.06em',
+                        fontWeight: '400',
+                        color: 'rgba(208, 214, 249, 1)',
+                        lineHeight: '1.4em',
+                    }
+                },
             ]
         }
     },

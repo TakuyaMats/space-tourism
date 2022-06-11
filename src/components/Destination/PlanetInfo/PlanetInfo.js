@@ -13,7 +13,6 @@ import TabPanel from '@mui/lab/TabPanel';
 import Typography from '@mui/material/Typography';
 import Tab from '@mui/material/Tab';
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 
 
 function PlanetInfo({ data }) {
@@ -54,66 +53,58 @@ function PlanetInfo({ data }) {
 
     return (
         <ThemeProvider theme={theme}>
-            <Container variant="imgInfo">
-                <Container variant='image'>
-                    <img src={planetWebp()} alt='Destination' />
-                </Container>
-                <Box className="aboveContext" sx={{ maxWidth: '27.8em', display: 'block' }}>
-                    <TabContext className='here' value={value}>
-                        {/* sx={{  borderBottom: 1, borderColor: 'divider', }} */}
-                        <Box className="belowContext">
-                            <TabList
-                                value={value}
-                                onChange={handleChange}
-                                indicatorColor="primary"
-                            // aria-label="secondary tabs example"
-                            >
-                                <Tab sx={{ color: 'white' }} value='Moon' onClick={handleClick} label="Moon" />
-                                <Tab sx={{ color: 'white' }} value='Mars' onClick={handleClick} label="Mars" />
-                                <Tab sx={{ color: 'white' }} value='Europa' onClick={handleClick} label="Europa" />
-                                <Tab sx={{ color: 'white' }} value='Titan' onClick={handleClick} label="Titan" />
-                            </TabList>
-                        </Box>
-                        {data.map((planet, index) => {
-                            let capName = planet.name.toUpperCase()
-                            return (
-                                <TabPanel
-                                    // variant='panel' remove padding 24px
-                                    key={index}
-                                    value={planet.name}
-
-                                >
-                                    <Typography
-                                        variant='name'
-                                    >
-                                        {capName}
-                                    </Typography>
-
-                                    <Typography
-                                        variant='desc'
-                                    >
-                                        {planet.description}
-                                    </Typography>
-
-                                    <Typography
-                                        variant='distance'
-                                        noWrap
-                                    >
-                                        {planet.distance}
-                                    </Typography>
-
-                                    <Typography
-                                        variant='travel'
-                                        noWrap
-                                    >
-                                        {planet.travel}
-                                    </Typography>
-                                </TabPanel>
-                            )
-                        })}
-                    </TabContext>
-                </Box>
+      
+            <Container variant='image'>
+                <img src={planetWebp()} alt='Destination'/>
             </Container>
+            <Container variant='info' className="aboveContext">
+                <TabContext className='here' value={value}>
+                    <Container>
+                        <TabList 
+                            value={value}
+                            onChange={handleChange}
+                            indicatorColor="primary"
+                        >
+                            <Tab sx={{ color: 'white' }} value='Moon' onClick={handleClick} label="Moon" />
+                            <Tab sx={{ color: 'white' }} value='Mars' onClick={handleClick} label="Mars" />
+                            <Tab sx={{ color: 'white' }} value='Europa' onClick={handleClick} label="Europa" />
+                            <Tab sx={{ color: 'white' }} value='Titan' onClick={handleClick} label="Titan" />
+                        </TabList>
+                    </Container>
+                    {data.map((planet, index) => {
+                        let capName = planet.name.toUpperCase()
+                        return (
+                            <TabPanel key={index} value={planet.name} >
+                                <Typography variant='name'>
+                                    {capName}
+                                </Typography>
+                                <Typography variant='desc'>
+                                    {planet.description}
+                                </Typography>
+                                <Container variant='subInfo'>
+                                    <Container variant='subDistance'>
+                                        <Typography variant='avgDist'>
+                                            AVG. Distance
+                                        </Typography>
+                                        <Typography variant='distance' noWrap>
+                                            {planet.distance}
+                                        </Typography>
+                                    </Container>
+                                    <Container variant='subTime'>
+                                        <Typography variant='estTime'>
+                                            Est. Time Travel
+                                        </Typography>
+                                        <Typography variant='travel' noWrap >
+                                            {planet.travel}
+                                        </Typography>
+                                    </Container>
+                                </Container>
+                            </TabPanel>
+                        )
+                    })}
+                </TabContext>
+            </Container>
+            {/* </Container> */}
         </ThemeProvider>
     )
 }
