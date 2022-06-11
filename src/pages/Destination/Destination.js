@@ -5,11 +5,10 @@ import theme from './Theme';
 import { data } from '../../assets/dataJSON';
 
 import NavBar from '../../components/Navbar/Navbar';
-// import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-
+// import Container from '@mui/material/Container';
+import Box from "@mui/material/Box";
 
 
 function Destination() {
@@ -18,19 +17,16 @@ function Destination() {
         <ThemeProvider theme={theme}>
             <Paper variant="body1" square>
                 <NavBar />
-                <Container sx={{ borderStyle: 'groove', borderColor: 'blue' }}>
-                    <Typography>
-                        PICK YOUR DESTINATION
+                {/* variant="title" */}
+                <Box sx={{display: 'flex', height: '2.12rem', marginTop: '4.7em', marginLeft: '10.4em',  marginBottom: '7em' }}>
+                    <Typography variant="01">
+                        01
                     </Typography>
-                </Container>
-                <Container sx={{ borderStyle: 'groove', borderColor: 'red', display: 'flex', justifyContent: 'space-around' }}>
-                    {/* <Box sx={{ borderStyle: 'groove', borderColor: 'yellow', display: 'flex' }}>
-                        <Typography sx={{ width: '445px', height: '445px' }}>
-                            Planet IMG
-                        </Typography>
-                    </Box> */}
-                    <PlanetInfo data={Destinations} />
-                </Container> 
+                    <Typography variant="pickDest">
+                        Pick Your Destination
+                    </Typography>
+                </Box>
+                <PlanetInfo data={Destinations} />
             </Paper>
         </ThemeProvider>
     )
