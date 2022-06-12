@@ -78,7 +78,6 @@ function Rocket({ data }) {
                                 indicatorColor="transparent"
                                 textColor="transparent"
                                 borderColor="white"
-                                sx={{ position: 'absolute', left: '165px', top: '383px', textDecorationStyle: 'none' }}
                             >
                                 <Tabs variant="tabs" value={value} onChange={handleChange} indicatorColor="transparent" textColor="transparent" borderColor="white">
                                     <Tab variant="tab" value='Launch vehicle' onClick={handleClick} label="1" />

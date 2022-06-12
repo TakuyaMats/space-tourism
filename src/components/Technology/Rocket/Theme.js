@@ -41,22 +41,23 @@ const theme = createTheme({
                         flexDirection: 'column', 
                         justifyContent: 'center',
                         textDecoration: 'none',
+                        position: 'fixed',
+                        left: '165px',
+                        top: '383px',
                         [breakpoints.down('desktop')]: {
                             flexDirection: 'row',
                         },
                         [breakpoints.only('iPadAir')]: {
                             textDecoration: 'none',
                             justifyContent: 'center',
-                            marginTop: '130px',
-                            marginLeft: '45px'
+                            left: '253px',
+                            top: '620px',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            left: '100px',
+                            top: '343px',
                         },
                     },
-                        "&.MuiTabs-flexContainer:after": {
-                            textDecoration: 'none',
-                            [breakpoints.only('iPadAir')]: {
-                                textDecoration: 'none',
-                            },
-                        }
                 }
             },
         },
@@ -91,6 +92,16 @@ const theme = createTheme({
                         [breakpoints.only('iPadAir')]: {
                             marginRight: '16px'
                         },
+                        [breakpoints.only('iphoneSE')]: {
+                            fontSize: '16px',
+                            letterSpacing: '1px',
+                            minWidth: 0,
+                            minHeight: 0,
+                            width: '40px',
+                            height: '40px', 
+                            left: '12px',
+                            marginRight: '16px'
+                        },
                     }
                 }
             ]
@@ -115,6 +126,13 @@ const theme = createTheme({
                             height: '237px',
                             top: '800px',
                             left: '160px',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            width: '327px',
+                            height: '220px',
+                            textAlign: 'center',
+                            top: '409px',
+                            left: '24px',
                         },
                     }
                 }
@@ -145,6 +163,11 @@ const theme = createTheme({
                             bottom: '0px',
                             top: '220px'
                         },
+                        [breakpoints.only('iphoneSE')]: {
+                            top: '139px',
+                            height: '170px',
+                            width: '100vw',
+                        },
                     }
                 }
             ]
@@ -159,12 +182,14 @@ theme.typography.h1 = {
     fontSize: '56px',
     lineHeight: '64px',
     color: '#FFFFFF',
-    // width: '470px',
     marginBottom: '11px',
     mixBlendMode: 'difference',
     [breakpoints.only('iPadAir')]: {
         fontSize: '40px',
-        // width: '420px'
+    },
+    [breakpoints.only('iphoneSE')]: {
+        fontSize: '24px',
+        lineHeight: '28px',
     },
 }
 
@@ -176,7 +201,12 @@ theme.typography.h5 = {
     letterSpacing: '2.7px',
     marginBottom: '11px',
     color: '#D0D6F9',
-    mixBlendMode: 'difference'
+    mixBlendMode: 'difference',
+    [breakpoints.only('iphoneSE')]: {
+        fontSize: '14px',
+        lineHeight: '17px',
+        letterSpacing: '2.3625px',
+    },
 }
 
 theme.typography.p = {
@@ -187,6 +217,11 @@ theme.typography.p = {
     lineHeight: '32px',
     color: '#D0D6F9',
     mixBlendMode: 'difference',
+    [breakpoints.only('iphoneSE')]: {
+        fontSize: '15px',
+        lineHeight: '25px',
+        fontWeight: 400,
+    },
 }
 
 

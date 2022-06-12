@@ -2,6 +2,7 @@ import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 import desktopBackgroundImage from '../../assets/technology/background-technology-desktop.jpg';
 import tabletBackgroundImage from '../../assets/technology/background-technology-tablet.jpg';
+import mobileBackgroundImage from '../../assets/technology/background-technology-mobile.jpg';
 
 const customBreakpointValues = {
     values: {
@@ -52,6 +53,9 @@ const theme = createTheme({
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                         },
+                        [breakpoints.down('surfaceDuo')]: {
+                            backgroundImage: `url(${mobileBackgroundImage})`,
+                        },
                     }
                 },
             ],
@@ -79,6 +83,7 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'absolute',
+                        fontFamily: 'Barlow Condensed',
                         color: 'white',
                         width: '305px',
                         height: '34px',
@@ -93,6 +98,14 @@ const theme = createTheme({
                             fontSize: '20px',
                             left: '38px'
                         },
+                        [breakpoints.only('iphoneSE')]: {
+                            top: '88px',
+                            left: '100px',
+                            fontSize: '16px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '700'
+                        },
                     }
                 },
                 {
@@ -101,6 +114,7 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'absolute',
+                        fontFamily: 'Barlow Condensed',
                         color: '#FFFFFF',
                         height: '34px',
                         top: '212px',
@@ -115,6 +129,15 @@ const theme = createTheme({
                             left: '76px',
                             letterSpacing: '3.375px',
                             lineHeight: '24px',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            top: '88px',
+                            left: '133px',
+                            height: '19px',
+                            fontSize: '16px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '400'
                         },
                     }
                 },
