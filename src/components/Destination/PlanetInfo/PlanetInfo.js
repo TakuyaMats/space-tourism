@@ -52,11 +52,11 @@ function PlanetInfo({ data }) {
         <ThemeProvider theme={theme}>
 
             <Container variant='image'>
-                <img src={planetWebp()} alt='Destination' />
+                <img src={planetWebp()} alt='Destination' width='100%' />
             </Container>
             <Container variant='info' className="aboveContext">
                 <TabContext value={value}>
-                    <Container>
+                    <Container variant='destTabs'>
                         <TabList
                             value={value}
                             onChange={handleChange}
@@ -79,7 +79,7 @@ function PlanetInfo({ data }) {
                                 </Typography>
                                 <Container variant='subInfo'>
                                     <Container variant='subDistance'>
-                                        <Typography variant='avgDist'>
+                                        <Typography variant='dist-time'>
                                             AVG. Distance
                                         </Typography>
                                         <Typography variant='distance' noWrap>
@@ -87,7 +87,7 @@ function PlanetInfo({ data }) {
                                         </Typography>
                                     </Container>
                                     <Container variant='subTime'>
-                                        <Typography variant='estTime'>
+                                        <Typography variant='dist-time'>
                                             Est. Time Travel
                                         </Typography>
                                         <Typography variant='travel' noWrap >

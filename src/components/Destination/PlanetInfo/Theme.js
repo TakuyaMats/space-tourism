@@ -48,17 +48,16 @@ const theme = createTheme({
                     style: {
                         postion: 'absolute',
                         marginRight: '47.8em',
-                        marginLeft: '14.3em',
+                        marginLeft: '14.375em',
                         width: '27.8em',
                         height: '27.8em',
                         [breakpoints.only('iPadAir')]: {
-                            // position: 'absolute',
                             padding: '0',
-                            width: '18.75em',
-                            height: '18.75em',
-                            marginLeft: '12.6em',
-                            marginRight: '14.6em',
-                            marginBottom: '3.31em'
+                            width: '20em',
+                            height: '19.5em',
+                            margin: 'auto',
+                            marginBottom: '3.313rem'
+                           
                         },
                     }
                 },
@@ -67,21 +66,22 @@ const theme = createTheme({
                         variant: 'info'
                     },
                     style: {
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
                         width: '33em',
                         position: 'relative',
                         marginLeft: '38em',
-                        left: '20em',
+                        left: '11em',
                         bottom: '29em',
                         height: '30em',
                         [breakpoints.only('iPadAir')]: {
-                            position: 'static',
                             padding: '0',
-                            flexDirection: 'column',
-                            marginTop: '11em',
-                            marginLeft: '13em',
-                            display: 'flex',
+                            position: 'static',
+                            width: '40em',
+                            marginTop: '3.313em',
+                            margin: 'auto',
                             textAlign: 'center',
-                            
                         },
                     }
                 },
@@ -94,14 +94,14 @@ const theme = createTheme({
                         flexDirection: 'row',
                         paddingRight: 0,
                         paddingLeft: 0,
-                        paddingTop: '2em',
+                        paddingTop: '1.5em',
                         borderLeft: 'none',
                         borderTopWidth: '.1em',
                         borderTopStyle: 'solid',
                         borderTopColor: 'rgba(56, 59, 75, 1)',
+                        marginTop: '3.313em',
                         [breakpoints.only('iPadAir')]: {
-                            display: 'flex',
-                            textAlign: 'center',
+                           
                         }
 
                     }
@@ -117,8 +117,7 @@ const theme = createTheme({
                         paddingRight: 0,
                         paddingLeft: 0,
                         [breakpoints.only('iPadAir')]: {
-                            display: 'flex',
-                            textAlign: 'center',
+                     
                         }
                     }
                 },
@@ -133,7 +132,21 @@ const theme = createTheme({
                         paddingRight: 0,
                         paddingLeft: 0
                     }
-                }
+                },
+                {
+                    props: {
+                        variant: 'destTabs'
+                    },
+                    style: {
+                        [breakpoints.only('iPadAir')]: {
+                           display: 'flex',
+                           justifyContent: 'center',
+                           marginBottom: '2em'
+                           
+                        },
+                    }
+                },
+
             ],
         },
         MuiTypography: {
@@ -147,7 +160,11 @@ const theme = createTheme({
                         fontFamily: 'Bellefair',
                         fontSize: '6.25em',
                         fontWeight: '400',
-                        color: 'rgba(255, 255, 255, 1)'
+                        color: 'rgba(255, 255, 255, 1)',
+                        [breakpoints.only('iPadAir')]: {
+                            fontSize: '5.5em',
+                            
+                        }
                     }
                 },
                 {
@@ -155,17 +172,19 @@ const theme = createTheme({
                         variant: 'desc'
                     },
                     style: {
-                        display: 'block',
+                        display: 'block', //display: block
+                        justifyContent: 'center',
                         fontFamily: 'Barlow',
                         fontSize: '1.12em',
                         fontWeight: '400',
                         color: 'rgba(208, 214, 249, 1)',
                         lineHeight: '178%',
                         marginTop: '14px',
-                        marginBottom: '54px',
+                        marginBottom: '3.375em',
                         [breakpoints.only('iPadAir')]: {
                             display: 'flex',
                             textAlign: 'center',
+                            marginBottom: '3.5em',
                         }
                     }
                 },
@@ -179,10 +198,10 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
                         lineHeight: '2em',
-                        // [breakpoints.only('iPadAir')]: {
-                        //     display: 'flex',
-                        //     textAlign: 'center',
-                        // }
+                        [breakpoints.only('iPadAir')]: {
+                            
+                        
+                        }
                         
                     }
                 },
@@ -195,50 +214,27 @@ const theme = createTheme({
                         fontSize: '1.75em',
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
-                        lineHeight: '2em',
-                        // [breakpoints.only('iPadAir')]: {
-                        //     display: 'flex',
-                        //     textAlign: 'center',
-                        // }
+                        lineHeight: '2em'
                     }
                 },
                 {
                     props: {
-                        variant: 'avgDist'
+                        variant: 'dist-time'
                     },
                     style: {
                         display: 'flex',
                         fontFamily: 'Barlow Condensed',
                         width: '6.06em',
-                        fontSize: '.875em',
+                        fontSize: '.875rem',
                         fontWeight: '400',
                         color: 'rgba(208, 214, 249, 1)',
                         lineHeight: '1.4em',
                         [breakpoints.only('iPadAir')]: {
-                            display: 'flex',
-                            textAlign: 'center',
+                          marginLeft: '6.4em',
                         }
                     }
                 },
-                {
-                    props: {
-                        variant: 'estTime'
-                    },
-                    style: {
-                        display: 'flex',
-                        fontFamily: 'Barlow Condensed',
-                        fontSize: '1.12em',
-                        width: '6.06em',
-                        fontWeight: '400',
-                        color: 'rgba(208, 214, 249, 1)',
-                        lineHeight: '1.4em',
-                        [breakpoints.only('iPadAir')]: {
-                            display: 'flex',
-                            textAlign: 'center',
-                        }
-                    }
-                },
-            ]
+            ],
         },
         MuiTab: {
             styleOverrides: {
@@ -252,7 +248,11 @@ const theme = createTheme({
                         fontWeight: '400',
                         height: '1.1em',
                         lineHeight: '1.1em',
-                        letterSpacing: '.169em'
+                        letterSpacing: '.169em',
+                        // [breakpoints.only('iPadAir')]: {
+                       
+
+                        // }
                     },
                 }
             },
