@@ -94,6 +94,11 @@ const theme = createTheme({
                         flexDirection: 'row',
                         paddingRight: 0,
                         paddingLeft: 0,
+                        paddingTop: '2em',
+                        borderLeft: 'none',
+                        borderTopWidth: '.1em',
+                        borderTopStyle: 'solid',
+                        borderTopColor: 'rgba(56, 59, 75, 1)',
                         [breakpoints.only('iPadAir')]: {
                             display: 'flex',
                             textAlign: 'center',
@@ -142,7 +147,7 @@ const theme = createTheme({
                         fontFamily: 'Bellefair',
                         fontSize: '6.25em',
                         fontWeight: '400',
-                        color: '#FFFFFF'
+                        color: 'rgba(255, 255, 255, 1)'
                     }
                 },
                 {
@@ -154,8 +159,8 @@ const theme = createTheme({
                         fontFamily: 'Barlow',
                         fontSize: '1.12em',
                         fontWeight: '400',
-                        color: '#FFFFFF',
-                        lineHeight: '1.4em',
+                        color: 'rgba(208, 214, 249, 1)',
+                        lineHeight: '178%',
                         marginTop: '14px',
                         marginBottom: '54px',
                         [breakpoints.only('iPadAir')]: {
@@ -172,7 +177,7 @@ const theme = createTheme({
                         fontFamily: 'Bellefair',
                         fontSize: '1.75em',
                         fontWeight: '400',
-                        color: '#FFFFFF',
+                        color: 'rgba(255, 255, 255, 1)',
                         lineHeight: '2em',
                         // [breakpoints.only('iPadAir')]: {
                         //     display: 'flex',
@@ -189,7 +194,7 @@ const theme = createTheme({
                         fontFamily: 'Bellefair',
                         fontSize: '1.75em',
                         fontWeight: '400',
-                        color: '#FFFFFF',
+                        color: 'rgba(255, 255, 255, 1)',
                         lineHeight: '2em',
                         // [breakpoints.only('iPadAir')]: {
                         //     display: 'flex',

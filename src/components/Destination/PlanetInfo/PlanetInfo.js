@@ -48,11 +48,6 @@ function PlanetInfo({ data }) {
         return planetImg;
     }
 
-    // const primary = grey[50];
-
-
-
-
     return (
         <ThemeProvider theme={theme}>
 
