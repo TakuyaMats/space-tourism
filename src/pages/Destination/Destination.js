@@ -17,8 +17,6 @@ function Destination() {
         <ThemeProvider theme={theme}>
             <Paper variant="body1" square>
                 <NavBar />
-                {/* variant="title" */}
-                {/* sx={{display: 'flex', height: '2.12rem', marginTop: '4.7em', marginLeft: '10.4em',  marginBottom: '7em' }}  */}
                 <Container variant='title'>
                     <Typography variant="01">
                         01
