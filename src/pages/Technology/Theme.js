@@ -98,6 +98,11 @@ const theme = createTheme({
                             fontSize: '20px',
                             left: '38px'
                         },
+                        [breakpoints.only('surfacePro7')]: {
+                            top: '130px',
+                            fontSize: '30px',
+                            left: '38px',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             top: '88px',
                             left: '100px',
@@ -135,6 +140,13 @@ const theme = createTheme({
                             top: '136px',
                             fontSize: '20px',
                             left: '76px',
+                            letterSpacing: '3.375px',
+                            lineHeight: '24px',
+                        },
+                        [breakpoints.only('surfacePro7')]: {
+                            top: '136px',
+                            fontSize: '30px',
+                            left: '86px',
                             letterSpacing: '3.375px',
                             lineHeight: '24px',
                         },

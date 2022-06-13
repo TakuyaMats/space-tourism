@@ -1,6 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
-import launchVehicleLandscape from '../../../assets/technology/image-launch-vehicle-landscape.jpg';
 
 const customBreakpointValues = {
     values: {
@@ -53,6 +52,12 @@ const theme = createTheme({
                             left: '253px',
                             top: '620px',
                         },
+                        [breakpoints.only('surfacePro7')]: {
+                            textDecoration: 'none',
+                            justifyContent: 'center',
+                            left: '300px',
+                            top: '620px',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             left: '100px',
                             top: '343px',
@@ -94,6 +99,9 @@ const theme = createTheme({
                         mixBlendMode: 'difference',
                         textColorPrimary: 'none',
                         [breakpoints.only('iPadAir')]: {
+                            marginRight: '16px'
+                        },
+                        [breakpoints.only('surfacePro7')]: {
                             marginRight: '16px'
                         },
                         [breakpoints.only('iphoneSE')]: {
@@ -141,6 +149,15 @@ const theme = createTheme({
                             top: '800px',
                             left: '160px',
                         },
+                        [breakpoints.only('surfacePro7')]: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            textAlign: 'center',
+                            width: '510px',
+                            height: '237px',
+                            top: '800px',
+                            left: '201px',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             width: '327px',
                             height: '220px',
@@ -184,6 +201,11 @@ const theme = createTheme({
                             bottom: '0px',
                             top: '220px'
                         },
+                        [breakpoints.only('surfacePro7')]: {
+                            top: '220px',
+                            height: '320px',
+                            width: '100vw',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             top: '139px',
                             height: '170px',
@@ -213,6 +235,9 @@ theme.typography.h1 = {
     [breakpoints.only('iPadAir')]: {
         fontSize: '40px',
     },
+    [breakpoints.only('surfacePro7')]: {
+        fontSize: '44px',
+    },
     [breakpoints.only('iphoneSE')]: {
         fontSize: '24px',
         lineHeight: '28px',
@@ -232,6 +257,10 @@ theme.typography.h5 = {
     marginBottom: '11px',
     color: '#D0D6F9',
     mixBlendMode: 'difference',
+    [breakpoints.only('surfacePro7')]: {
+        fontSize: '20px',
+        lineHeight: '24px',        
+    },
     [breakpoints.only('iphoneSE')]: {
         fontSize: '14px',
         lineHeight: '17px',
@@ -252,6 +281,10 @@ theme.typography.p = {
     lineHeight: '32px',
     color: '#D0D6F9',
     mixBlendMode: 'difference',
+    [breakpoints.only('surfacePro7')]: {
+        fontSize: '20px',
+        lineHeight: '40px',
+    },
     [breakpoints.only('iphoneSE')]: {
         fontSize: '15px',
         lineHeight: '25px',
