@@ -57,6 +57,10 @@ const theme = createTheme({
                             left: '100px',
                             top: '343px',
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            left: '120px',
+                            top: '355px',
+                        },
                     },
                 }
             },
@@ -102,6 +106,16 @@ const theme = createTheme({
                             left: '12px',
                             marginRight: '16px'
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            fontSize: '16px',
+                            letterSpacing: '1px',
+                            minWidth: 0,
+                            minHeight: 0,
+                            width: '50px',
+                            height: '50px', 
+                            // left: '2px',
+                            marginRight: '16px'
+                        },
                     }
                 }
             ]
@@ -133,6 +147,13 @@ const theme = createTheme({
                             textAlign: 'center',
                             top: '409px',
                             left: '24px',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            width: '327px',
+                            height: '220px',
+                            textAlign: 'center',
+                            top: '450px',
+                            left: '43px',
                         },
                     }
                 }
@@ -168,6 +189,11 @@ const theme = createTheme({
                             height: '170px',
                             width: '100vw',
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            top: '139px',
+                            height: '170px',
+                            width: '100vw',
+                        },
                     }
                 }
             ]
@@ -191,6 +217,10 @@ theme.typography.h1 = {
         fontSize: '24px',
         lineHeight: '28px',
     },
+    [breakpoints.only('iphoneXR')]: {
+        fontSize: '28px',
+        lineHeight: '28px',
+    },
 }
 
 theme.typography.h5 = {
@@ -207,6 +237,11 @@ theme.typography.h5 = {
         lineHeight: '17px',
         letterSpacing: '2.3625px',
     },
+    [breakpoints.only('iphoneXR')]: {
+        fontSize: '18px',
+        lineHeight: '17px',
+        letterSpacing: '2.3625px',
+    },
 }
 
 theme.typography.p = {
@@ -220,6 +255,11 @@ theme.typography.p = {
     [breakpoints.only('iphoneSE')]: {
         fontSize: '15px',
         lineHeight: '25px',
+        fontWeight: 400,
+    },
+    [breakpoints.only('iphoneXR')]: {
+        fontSize: '16px',
+        lineHeight: '30px',
         fontWeight: 400,
     },
 }

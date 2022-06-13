@@ -106,6 +106,14 @@ const theme = createTheme({
                             lineHeight: '19px',
                             fontWeight: '700'
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            top: '88px',
+                            left: '100px',
+                            fontSize: '20px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '700'
+                        },
                     }
                 },
                 {
@@ -135,6 +143,15 @@ const theme = createTheme({
                             left: '133px',
                             height: '19px',
                             fontSize: '16px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '400'
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            top: '88px',
+                            left: '133px',
+                            height: '19px',
+                            fontSize: '20px',
                             letterSpacing: '2.7px',
                             lineHeight: '19px',
                             fontWeight: '400'
