@@ -51,6 +51,15 @@ const theme = createTheme({
                         marginLeft: '14.3em',
                         width: '27.8em',
                         height: '27.8em',
+                        [breakpoints.only('iPadAir')]: {
+                            // position: 'absolute',
+                            padding: '0',
+                            width: '18.75em',
+                            height: '18.75em',
+                            marginLeft: '12.6em',
+                            marginRight: '14.6em',
+                            marginBottom: '3.31em'
+                        },
                     }
                 },
                 {
@@ -59,19 +68,21 @@ const theme = createTheme({
                     },
                     style: {
                         width: '33em',
-                        position: 'absolute',
-                        left: '51.875em',
-                        bottom: '10em',
+                        position: 'relative',
+                        marginLeft: '38em',
+                        left: '20em',
+                        bottom: '29em',
                         height: '30em',
-                    }
-                },
-                {
-                    props: {
-                        variant: 'tabsContainer'
-                    },
-                    style: {
-
-
+                        [breakpoints.only('iPadAir')]: {
+                            position: 'static',
+                            padding: '0',
+                            flexDirection: 'column',
+                            marginTop: '11em',
+                            marginLeft: '13em',
+                            display: 'flex',
+                            textAlign: 'center',
+                            
+                        },
                     }
                 },
                 {
@@ -82,7 +93,11 @@ const theme = createTheme({
                         display: 'flex',
                         flexDirection: 'row',
                         paddingRight: 0,
-                        paddingLeft: 0
+                        paddingLeft: 0,
+                        [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            textAlign: 'center',
+                        }
 
                     }
                 },
@@ -95,7 +110,11 @@ const theme = createTheme({
                         justifyContent: 'center',
                         flexDirection: 'column',
                         paddingRight: 0,
-                        paddingLeft: 0
+                        paddingLeft: 0,
+                        [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            textAlign: 'center',
+                        }
                     }
                 },
                 {
@@ -138,7 +157,11 @@ const theme = createTheme({
                         color: '#FFFFFF',
                         lineHeight: '1.4em',
                         marginTop: '14px',
-                        marginBottom: '54px'
+                        marginBottom: '54px',
+                        [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            textAlign: 'center',
+                        }
                     }
                 },
                 {
@@ -150,7 +173,12 @@ const theme = createTheme({
                         fontSize: '1.75em',
                         fontWeight: '400',
                         color: '#FFFFFF',
-                        lineHeight: '2em'
+                        lineHeight: '2em',
+                        // [breakpoints.only('iPadAir')]: {
+                        //     display: 'flex',
+                        //     textAlign: 'center',
+                        // }
+                        
                     }
                 },
                 {
@@ -162,7 +190,11 @@ const theme = createTheme({
                         fontSize: '1.75em',
                         fontWeight: '400',
                         color: '#FFFFFF',
-                        lineHeight: '2em'
+                        lineHeight: '2em',
+                        // [breakpoints.only('iPadAir')]: {
+                        //     display: 'flex',
+                        //     textAlign: 'center',
+                        // }
                     }
                 },
                 {
@@ -170,7 +202,6 @@ const theme = createTheme({
                         variant: 'avgDist'
                     },
                     style: {
-
                         display: 'flex',
                         fontFamily: 'Barlow Condensed',
                         width: '6.06em',
@@ -178,6 +209,10 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(208, 214, 249, 1)',
                         lineHeight: '1.4em',
+                        [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            textAlign: 'center',
+                        }
                     }
                 },
                 {
@@ -185,7 +220,6 @@ const theme = createTheme({
                         variant: 'estTime'
                     },
                     style: {
-
                         display: 'flex',
                         fontFamily: 'Barlow Condensed',
                         fontSize: '1.12em',
@@ -193,6 +227,10 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(208, 214, 249, 1)',
                         lineHeight: '1.4em',
+                        [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            textAlign: 'center',
+                        }
                     }
                 },
             ]
@@ -204,8 +242,6 @@ const theme = createTheme({
                         '&:hover': {
                             color: 'gray',
                         },
-                        
-
                         fontSize: '1em',
                         fontFamily: 'Barlow Condensed',
                         fontWeight: '400',
@@ -213,14 +249,8 @@ const theme = createTheme({
                         lineHeight: '1.1em',
                         letterSpacing: '.169em'
                     },
-                    // "&.MuiButtonBase-root": {
-                    //     display: 'flex',
-
-
-
-                    // }
                 }
-            }
+            },
         },
     },
 })
