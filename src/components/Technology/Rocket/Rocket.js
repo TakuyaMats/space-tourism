@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -22,6 +22,7 @@ import './Rocket.css';
 function Rocket({ data }) {
     const [value, setValue] = useState('Launch vehicle');
     const [selectedTerminology, setSelectedTerminology] = useState(0);
+    const [size, setSize] = useState(0);
 
     const handleChange = (event, newValue) => {
         setSelectedTerminology(newValue);
@@ -31,6 +32,20 @@ function Rocket({ data }) {
     const handleClick = (e) => {
         e.preventDefault();
     }
+
+    const useWindowSize = () => {
+        useLayoutEffect(() => {
+            function updateSize() {
+            setSize(window.innerWidth);
+            }
+            window.addEventListener('resize', updateSize);
+            updateSize();
+            return () => window.removeEventListener('resize', updateSize);
+        }, []);
+        return size;
+    }
+
+    useWindowSize();
 
     function terminologyPicture() {
         let terminologyImage = '';

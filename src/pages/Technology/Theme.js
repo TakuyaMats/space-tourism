@@ -13,8 +13,8 @@ const customBreakpointValues = {
         iphoneSE: 375,
         iphone12Pro: 390,
         pixel5: 392,
-        samsungGalaxyA51: 412,
-        samsungGalaxyS20: 412,
+        // not getting the exact media query point 412
+        samsungGalaxyS20: 413,
         iphoneXR: 414,
 
         // tablet
@@ -98,6 +98,11 @@ const theme = createTheme({
                             fontSize: '20px',
                             left: '38px'
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            top: '136px',
+                            fontSize: '20px',
+                            left: '38px'
+                        },
                         [breakpoints.only('surfacePro7')]: {
                             top: '130px',
                             fontSize: '30px',
@@ -114,6 +119,30 @@ const theme = createTheme({
                         [breakpoints.only('iphoneXR')]: {
                             top: '88px',
                             left: '100px',
+                            fontSize: '20px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '700'
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            top: '88px',
+                            left: '107px',
+                            fontSize: '16px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '700'
+                        },
+                        [breakpoints.only('pixel5')]: {
+                            top: '88px',
+                            left: '97px',
+                            fontSize: '20px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '700'
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            top: '88px',
+                            left: '77px',
                             fontSize: '20px',
                             letterSpacing: '2.7px',
                             lineHeight: '19px',
@@ -143,6 +172,13 @@ const theme = createTheme({
                             letterSpacing: '3.375px',
                             lineHeight: '24px',
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            top: '136px',
+                            fontSize: '20px',
+                            left: '76px',
+                            letterSpacing: '3.375px',
+                            lineHeight: '24px',
+                        },
                         [breakpoints.only('surfacePro7')]: {
                             top: '136px',
                             fontSize: '30px',
@@ -162,6 +198,33 @@ const theme = createTheme({
                         [breakpoints.only('iphoneXR')]: {
                             top: '88px',
                             left: '133px',
+                            height: '19px',
+                            fontSize: '20px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '400'
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            top: '88px',
+                            left: '140px',
+                            height: '19px',
+                            fontSize: '16px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '400'
+                        },
+                        [breakpoints.only('pixel5')]: {
+                            top: '88px',
+                            left: '130px',
+                            height: '19px',
+                            fontSize: '20px',
+                            letterSpacing: '2.7px',
+                            lineHeight: '19px',
+                            fontWeight: '400'
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            top: '88px',
+                            left: '110px',
                             height: '19px',
                             fontSize: '20px',
                             letterSpacing: '2.7px',
