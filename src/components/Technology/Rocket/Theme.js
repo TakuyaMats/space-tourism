@@ -183,7 +183,7 @@ const theme = createTheme({
                     },
                     style: {
                         position: 'absolute',
-                        width: '470px',
+                        width: '510px',
                         height: '382px',
                         left: '325px',
                         top: '383px',
@@ -401,6 +401,7 @@ theme.typography.p = {
     fontFamily: 'Barlow',
     fontStyle: 'normal',
     fontWeight: 400,
+    width: '444px',
     fontSize: '18px',
     lineHeight: '32px',
     color: '#D0D6F9',
