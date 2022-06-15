@@ -61,7 +61,7 @@ function PlanetInfo({ data }) {
                             value={value}
                             onChange={handleChange}
                         >
-                            <Tab sx={{ color: '#D0D6F9' }} variant='bttn' value='Moon' onClick={handleClick} label="Moon" />
+                            <Tab sx={{ color: '#D0D6F9' }} value='Moon' onClick={handleClick} label="Moon" />
                             <Tab sx={{ color: '#D0D6F9' }} value='Mars' onClick={handleClick} label="Mars" />
                             <Tab sx={{ color: '#D0D6F9' }} value='Europa' onClick={handleClick} label="Europa" />
                             <Tab sx={{ color: '#D0D6F9' }} value='Titan' onClick={handleClick} label="Titan" />
