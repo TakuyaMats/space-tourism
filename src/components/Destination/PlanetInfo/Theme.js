@@ -165,7 +165,8 @@ const theme = createTheme({
                             marginBottom: '2em'
                         },
                         [breakpoints.only('iphoneSE')]: {
-                            padding: '0',
+                            width: '21em',
+                            marginLeft: '1.4em'
                         },
                     }
                 },
@@ -302,26 +303,22 @@ const theme = createTheme({
                         letterSpacing: '.169em',
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '.875em',
-                            
-
                         }
                     },
-                    // "&.MuiTab-flexContainer": {
-                    //     [breakpoints.only('iphoneSE')]: {
-                    //         width: '100%',
-                    //         padding: '0',
-                    //     }
-
-                    // },
-                    // "&.MuiButtonBase-root": {
-                    //     [breakpoints.only('iphoneSE')]: {
-                    //        backgroundColor: 'red',
-                    //     }
-
-                    // }
-                }
+                },
             },
         },
+        MuiButtonBase: {
+            styleOverrides: {
+                root: {
+                    "&.MuiTab-root": {
+                        [breakpoints.only('iphoneSE')]: {
+                            minWidth: '2em'
+                        }
+                    }
+                }
+            }
+        }
     },
 })
 export default theme;
