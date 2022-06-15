@@ -78,9 +78,15 @@ const theme = createTheme({
                         [breakpoints.only('iphoneSE')]: {
                             marginTop: '1.5em',
                             marginBottom: '1em',
-                            marginLeft: '2.5em',
+                            marginLeft: '3.5em',
                             width: '19em',
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            marginTop: '1.5em',
+                            marginLeft: '4.8rem',
+                            marginBottom: '1em',
+                            width: '19em',
+                        }
                     }
                 }
             ]
@@ -103,7 +109,12 @@ const theme = createTheme({
                             fontSize: '1.25em',
                         },
                         [breakpoints.only('iphoneSE')]: {
-                            fontSize: '1em'
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
                         },
                     }
                 },
@@ -126,7 +137,13 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '1em',
-                            marginLeft: '1.25em'
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            fontSize: '1em',
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
                         },
                     }
                 }

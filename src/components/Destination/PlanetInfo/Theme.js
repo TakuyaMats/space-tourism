@@ -27,7 +27,6 @@ const customBreakpointValues = {
 }
 
 const breakpoints = createBreakpoints({ ...customBreakpointValues })
-// const primary = grey[50];
 
 const theme = createTheme({
     breakpoints: {
@@ -67,6 +66,15 @@ const theme = createTheme({
                             left: '5.8em',
                             right: '8.5em',
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            margin: 'auto',
+                            position: 'absolute',
+                            padding: '0',
+                            width: '11.7em',
+                            top: '8.5em',
+                            left: '6.438em',
+                            right: '6em',
+                        },
                     }
                 },
                 {
@@ -99,6 +107,16 @@ const theme = createTheme({
                             textAlign: 'center',
                             left: '.5em',
                         },
+                        [breakpoints.only('iphoneXR')]: {
+                            position: 'absolute',
+                            margin: 'auto',
+                            // marginTop: '.75em',
+                            padding: '0',
+                            top: '10.75em',
+                            bottom: '0em',
+                            textAlign: 'center',
+                            left: '.5em',
+                        },
                     }
                 },
                 {
@@ -121,7 +139,17 @@ const theme = createTheme({
                             width: '61%',
                             paddingTop: '.5em',
                             marginLeft: '.5em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            marginTop: '2em',
+                            // paddingTop: '.5em',
+                            // margin: 'auto'
+                            marginLeft: '.5em',
+                            width: '70%',
                         }
+
 
                     }
                 },
@@ -135,10 +163,11 @@ const theme = createTheme({
                         flexDirection: 'column',
                         paddingRight: 0,
                         paddingLeft: 0,
-                        [breakpoints.only('iPadAir')]: {
-                           
-
-
+                        [breakpoints.only('iphoneXR')]: {
+                           display: 'flex',
+                           justifyContent: 'center',
+                           alignItems: 'center',
+                           marginBottom: '2em'
                         }
                     }
                 },
@@ -151,7 +180,12 @@ const theme = createTheme({
                         justifyContent: 'center',
                         flexDirection: 'column',
                         paddingRight: 0,
-                        paddingLeft: 0
+                        paddingLeft: 0,
+                        [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                         }
                     }
                 },
                 {
@@ -165,8 +199,17 @@ const theme = createTheme({
                             marginBottom: '2em'
                         },
                         [breakpoints.only('iphoneSE')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
                             width: '21em',
-                            marginLeft: '1.4em'
+                            marginLeft: '.8em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            marginTop: '3em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            width: '25em',
+                            marginLeft: '.1em',
                         },
                     }
                 },
@@ -191,6 +234,11 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '3em',
+                            lineHeight: '.8em',
+                            width: '6.5em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            fontSize: '3.5em',
                             lineHeight: '.8em',
                             width: '6.5em',
                         }
@@ -221,6 +269,14 @@ const theme = createTheme({
                             width: '20.4em',
                             lineHeight: '167%',
 
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            marginTop: '1em',
+                            marginLeft: '1em',
+                            fontSize: '.938em',
+                            marginBottom: '1em',
+                            width: '21.4em',
+                            lineHeight: '167%',
                         }
                     }
                 },
@@ -239,6 +295,13 @@ const theme = createTheme({
                             justifyContent: 'center',
                             margin: 'auto',
                             fontSize: '1.75em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
+                            fontWeight: '400'
                         }
 
                     }
@@ -258,7 +321,12 @@ const theme = createTheme({
                             justifyContent: 'center',
                             margin: 'auto',
                             fontSize: '1.75em',
-                           
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
                         }
                     }
                 },
@@ -282,6 +350,14 @@ const theme = createTheme({
                             justifyContent: 'center',
                             margin: 'auto',
                             fontSize: '.875em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            width: '8em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '.875em',
+                            letterSpacing: '.148em',
                             
                         }
                     }
@@ -313,7 +389,12 @@ const theme = createTheme({
                 root: {
                     "&.MuiTab-root": {
                         [breakpoints.only('iphoneSE')]: {
-                            minWidth: '2em'
+                            minWidth: '2em',
+                            maxWidth: '4em',
+                        },
+                        [breakpoints.only('iphoneXR')]: {
+                            minWidth: '2em',
+                            // maxWidth: '8em',
                         }
                     }
                 }
