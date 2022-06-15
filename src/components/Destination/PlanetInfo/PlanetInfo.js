@@ -88,7 +88,7 @@ function PlanetInfo({ data }) {
                                     </Container>
                                     <Container variant='subTime'>
                                         <Typography variant='dist-time'>
-                                            Est. Time Travel
+                                            EST. Travel Time
                                         </Typography>
                                         <Typography variant='travel' noWrap >
                                             {planet.travel}
