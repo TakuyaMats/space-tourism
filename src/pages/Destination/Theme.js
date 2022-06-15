@@ -56,15 +56,6 @@ const theme = createTheme({
             ],
         },
         MuiContainer: {
-            // styleOverrides: {
-            //     ".MuiContainer-root": {
-            //         position: 'absolute',
-            //         width: '23.87em',
-            //         height: '2.12rem',
-            //         margin: '10.4em',
-            //         marginBottom: '10em'
-            //     }
-            // },
             variants: [
                 {
                     props: {
@@ -83,6 +74,12 @@ const theme = createTheme({
                             marginRight: '28.5em',
                             marginBottom: '3em', // moves IMG towards bottom of screen
                             width: '23em', 
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            marginTop: '1.5em',
+                            marginBottom: '1em',
+                            marginLeft: '2.5em',
+                            width: '19em',
                         },
                     }
                 }
@@ -105,7 +102,9 @@ const theme = createTheme({
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '1.25em',
                         },
-
+                        [breakpoints.only('iphoneSE')]: {
+                            fontSize: '1em'
+                        },
                     }
                 },
                 {
@@ -125,7 +124,10 @@ const theme = createTheme({
                             fontSize: '1.25em',
                             marginLeft: '1.188em'
                         },
-
+                        [breakpoints.only('iphoneSE')]: {
+                            fontSize: '1em',
+                            marginLeft: '1.25em'
+                        },
                     }
                 }
             ]

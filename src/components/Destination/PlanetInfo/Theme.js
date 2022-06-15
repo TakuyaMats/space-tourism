@@ -57,7 +57,15 @@ const theme = createTheme({
                             height: '19.5em',
                             margin: 'auto',
                             marginBottom: '3.313rem'
-                           
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            margin: 'auto',
+                            position: 'absolute',
+                            padding: '0',
+                            width: '10.7em',
+                            top: '8em',
+                            left: '5.8em',
+                            right: '8.5em',
                         },
                     }
                 },
@@ -66,22 +74,30 @@ const theme = createTheme({
                         variant: 'info'
                     },
                     style: {
-                        display: 'flex',
+                        display: 'block',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         width: '33em',
                         position: 'relative',
                         marginLeft: '38em',
                         left: '11em',
-                        bottom: '29em',
+                        bottom: '30em',
                         height: '30em',
                         [breakpoints.only('iPadAir')]: {
+                            margin: 'auto',
                             padding: '0',
                             position: 'static',
                             width: '40em',
-                            marginTop: '3.313em',
-                            margin: 'auto',
                             textAlign: 'center',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            position: 'absolute',
+                            margin: 'auto',
+                            padding: '0',
+                            top: '26.5em',
+                            bottom: '0em',
+                            textAlign: 'center',
+                            left: '.5em',
                         },
                     }
                 },
@@ -100,8 +116,11 @@ const theme = createTheme({
                         borderTopStyle: 'solid',
                         borderTopColor: 'rgba(56, 59, 75, 1)',
                         marginTop: '3.313em',
-                        [breakpoints.only('iPadAir')]: {
-                           
+                        [breakpoints.only('iphoneSE')]: {
+                            marginTop: '1em',
+                            width: '61%',
+                            paddingTop: '.5em',
+                            marginLeft: '.5em',
                         }
 
                     }
@@ -117,7 +136,9 @@ const theme = createTheme({
                         paddingRight: 0,
                         paddingLeft: 0,
                         [breakpoints.only('iPadAir')]: {
-                     
+                           
+
+
                         }
                     }
                 },
@@ -139,10 +160,12 @@ const theme = createTheme({
                     },
                     style: {
                         [breakpoints.only('iPadAir')]: {
-                           display: 'flex',
-                           justifyContent: 'center',
-                           marginBottom: '2em'
-                           
+                            display: 'flex',
+                            justifyContent: 'center',
+                            marginBottom: '2em'
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            padding: '0',
                         },
                     }
                 },
@@ -163,7 +186,12 @@ const theme = createTheme({
                         color: 'rgba(255, 255, 255, 1)',
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '5.5em',
-                            
+
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            fontSize: '3em',
+                            lineHeight: '.8em',
+                            width: '6.5em',
                         }
                     }
                 },
@@ -185,6 +213,13 @@ const theme = createTheme({
                             display: 'flex',
                             textAlign: 'center',
                             marginBottom: '3.5em',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            fontSize: '.938em',
+                            marginBottom: '1em',
+                            width: '20.4em',
+                            lineHeight: '167%',
+
                         }
                     }
                 },
@@ -198,11 +233,13 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
                         lineHeight: '2em',
-                        [breakpoints.only('iPadAir')]: {
-                            
-                        
+                        [breakpoints.only('iphoneSE')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
                         }
-                        
+
                     }
                 },
                 {
@@ -214,7 +251,14 @@ const theme = createTheme({
                         fontSize: '1.75em',
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
-                        lineHeight: '2em'
+                        lineHeight: '2em',
+                        [breakpoints.only('iphoneSE')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
+                           
+                        }
                     }
                 },
                 {
@@ -230,7 +274,14 @@ const theme = createTheme({
                         color: 'rgba(208, 214, 249, 1)',
                         lineHeight: '1.4em',
                         [breakpoints.only('iPadAir')]: {
-                          marginLeft: '6.4em',
+                            marginLeft: '6.4em',
+                        },
+                        [breakpoints.only('iphoneSE')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '.875em',
+                            
                         }
                     }
                 },
@@ -249,11 +300,25 @@ const theme = createTheme({
                         height: '1.1em',
                         lineHeight: '1.1em',
                         letterSpacing: '.169em',
-                        // [breakpoints.only('iPadAir')]: {
-                       
+                        [breakpoints.only('iphoneSE')]: {
+                            fontSize: '.875em',
+                            
 
-                        // }
+                        }
                     },
+                    // "&.MuiTab-flexContainer": {
+                    //     [breakpoints.only('iphoneSE')]: {
+                    //         width: '100%',
+                    //         padding: '0',
+                    //     }
+
+                    // },
+                    // "&.MuiButtonBase-root": {
+                    //     [breakpoints.only('iphoneSE')]: {
+                    //        backgroundColor: 'red',
+                    //     }
+
+                    // }
                 }
             },
         },
