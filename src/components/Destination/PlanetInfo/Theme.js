@@ -144,7 +144,7 @@ const theme = createTheme({
                             display: 'flex',
                             flexDirection: 'column',
                             marginTop: '2em',
-                            // paddingTop: '.5em',
+                            paddingTop: '2em',
                             // margin: 'auto'
                             marginLeft: '.5em',
                             width: '70%',
@@ -167,7 +167,7 @@ const theme = createTheme({
                            display: 'flex',
                            justifyContent: 'center',
                            alignItems: 'center',
-                           marginBottom: '2em'
+                           marginBottom: '1.5em'
                         }
                     }
                 },
@@ -238,9 +238,10 @@ const theme = createTheme({
                             width: '6.5em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            marginTop: '.2em',
                             fontSize: '3.5em',
                             lineHeight: '.8em',
-                            width: '6.5em',
+                            width: '6.3em',
                         }
                     }
                 },
@@ -393,8 +394,7 @@ const theme = createTheme({
                             maxWidth: '4em',
                         },
                         [breakpoints.only('iphoneXR')]: {
-                            minWidth: '2em',
-                            // maxWidth: '8em',
+                            minWidth: '5em',
                         }
                     }
                 }
