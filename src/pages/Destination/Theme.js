@@ -75,6 +75,13 @@ const theme = createTheme({
                             marginBottom: '3em', // moves IMG towards bottom of screen
                             width: '23em', 
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            marginTop: '2em',
+                            marginLeft: '2.406em',
+                            marginRight: '28.5em',
+                            marginBottom: '1.5em', // moves IMG towards bottom of screen
+                            width: '23em', 
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             marginTop: '1.5em',
                             marginBottom: '1em',
@@ -114,6 +121,9 @@ const theme = createTheme({
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '1.25em',
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            fontSize: '1.25em',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '1em',
                             letterSpacing: '.169em',
@@ -142,6 +152,10 @@ const theme = createTheme({
                         textTransform: 'uppercase',
                         marginLeft: '1.7rem',
                         [breakpoints.only('iPadAir')]: {
+                            fontSize: '1.25em',
+                            marginLeft: '1.188em'
+                        },
+                        [breakpoints.only('iPadMini')]: {
                             fontSize: '1.25em',
                             marginLeft: '1.188em'
                         },
