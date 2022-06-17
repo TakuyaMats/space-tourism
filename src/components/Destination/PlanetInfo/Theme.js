@@ -57,6 +57,15 @@ const theme = createTheme({
                             margin: 'auto',
                             marginBottom: '3.313rem'
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            padding: '0',
+                            width: '19em',
+                            height: '18.5em',
+                            margin: 'auto',
+                            marginBottom: '1.5rem',
+                            position: 'relative',
+                            right: '3.1em'
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             margin: 'auto',
                             position: 'absolute',
@@ -107,6 +116,15 @@ const theme = createTheme({
                             width: '40em',
                             textAlign: 'center',
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            margin: 'auto',
+                            padding: '0',
+                            position: 'static',
+                            width: '40em',
+                            textAlign: 'center',
+                            marginLeft: '4em'
+                            
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             position: 'absolute',
                             margin: 'auto',
@@ -152,6 +170,10 @@ const theme = createTheme({
                         borderTopStyle: 'solid',
                         borderTopColor: 'rgba(56, 59, 75, 1)',
                         marginTop: '3.313em',
+
+                        [breakpoints.only('iPadMini')]: {
+                            marginTop: '-1em'
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             marginTop: '1em',
                             width: '61%',
@@ -163,7 +185,6 @@ const theme = createTheme({
                             flexDirection: 'column',
                             marginTop: '2em',
                             paddingTop: '2em',
-                            // margin: 'auto'
                             marginLeft: '.5em',
                             width: '70%',
                         },
@@ -172,7 +193,6 @@ const theme = createTheme({
                             flexDirection: 'column',
                             marginTop: '2em',
                             paddingTop: '2em',
-                            // margin: 'auto'
                             marginLeft: '.5em',
                             width: '70%',
                         }
@@ -236,6 +256,11 @@ const theme = createTheme({
                             justifyContent: 'center',
                             marginBottom: '2em'
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            marginBottom: '1.5em',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             display: 'flex',
                             justifyContent: 'center',
@@ -277,6 +302,10 @@ const theme = createTheme({
                             fontSize: '5.5em',
 
                         },
+                        [breakpoints.only('iPadMini')]: {
+                            fontSize: '5.5em',
+
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '3em',
                             lineHeight: '.8em',
@@ -311,6 +340,11 @@ const theme = createTheme({
                         marginTop: '14px',
                         marginBottom: '3.375em',
                         [breakpoints.only('iPadAir')]: {
+                            display: 'flex',
+                            textAlign: 'center',
+                            marginBottom: '3.5em',
+                        },
+                        [breakpoints.only('iPadMini')]: {
                             display: 'flex',
                             textAlign: 'center',
                             marginBottom: '3.5em',
@@ -417,6 +451,9 @@ const theme = createTheme({
                         lineHeight: '1.4em',
                         [breakpoints.only('iPadAir')]: {
                             marginLeft: '6.4em',
+                        },
+                        [breakpoints.only('iPadMini')]: {
+                            marginLeft: '8em',
                         },
                         [breakpoints.only('iphoneSE')]: {
                             display: 'flex',
