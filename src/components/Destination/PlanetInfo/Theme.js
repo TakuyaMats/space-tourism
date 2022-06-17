@@ -75,6 +75,15 @@ const theme = createTheme({
                             left: '6.438em',
                             right: '6em',
                         },
+                        [breakpoints.only('iphone12Pro')]: {
+                            margin: 'auto',
+                            position: 'absolute',
+                            padding: '0',
+                            width: '12em',
+                            top: '8em',
+                            left: '5.2em',
+                            right: '6.2em',
+                        },
                     }
                 },
                 {
@@ -117,6 +126,15 @@ const theme = createTheme({
                             textAlign: 'center',
                             left: '.5em',
                         },
+                        [breakpoints.only('iphone12Pro')]: {
+                            position: 'absolute',
+                            margin: 'auto',
+                            padding: '0',
+                            top: '11.3em',
+                            bottom: '0em',
+                            textAlign: 'center',
+                            left: '-.25em'
+                        },
                     }
                 },
                 {
@@ -148,6 +166,15 @@ const theme = createTheme({
                             // margin: 'auto'
                             marginLeft: '.5em',
                             width: '70%',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            marginTop: '2em',
+                            paddingTop: '2em',
+                            // margin: 'auto'
+                            marginLeft: '.5em',
+                            width: '70%',
                         }
 
 
@@ -168,7 +195,13 @@ const theme = createTheme({
                            justifyContent: 'center',
                            alignItems: 'center',
                            marginBottom: '1.5em'
-                        }
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginBottom: '1.1em'
+                         }
                     }
                 },
                 {
@@ -182,6 +215,11 @@ const theme = createTheme({
                         paddingRight: 0,
                         paddingLeft: 0,
                         [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                         },
+                         [breakpoints.only('iphone12Pro')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -206,6 +244,13 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iphoneXR')]: {
                             marginTop: '3em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            width: '25em',
+                            marginLeft: '.1em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            marginTop: '3.2em',
                             display: 'flex',
                             justifyContent: 'center',
                             width: '25em',
@@ -238,6 +283,12 @@ const theme = createTheme({
                             width: '6.5em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            marginTop: '.2em',
+                            fontSize: '3.5em',
+                            lineHeight: '.8em',
+                            width: '6.3em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
                             marginTop: '.2em',
                             fontSize: '3.5em',
                             lineHeight: '.8em',
@@ -278,6 +329,14 @@ const theme = createTheme({
                             marginBottom: '1em',
                             width: '21.4em',
                             lineHeight: '167%',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            marginTop: '1em',
+                            marginLeft: '1em',
+                            fontSize: '.938em',
+                            marginBottom: '1em',
+                            width: '21.4em',
+                            lineHeight: '167%',
                         }
                     }
                 },
@@ -298,6 +357,13 @@ const theme = createTheme({
                             fontSize: '1.75em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
+                            fontWeight: '400'
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             margin: 'auto',
@@ -324,6 +390,12 @@ const theme = createTheme({
                             fontSize: '1.75em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             margin: 'auto',
@@ -360,6 +432,15 @@ const theme = createTheme({
                             fontSize: '.875em',
                             letterSpacing: '.148em',
                             
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            width: '8em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '.875em',
+                            letterSpacing: '.148em',
+                            
                         }
                     }
                 },
@@ -380,6 +461,9 @@ const theme = createTheme({
                         letterSpacing: '.169em',
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '.875em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            fontSize: '.875em',
                         }
                     },
                 },
@@ -394,6 +478,9 @@ const theme = createTheme({
                             maxWidth: '4em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            minWidth: '5em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
                             minWidth: '5em',
                         }
                     }

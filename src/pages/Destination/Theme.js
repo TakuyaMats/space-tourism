@@ -86,6 +86,12 @@ const theme = createTheme({
                             marginLeft: '4.8rem',
                             marginBottom: '1em',
                             width: '19em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
+                            marginTop: '1.5em',
+                            marginLeft: '4.3rem',
+                            marginBottom: '1em',
+                            width: '19em',
                         }
                     }
                 }
@@ -116,6 +122,10 @@ const theme = createTheme({
                             fontSize: '1em',
                             letterSpacing: '.169em',
                         },
+                        [breakpoints.only('iphone12Pro')]: {
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
+                        },
                     }
                 },
                 {
@@ -141,6 +151,11 @@ const theme = createTheme({
                             letterSpacing: '.169em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            fontSize: '1em',
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
                             fontSize: '1em',
                             marginLeft: '1.25em',
                             letterSpacing: '.169em',
