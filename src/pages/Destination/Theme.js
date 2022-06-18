@@ -23,6 +23,7 @@ const customBreakpointValues = {
         surfacePro7: 912,
         // tablet: 913,
         desktop: 1140,
+        mdDesktop: 1440,
         xl: 1680,
     },
 }
@@ -63,24 +64,39 @@ const theme = createTheme({
                     },
                     style: {
                         height: '2.12rem',
-                        marginTop: '4.7em',
+                        marginTop: '4em',
                         marginLeft: '10.4em',
-                        marginBottom: '7em',
+                        marginBottom: '5em',
                         width: '33em',
                         marginRight: 'auto',
+                        [breakpoints.down('mdDesktop')]: {
+                            height: '2.12rem',
+                            marginTop: '2em',
+                            marginLeft: '10em',
+                            marginBottom: '4.5em',
+                            width: '33em',
+                            marginRight: 'auto',
+                        },
+                        [breakpoints.only('surfacePro7')]: {
+                            marginTop: '2.5em',
+                            marginLeft: '3em',
+                            // marginRight: '28.5em',
+                            marginBottom: '3.5em',
+                            width: '31em',
+                        },
                         [breakpoints.only('iPadAir')]: {
                             marginTop: '2em',
                             marginLeft: '2.406em',
                             marginRight: '28.5em',
-                            marginBottom: '3em', // moves IMG towards bottom of screen
-                            width: '23em', 
+                            marginBottom: '3em',
+                            width: '23em',
                         },
                         [breakpoints.only('iPadMini')]: {
                             marginTop: '2em',
                             marginLeft: '2.406em',
                             marginRight: '28.5em',
-                            marginBottom: '1.5em', // moves IMG towards bottom of screen
-                            width: '23em', 
+                            marginBottom: '1.5em',
+                            width: '23em',
                         },
                         [breakpoints.only('iphoneSE')]: {
                             marginTop: '1.5em',
@@ -118,6 +134,9 @@ const theme = createTheme({
                         fontStyle: 'normal',
                         letterSpacing: '.294em',
                         fontSize: '1.75em',
+                        [breakpoints.only('surfacePro7')]: {
+                            fontSize: '1.5em',
+                        },
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '1.25em',
                         },
@@ -151,6 +170,10 @@ const theme = createTheme({
                         fontSize: '1.75em',
                         textTransform: 'uppercase',
                         marginLeft: '1.7rem',
+                        [breakpoints.only('surfacePro7')]: {
+                            fontSize: '1.5em',
+                            marginLeft: '1.188em'
+                        },
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '1.25em',
                             marginLeft: '1.188em'
