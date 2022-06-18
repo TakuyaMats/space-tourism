@@ -24,20 +24,14 @@ function Crew() {
   return (
 
     <ThemeProvider theme={theme}>
-      <Paper variant="body1"
+      <Paper variant="body1" square
         sx={{
-          // backgroundImage: `url(${backgroundImage})`,
-          // backgroundPosition: "center",
-          // backgroundSize: "cover",
-          // backgroundRepeat: "no-repeat",
           width: "100vw",
           height: "100vh",
-          // position: "fixed",
         }}
       >
         <NavBar />
         <Container variant="container1">
-          {/* <NavBar /> */}
           <CrewMember crew={crew} />
         </Container>
       </Paper>
