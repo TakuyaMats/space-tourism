@@ -50,6 +50,13 @@ const theme = createTheme({
                         marginLeft: '14.375em',
                         width: '27.8em',
                         height: '27.8em',
+                        [breakpoints.only('surfacePro7')]: {
+                            padding: '0',
+                            width: '23em',
+                            height: '19.5em',
+                            left: '.5em',
+                            margin: 'auto',
+                        },
                         [breakpoints.only('iPadAir')]: {
                             padding: '0',
                             width: '20em',
@@ -72,8 +79,7 @@ const theme = createTheme({
                             padding: '0',
                             width: '10.7em',
                             top: '8em',
-                            left: '5.8em',
-                            right: '8.5em',
+                            left: '6.5em',
                         },
                         [breakpoints.only('iphoneXR')]: {
                             margin: 'auto',
@@ -109,6 +115,15 @@ const theme = createTheme({
                         left: '11em',
                         bottom: '30em',
                         height: '30em',
+                        [breakpoints.only('surfacePro7')]: {
+                            margin: 'auto',
+                            padding: '0',
+                            position: 'absolute',
+                            width: '45em',
+                            textAlign: 'center',
+                            left: '6.1em',
+                            top: '57em'
+                        },
                         [breakpoints.only('iPadAir')]: {
                             margin: 'auto',
                             padding: '0',
@@ -170,7 +185,9 @@ const theme = createTheme({
                         borderTopStyle: 'solid',
                         borderTopColor: 'rgba(56, 59, 75, 1)',
                         marginTop: '3.313em',
-
+                        [breakpoints.only('surfacePro7')]: {
+                            marginTop: '-1.25em'
+                        },
                         [breakpoints.only('iPadMini')]: {
                             marginTop: '-1em'
                         },
@@ -251,6 +268,13 @@ const theme = createTheme({
                         variant: 'destTabs'
                     },
                     style: {
+                        [breakpoints.only('surfacePro7')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            marginBottom: '2em',
+                            width: '30em',
+                            fontSize: '1em'
+                        },
                         [breakpoints.only('iPadAir')]: {
                             display: 'flex',
                             justifyContent: 'center',
@@ -259,7 +283,7 @@ const theme = createTheme({
                         [breakpoints.only('iPadMini')]: {
                             display: 'flex',
                             justifyContent: 'center',
-                            marginBottom: '1.5em',
+                            marginBottom: '1em',
                         },
                         [breakpoints.only('iphoneSE')]: {
                             display: 'flex',
@@ -298,6 +322,9 @@ const theme = createTheme({
                         fontSize: '6.25em',
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
+                        [breakpoints.only('surfacePro7')]: {
+                            fontSize: '6em',
+                        },
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '5.5em',
 
@@ -339,6 +366,12 @@ const theme = createTheme({
                         lineHeight: '178%',
                         marginTop: '14px',
                         marginBottom: '3.375em',
+                        [breakpoints.only('surfacePro7')]: {
+                            fontSize: '1.5em',
+                            display: 'flex',
+                            textAlign: 'center',
+                            marginBottom: '3.5em',
+                        },
                         [breakpoints.only('iPadAir')]: {
                             display: 'flex',
                             textAlign: 'center',
@@ -384,11 +417,19 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
                         lineHeight: '2em',
+                        textTransform: 'uppercase',
+                        [breakpoints.only('surfacePro7')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            // margin: 'auto',
+                            fontSize: '2em',
+                            marginTop: '1em',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             margin: 'auto',
-                            fontSize: '1.75em',
+                            fontSize: '1.5em',
                         },
                         [breakpoints.only('iphoneXR')]: {
                             display: 'flex',
@@ -417,11 +458,18 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(255, 255, 255, 1)',
                         lineHeight: '2em',
+                        textTransform: 'uppercase',
+                        [breakpoints.only('surfacePro7')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            marginTop: '1em',
+                            fontSize: '2em',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             margin: 'auto',
-                            fontSize: '1.75em',
+                            fontSize: '1.5em',
                         },
                         [breakpoints.only('iphoneXR')]: {
                             display: 'flex',
@@ -449,6 +497,11 @@ const theme = createTheme({
                         fontWeight: '400',
                         color: 'rgba(208, 214, 249, 1)',
                         lineHeight: '1.4em',
+                        [breakpoints.only('surfacePro7')]: {
+                            marginTop: '1.5em',
+                            marginLeft: '5.2em',
+                            fontSize: '1.35em'
+                        },
                         [breakpoints.only('iPadAir')]: {
                             marginLeft: '6.4em',
                         },
@@ -496,6 +549,9 @@ const theme = createTheme({
                         height: '1.1em',
                         lineHeight: '1.1em',
                         letterSpacing: '.169em',
+                        [breakpoints.only('surfacePro7')]: {
+                            fontSize: '1em',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '.875em',
                         },
@@ -510,6 +566,12 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     "&.MuiTab-root": {
+                        [breakpoints.only('iPadMini')]: {
+                            minWidth: '6em',
+                        },
+                        [breakpoints.only('surfacePro7')]: {
+                            minWidth: '7em',
+                        },
                         [breakpoints.only('iphoneSE')]: {
                             minWidth: '2em',
                             maxWidth: '4em',
