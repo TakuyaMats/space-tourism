@@ -69,7 +69,7 @@ const theme = createTheme({
                         marginBottom: '5em',
                         width: '33em',
                         marginRight: 'auto',
-                        [breakpoints.down('mdDesktop')]: {
+                        [breakpoints.only('mdDesktop')]: {
                             height: '2.12rem',
                             marginTop: '2em',
                             marginLeft: '10em',
@@ -108,7 +108,7 @@ const theme = createTheme({
                             marginTop: '1.5em',
                             marginLeft: '4.8rem',
                             marginBottom: '1em',
-                            width: '19em',
+                            width: '23em'
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             marginTop: '1.5em',

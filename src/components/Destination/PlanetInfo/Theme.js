@@ -88,7 +88,7 @@ const theme = createTheme({
                             width: '11.7em',
                             top: '8.5em',
                             left: '6.438em',
-                            right: '6em',
+                            right: '7.5em',
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             margin: 'auto',
@@ -152,7 +152,6 @@ const theme = createTheme({
                         [breakpoints.only('iphoneXR')]: {
                             position: 'absolute',
                             margin: 'auto',
-                            // marginTop: '.75em',
                             padding: '0',
                             top: '10.75em',
                             bottom: '0em',
