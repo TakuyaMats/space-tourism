@@ -230,7 +230,7 @@ theme.typography.h5 = {
     },
 }
 theme.typography.paragraph = {
-    fontSize: '1em',
+    fontSize: '1.125em',
     fontFamily: 'Barlow, sans-serif',
     lineHeight: '32px',
     color: '#D0D6F9',
