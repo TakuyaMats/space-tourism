@@ -8,7 +8,6 @@ import NavBar from '../../components/Navbar/Navbar';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-// import Box from "@mui/material/Box";
 
 
 function Destination() {

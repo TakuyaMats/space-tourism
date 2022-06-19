@@ -11,7 +11,6 @@ const customBreakpointValues = {
         iphoneSE: 375,
         iphone12Pro: 390,
         pixel5: 392,
-        samsungGalaxyA51: 412,
         samsungGalaxyS20: 412,
         iphoneXR: 414,
 
@@ -99,6 +98,24 @@ const theme = createTheme({
                             left: '5.2em',
                             right: '6.2em',
                         },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            margin: 'auto',
+                            position: 'absolute',
+                            padding: '0',
+                            width: '12em',
+                            top: '8em',
+                            left: '5.2em',
+                            right: '6.2em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            margin: 'auto',
+                            position: 'absolute',
+                            padding: '0',
+                            width: '13em',
+                            top: '8.5em',
+                            left: '6.5em',
+                            right: '6.2em',
+                        },
                     }
                 },
                 {
@@ -138,7 +155,7 @@ const theme = createTheme({
                             width: '40em',
                             textAlign: 'center',
                             marginLeft: '4em'
-                            
+
                         },
                         [breakpoints.only('iphoneSE')]: {
                             position: 'absolute',
@@ -166,6 +183,25 @@ const theme = createTheme({
                             bottom: '0em',
                             textAlign: 'center',
                             left: '-.25em'
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            position: 'absolute',
+                            margin: 'auto',
+                            padding: '0',
+                            top: '25em',
+                            bottom: '0em',
+                            textAlign: 'center',
+                            left: '-1.35em'
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            position: 'absolute',
+                            margin: 'auto',
+                            padding: '0',
+                            top: '11.3em',
+                            bottom: '0em',
+                            textAlign: 'center',
+                            left: '.3em'
+                            // right: '25em'
                         },
                     }
                 },
@@ -211,7 +247,21 @@ const theme = createTheme({
                             paddingTop: '2em',
                             marginLeft: '.5em',
                             width: '70%',
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            marginTop: '1em',
+                            width: '61%',
+                            paddingTop: '.5em',
+                            marginLeft: '2em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            marginTop: '2em',
+                            paddingTop: '2em',
+                            marginLeft: '.5em',
+                            width: '70%',
+                        },
 
 
                     }
@@ -227,17 +277,28 @@ const theme = createTheme({
                         paddingRight: 0,
                         paddingLeft: 0,
                         [breakpoints.only('iphoneXR')]: {
-                           display: 'flex',
-                           justifyContent: 'center',
-                           alignItems: 'center',
-                           marginBottom: '1.5em'
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginBottom: '1.5em'
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
                             marginBottom: '1.1em'
-                         }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginBottom: '1.1em'
+                        },
                     }
                 },
                 {
@@ -254,12 +315,22 @@ const theme = createTheme({
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                         },
-                         [breakpoints.only('iphone12Pro')]: {
+                        },
+                        [breakpoints.only('iphone12Pro')]: {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                         }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        },
                     }
                 },
                 {
@@ -298,6 +369,20 @@ const theme = createTheme({
                             marginLeft: '.1em',
                         },
                         [breakpoints.only('iphone12Pro')]: {
+                            marginTop: '3.2em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            width: '25em',
+                            marginLeft: '.1em',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            // marginTop: '3.2em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            width: '25em',
+                            marginLeft: '.1em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
                             marginTop: '3.2em',
                             display: 'flex',
                             justifyContent: 'center',
@@ -348,7 +433,19 @@ const theme = createTheme({
                             fontSize: '3.5em',
                             lineHeight: '.8em',
                             width: '6.3em',
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            marginTop: '.2em',
+                            fontSize: '3.5em',
+                            lineHeight: '.8em',
+                            width: '6.3em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            marginTop: '.2em',
+                            fontSize: '3.5em',
+                            lineHeight: '.8em',
+                            width: '6.3em',
+                        },
                     }
                 },
                 {
@@ -403,7 +500,23 @@ const theme = createTheme({
                             marginBottom: '1em',
                             width: '21.4em',
                             lineHeight: '167%',
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            marginTop: '1em',
+                            marginLeft: '1em',
+                            fontSize: '.938em',
+                            marginBottom: '1em',
+                            width: '21.4em',
+                            lineHeight: '167%',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            marginTop: '1em',
+                            marginLeft: '1em',
+                            fontSize: '.95em',
+                            marginBottom: '1em',
+                            width: '21.4em',
+                            lineHeight: '167%',
+                        },
                     }
                 },
                 {
@@ -443,7 +556,21 @@ const theme = createTheme({
                             margin: 'auto',
                             fontSize: '1.75em',
                             fontWeight: '400'
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.5em',
+                            fontWeight: '400'
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
+                            fontWeight: '400'
+                        },
 
                     }
                 },
@@ -481,7 +608,19 @@ const theme = createTheme({
                             justifyContent: 'center',
                             margin: 'auto',
                             fontSize: '1.75em',
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.5em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '1.75em',
+                        },
                     }
                 },
                 {
@@ -520,7 +659,7 @@ const theme = createTheme({
                             margin: 'auto',
                             fontSize: '.875em',
                             letterSpacing: '.148em',
-                            
+
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             width: '8em',
@@ -529,8 +668,25 @@ const theme = createTheme({
                             margin: 'auto',
                             fontSize: '.875em',
                             letterSpacing: '.148em',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            width: '8em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            // margin: 'auto',
+                            marginTop: '1em',
+                            fontSize: '.875em',
+                            letterSpacing: '.148em',
                             
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            width: '8em',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: 'auto',
+                            fontSize: '.875em',
+                            letterSpacing: '.148em',
+                        },
                     }
                 },
             ],
@@ -556,7 +712,13 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             fontSize: '.875em',
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            fontSize: '.875em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            fontSize: '.875em',
+                        },
                     },
                 },
             },
@@ -580,7 +742,13 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             minWidth: '5em',
-                        }
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            minWidth: '4em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            minWidth: '5em',
+                        },
                     }
                 }
             }
