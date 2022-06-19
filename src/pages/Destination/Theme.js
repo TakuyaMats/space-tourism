@@ -126,7 +126,13 @@ const theme = createTheme({
                             marginLeft: '5.2rem',
                             marginBottom: '1em',
                             width: '17em',
-                        }
+                        },
+                        [breakpoints.only('pixel5')]: {
+                            marginTop: '1.5em',
+                            marginBottom: '1em',
+                            marginLeft: '4.3em',
+                            width: '19em',
+                        },
                     }
                 }
             ]
@@ -171,6 +177,10 @@ const theme = createTheme({
                             letterSpacing: '.169em',
                         },
                         [breakpoints.only('samsungGalaxyS20')]: {
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('pixel5')]: {
                             fontSize: '1em',
                             letterSpacing: '.169em',
                         },
@@ -222,6 +232,11 @@ const theme = createTheme({
                             letterSpacing: '.169em',
                         },
                         [breakpoints.only('samsungGalaxyS20')]: {
+                            fontSize: '1em',
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('pixel5')]: {
                             fontSize: '1em',
                             marginLeft: '1.25em',
                             letterSpacing: '.169em',
