@@ -23,7 +23,7 @@ const customBreakpointValues = {
         surfacePro7: 912,
         // tablet: 913,
         desktop: 1140,
-        mdDesktop: 1440,
+        laptop: 1440,
         xl: 1680,
     },
 }
@@ -69,9 +69,9 @@ const theme = createTheme({
                         marginBottom: '5em',
                         width: '33em',
                         marginRight: 'auto',
-                        [breakpoints.only('mdDesktop')]: {
+                        [breakpoints.down('laptop')]: {
                             height: '2.12rem',
-                            marginTop: '2em',
+                            marginTop: '1.5em',
                             marginLeft: '10em',
                             marginBottom: '4.5em',
                             width: '33em',
@@ -80,7 +80,6 @@ const theme = createTheme({
                         [breakpoints.only('surfacePro7')]: {
                             marginTop: '2.5em',
                             marginLeft: '3em',
-                            // marginRight: '28.5em',
                             marginBottom: '3.5em',
                             width: '31em',
                         },
@@ -115,6 +114,18 @@ const theme = createTheme({
                             marginLeft: '4.3rem',
                             marginBottom: '1em',
                             width: '19em',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            marginTop: '1.5em',
+                            marginLeft: '3.5rem',
+                            marginBottom: '1em',
+                            width: '17em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
+                            marginTop: '1.5em',
+                            marginLeft: '5.2rem',
+                            marginBottom: '1em',
+                            width: '17em',
                         }
                     }
                 }
@@ -152,6 +163,14 @@ const theme = createTheme({
                             letterSpacing: '.169em',
                         },
                         [breakpoints.only('iphone12Pro')]: {
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
                             fontSize: '1em',
                             letterSpacing: '.169em',
                         },
@@ -193,6 +212,16 @@ const theme = createTheme({
                             letterSpacing: '.169em',
                         },
                         [breakpoints.only('iphone12Pro')]: {
+                            fontSize: '1em',
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('samsungGalaxyS8')]: {
+                            fontSize: '1em',
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
+                        },
+                        [breakpoints.only('samsungGalaxyS20')]: {
                             fontSize: '1em',
                             marginLeft: '1.25em',
                             letterSpacing: '.169em',
