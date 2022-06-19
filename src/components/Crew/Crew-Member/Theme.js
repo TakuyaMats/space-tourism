@@ -59,9 +59,12 @@ const theme = createTheme({
                         height: "90vh",
                         [breakpoints.down('tablet')]: {
                             height: "80vh",
+                            display: 'grid',
+                            gridTemplateRows: '40% 61%'
                         },
                         [breakpoints.down('mobile')]: {
                             height: "35vh",
+                            display: 'flex'
                         },
                     }
 
@@ -188,10 +191,7 @@ const theme = createTheme({
                         variant: 'title'
                     },
                     style: {
-                        marginTop: "0px",
-                        [breakpoints.down('tablet')]: {
-                            textAlign: 'left'
-                        },
+
                     }
                 },
                 {
@@ -205,8 +205,68 @@ const theme = createTheme({
                         },
                     }
                 },
+                {
+                    props: {
+                        variant: 'pageTitle'
+                    },
+                    style: {
+
+                    }
+
+                }
+
             ]
-        }
+        },
+        MuiTypography: {
+            variants: [
+                {
+                    props: {
+                        variant: '02'
+                    },
+                    style: {
+                        color: 'rgba(225, 225, 225, 1)',
+                        opacity: '0.3',
+                        fontFamily: 'Barlow Condensed',
+                        fontWeight: 700,
+                        fontStyle: 'normal',
+                        letterSpacing: '.294em',
+                        fontSize: '1.75em',
+                        [breakpoints.down('tablet')]: {
+                            fontSize: '1.5em',
+                        },
+                        [breakpoints.down('mobile')]: {
+                            fontSize: '1em',
+                            letterSpacing: '.169em',
+                        },
+                    }
+                },
+                {
+                    props: {
+                        variant: 'meetYourCrew'
+                    },
+                    style: {
+                        color: '#FFFFFF',
+                        fontFamily: 'Barlow Condensed',
+                        fontWeight: 400,
+                        fontStyle: 'normal',
+                        letterSpacing: '.294em',
+                        fontSize: '1.75em',
+                        textTransform: 'uppercase',
+                        marginLeft: '1.7rem',
+                        [breakpoints.down('tablet')]: {
+                            fontSize: '1.50em',
+                            marginLeft: '1.188em'
+                        },
+                        [breakpoints.down('mobile')]: {
+                            fontSize: '1.2em',
+                            marginLeft: '1.25em',
+                            letterSpacing: '.169em',
+                        },
+                    }
+                }
+            ]
+        },
+
 
     }
 })
@@ -223,7 +283,15 @@ theme.typography.h3 = {
     },
 }
 theme.typography.h5 = {
-    margin: "1em 1em 2em 1em",
+    color: '#FFFFFF',
+    fontFamily: 'Barlow Condensed',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    letterSpacing: '.294em',
+    margin: "1em 1em 2em 0em",
+    [breakpoints.down('tablet')]: {
+        marginLeft: "1em"
+    },
     [breakpoints.down('mobile')]: {
         textAlign: 'center',
         fontSize: '1.2em'

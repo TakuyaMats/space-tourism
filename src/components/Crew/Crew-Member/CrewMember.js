@@ -50,9 +50,10 @@ const Tab = styled(TabUnstyled)`
   }
 
 
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     width: 15px;
     height: 15px;
+    background-color: #333333;
     }
   
   &.${tabUnstyledClasses.selected} {
@@ -63,6 +64,20 @@ const Tab = styled(TabUnstyled)`
     opacity: 0.5;
     cursor: not-allowed;
   }
+`;
+
+const Title = styled(Box)`
+  margin: 5vh 0 5vh 0;
+  padding: 0;
+
+  @media (max-width: 821px) {
+    margin-left: 5vh;
+    }
+  @media (max-width: 420px) {
+    margin-left: 20%;
+    margin-right: 20%;
+    }
+  
 `;
 
 const CrewMember = ({ crew }) => {
@@ -107,9 +122,11 @@ const CrewMember = ({ crew }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box>
-        <Typography variant="h5" >02 MEET YOUR CREW</Typography>
-      </Box>
+      <Title>
+        <Typography variant="02" >02</Typography>
+        <Typography variant="meetYourCrew" >MEET YOUR CREW</Typography>
+      </Title>
+
       <Grid container variant='crew'>
         <Grid item xs={12} lg={6} variant="crewmate-info">
           <Fade
