@@ -50,7 +50,7 @@ const Tab = styled(TabUnstyled)`
   }
 
 
-  @media (min-width: 800px) {
+  @media (max-width: 821px) {
     width: 15px;
     height: 15px;
     background-color: #333333;
