@@ -62,11 +62,14 @@ const theme = createTheme({
                     },
                     style: {
                         display: 'block',
-                        /*
-display: grid;
-    grid-template-rows: 5% 20% 40% 10%;
-                        */
+                        marginTop: '5%',
+
+                        display: 'grid',
+                        gridTemplateRows: '5% 15% 40% 10%',
+
                         [breakpoints.down('tablet')]: {
+                            display: 'block',
+                            marginTop: '0',
                             textAlign: 'center',
                             height: '0'
                         },
@@ -166,10 +169,6 @@ display: grid;
                         variant: 'crewmate-name'
                     },
                     style: {
-                        /*
-display: flex;
-    align-items: center;
-                        */
                         [breakpoints.down('mobile')]: {
                             order: '3'
                         },
