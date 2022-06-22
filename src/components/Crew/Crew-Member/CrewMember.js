@@ -74,8 +74,8 @@ const Title = styled(Box)`
     margin-left: 5vh;
     }
   @media (max-width: 420px) {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 0;
+    text-align: center;
     }
 `;
 

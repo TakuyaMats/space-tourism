@@ -15,7 +15,7 @@ import TabPanelUnstyled from "@mui/base/TabPanelUnstyled";
 import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import CrewMember from "../../components/Crew/Crew-Member/CrewMember";
-import { crew } from "../../assets/data";
+import { data } from "../../assets/dataJSON";
 import theme from './Theme';
 import { ThemeProvider } from '@mui/material/styles';
 
@@ -31,7 +31,7 @@ function Crew() {
       >
         <NavBar />
         <Container variant="container1">
-          <CrewMember crew={crew} />
+          <CrewMember crew={data.Crew} />
         </Container>
       </Paper>
     </ThemeProvider>

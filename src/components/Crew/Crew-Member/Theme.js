@@ -10,21 +10,8 @@ const customBreakpointValues = {
         lg: 1200,
         xl: 1536,
         mobile: 420,
-        // galaxyFold: 280,
-        // samsungGalaxyS8: 360,
-        // iphoneSE: 375,
-        // iphone12Pro: 390,
-        // pixel5: 392,
-        // samsungGalaxyA51: 412,
-        // samsungGalaxyS20: 412,
-        // iphoneXR: 414,
-
-        // tablet
-        // surfaceDuo: 540,
-        // iPadMini: 768,
-        // iPadAir: 820,
-        // surfacePro7: 912,
         tablet: 821,
+        smTablet: 700,
         desktop: 1200,
         // xl: 1680,
     },
@@ -75,7 +62,14 @@ const theme = createTheme({
                     },
                     style: {
                         display: 'block',
+                        marginTop: '5%',
+
+                        display: 'grid',
+                        gridTemplateRows: '5% 15% 40% 10%',
+
                         [breakpoints.down('tablet')]: {
+                            display: 'block',
+                            marginTop: '0',
                             textAlign: 'center',
                             height: '0'
                         },
@@ -175,7 +169,6 @@ const theme = createTheme({
                         variant: 'crewmate-name'
                     },
                     style: {
-
                         [breakpoints.down('mobile')]: {
                             order: '3'
                         },
