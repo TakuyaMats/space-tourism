@@ -6,24 +6,8 @@ import tabletBackgroundImage from '../../assets/crew/background-crew-tablet.jpg'
 const customBreakpointValues = {
     values: {
         xs: 0,
-        // mobile
-        // galaxyFold: 280,
-        // samsungGalaxyS8: 360,
-        // iphoneSE: 375,
-        // iphone12Pro: 390,
-        // pixel5: 392,
-        // samsungGalaxyA51: 412,
-        // samsungGalaxyS20: 412,
-        // iphoneXR: 414,
-
-        // tablet
-        // surfaceDuo: 540,
-        // iPadMini: 768,
-        // iPadAir: 820,
-        // surfacePro7: 912,
         tablet: 768,
         desktop: 1200,
-        // xl: 1680,
     },
 }
 
@@ -74,11 +58,9 @@ const theme = createTheme({
                             maxWidth: '900px'
                         }
                     },
-
                 }
             ]
         }
-
     }
 })
 

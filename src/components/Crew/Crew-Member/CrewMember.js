@@ -77,7 +77,6 @@ const Title = styled(Box)`
     margin-left: 20%;
     margin-right: 20%;
     }
-  
 `;
 
 const CrewMember = ({ crew }) => {

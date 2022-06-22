@@ -16,7 +16,6 @@ import spaceportPortrait from '../../../assets/technology/image-spaceport-portra
 import spaceportLandscape from '../../../assets/technology/image-spaceport-landscape.jpg';
 import spaceCapsulePortrait from '../../../assets/technology/image-space-capsule-portrait.jpg';
 import spaceCapsuleLandscape from '../../../assets/technology/image-space-capsule-landscape.jpg';
-import './Rocket.css';
 
 
 function Rocket({ data }) {
