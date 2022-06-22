@@ -18,7 +18,6 @@ import CrewMember from "../../components/Crew/Crew-Member/CrewMember";
 import { data } from "../../assets/dataJSON";
 import theme from './Theme';
 import { ThemeProvider } from '@mui/material/styles';
-import './Crew.css';
 
 function Crew() {
   return (
