@@ -68,8 +68,7 @@ const theme = createTheme({
                             height: '18.5em',
                             margin: 'auto',
                             marginBottom: '1.5rem',
-                            position: 'relative',
-                            right: '3.1em'
+                            position: 'relative'
                         },
                         [breakpoints.only('iphoneSE')]: {
                             margin: 'auto',
