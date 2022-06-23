@@ -50,18 +50,21 @@ const theme = createTheme({
                         variant: 'crew'
                     },
                     style: {
+                        width: 'auto',
                         height: "90vh",
+                        marginLeft: "5rem",
                         [breakpoints.down('tablet')]: {
                             height: "80vh",
                             display: 'grid',
-                            gridTemplateRows: '40% 61%'
+                            gridTemplateRows: '40% 61%',
+                            marginLeft: 0,
                         },
                         [breakpoints.down('mobile')]: {
+                            marginLeft: 0,
                             height: "35vh",
                             display: 'flex'
                         },
                     }
-
                 },
                 {
                     props: {
@@ -70,7 +73,6 @@ const theme = createTheme({
                     style: {
                         display: 'block',
                         marginTop: '5%',
-                        // display: 'grid',
                         gridTemplateRows: '5% 15% 25% 10%',
                         [breakpoints.down('tablet')]: {
                             display: 'block',
@@ -120,7 +122,6 @@ const theme = createTheme({
                             marginTop: "5%",
                             marginBottom: "5%",
                             maxWidth: "100%",
-
                         },
                         [breakpoints.down('mobile')]: {
                             order: '1',
@@ -128,11 +129,8 @@ const theme = createTheme({
                             marginRight: "0%",
                             marginTop: "10%",
                             marginBottom: "10%",
-
-
                         },
                     }
-
                 },
                 {
                     props: {
@@ -145,16 +143,13 @@ const theme = createTheme({
                         [breakpoints.down('tablet')]: {
                             backgroundPosition: 'center',
                             height: 'auto'
-
                         },
                         [breakpoints.down('mobile')]: {
                             order: '1',
                             height: '40vh',
                             borderBottom: '1px double #D0D6F9'
-
                         },
                     }
-
                 },
                 {
                     props: {
@@ -165,7 +160,6 @@ const theme = createTheme({
                             order: '2'
                         },
                     }
-
                 },
                 {
                     props: {
@@ -176,20 +170,11 @@ const theme = createTheme({
                             order: '3'
                         },
                     }
-
                 },
             ]
         },
         MuiBox: {
             variants: [
-                {
-                    props: {
-                        variant: 'title'
-                    },
-                    style: {
-
-                    }
-                },
                 {
                     props: {
                         variant: 'image'
@@ -201,16 +186,6 @@ const theme = createTheme({
                         },
                     }
                 },
-                {
-                    props: {
-                        variant: 'pageTitle'
-                    },
-                    style: {
-
-                    }
-
-                }
-
             ]
         },
         MuiTypography: {
@@ -227,10 +202,13 @@ const theme = createTheme({
                         fontStyle: 'normal',
                         letterSpacing: '.294em',
                         fontSize: '1.75em',
+                        marginLeft: "5rem",
                         [breakpoints.down('tablet')]: {
+                            marginLeft: 0,
                             fontSize: '1.25em',
                         },
                         [breakpoints.down('mobile')]: {
+                            marginLeft: 0,
                             fontSize: '1em',
                             letterSpacing: '.169em',
                         },

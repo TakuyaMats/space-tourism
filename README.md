@@ -44,7 +44,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github Repository](https://github.com/TakuyaMats/space-tourism)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -111,6 +111,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ---
 
 - Website - [Eric Sun](https://esun94.github.io/Portfolio/)
+- Frontend Mentor - [@Esun94](https://www.frontendmentor.io/profile/Esun94)
 - Github - [@Esun94](https://github.com/Esun94)
 <br><br>
 - Name - Matheus Barbosa

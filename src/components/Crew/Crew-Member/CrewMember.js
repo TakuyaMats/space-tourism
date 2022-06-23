@@ -98,7 +98,6 @@ const CrewMember = ({ crew }) => {
 
   function crewmatePicture() {
     let crewmateImage = ''
-    //Switch Statement 
     switch (selectedCrewmate) {
       case 0:
         crewmateImage = crewmateDouglas
@@ -112,11 +111,11 @@ const CrewMember = ({ crew }) => {
       case 3:
         crewmateImage = crewmateAnsari
         break;
+      default:
+        crewmateImage = crewmateDouglas
     }
     return crewmateImage
   }
-
-  //Move the Fade effect inside a function later so you dont write the whole thing 3 times 
 
 
   return (
