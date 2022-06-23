@@ -44,7 +44,6 @@ const theme = createTheme({
                         variant: 'image'
                     },
                     style: {
-                        postion: 'absolute',
                         marginLeft: '14.375em',
                         width: '27.8em',
                         height: '27.8em',
@@ -284,8 +283,6 @@ const theme = createTheme({
                             marginLeft: '.5em',
                             width: '70%',
                         },
-
-
                     }
                 },
                 {
@@ -451,11 +448,9 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '5.5em',
-
                         },
                         [breakpoints.only('iPadMini')]: {
                             fontSize: '5.5em',
-
                         },
                         [breakpoints.only('iphoneSE')]: {
                             fontSize: '3em',
@@ -499,7 +494,7 @@ const theme = createTheme({
                         variant: 'desc'
                     },
                     style: {
-                        display: 'block', //display: block
+                        display: 'block',
                         justifyContent: 'center',
                         fontFamily: 'Barlow',
                         fontSize: '1.12em',
@@ -529,7 +524,6 @@ const theme = createTheme({
                             marginBottom: '1em',
                             width: '20.4em',
                             lineHeight: '167%',
-
                         },
                         [breakpoints.only('iphoneXR')]: {
                             marginTop: '1em',
@@ -587,7 +581,6 @@ const theme = createTheme({
                         [breakpoints.only('surfacePro7')]: {
                             display: 'flex',
                             justifyContent: 'center',
-                            // margin: 'auto',
                             fontSize: '2em',
                             marginTop: '1em',
                         },
@@ -632,7 +625,6 @@ const theme = createTheme({
                             fontSize: '1.75em',
                             fontWeight: '400'
                         },
-
                     }
                 },
                 {
@@ -726,7 +718,6 @@ const theme = createTheme({
                             margin: 'auto',
                             fontSize: '.875em',
                             letterSpacing: '.148em',
-
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             width: '8em',
@@ -740,7 +731,6 @@ const theme = createTheme({
                             width: '8em',
                             display: 'flex',
                             justifyContent: 'center',
-                            // margin: 'auto',
                             marginTop: '1em',
                             fontSize: '.875em',
                             letterSpacing: '.148em',
