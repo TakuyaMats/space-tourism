@@ -45,7 +45,6 @@ const theme = createTheme({
                     },
                     style: {
                         postion: 'absolute',
-                        marginRight: '47.8em',
                         marginLeft: '14.375em',
                         width: '27.8em',
                         height: '27.8em',
