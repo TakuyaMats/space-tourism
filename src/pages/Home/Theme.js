@@ -280,7 +280,6 @@ theme.typography.h1 = {
 }
 
 theme.typography.h5 = {
-    // right: '5%',
     [breakpoints.down('desktop')]: {
         display: 'flex',
         justifyContent: 'center',
@@ -290,7 +289,42 @@ theme.typography.h5 = {
     [breakpoints.only('surfacePro7')]: {
         fontSize: '20px',
     },
-    [breakpoints.down('iphoneXR')]: {
+    [breakpoints.only('iphoneSE')]: {
+        display: 'flex',
+        justifyContent: 'center',
+        fontSize: '16px',
+        letterSpacing: '2.7px',
+        lineHeight: '19px'
+    },
+    [breakpoints.only('iphoneXR')]: {
+        display: 'flex',
+        justifyContent: 'center',
+        fontSize: '16px',
+        letterSpacing: '2.7px',
+        lineHeight: '19px'
+    },
+    [breakpoints.only('iphone12Pro')]: {
+        display: 'flex',
+        justifyContent: 'center',
+        fontSize: '16px',
+        letterSpacing: '2.7px',
+        lineHeight: '19px'
+    },
+    [breakpoints.only('pixel5')]: {
+        display: 'flex',
+        justifyContent: 'center',
+        fontSize: '16px',
+        letterSpacing: '2.7px',
+        lineHeight: '19px'
+    },
+    [breakpoints.only('samsungGalaxyS8')]: {
+        display: 'flex',
+        justifyContent: 'center',
+        fontSize: '16px',
+        letterSpacing: '2.7px',
+        lineHeight: '19px'
+    },
+    [breakpoints.only('samsungGalaxyS20')]: {
         display: 'flex',
         justifyContent: 'center',
         fontSize: '16px',
@@ -301,11 +335,11 @@ theme.typography.h5 = {
 
 theme.typography.p = {
     fontSize: '18px',
-    fontFamily: 'Barlow',
-    mixBlendMode: 'normal',
+    fontFamily: 'Barlow, sans-serif',
+    mixBlendMode: 'difference',
     color: '#D0D6F9',
     [breakpoints.down('desktop')]: {
-        fontFamily: 'Barlow',
+        fontFamily: 'Barlow, sans-serif',
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',
