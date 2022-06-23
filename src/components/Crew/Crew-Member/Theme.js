@@ -228,7 +228,7 @@ const theme = createTheme({
                         letterSpacing: '.294em',
                         fontSize: '1.75em',
                         [breakpoints.down('tablet')]: {
-                            fontSize: '1.5em',
+                            fontSize: '1.25em',
                         },
                         [breakpoints.down('mobile')]: {
                             fontSize: '1em',
@@ -250,7 +250,7 @@ const theme = createTheme({
                         textTransform: 'uppercase',
                         marginLeft: '1.7rem',
                         [breakpoints.down('tablet')]: {
-                            fontSize: '1.50em',
+                            fontSize: '1.25em',
                             marginLeft: '1.188em'
                         },
                         [breakpoints.down('mobile')]: {

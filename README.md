@@ -110,7 +110,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Contributors
 ---
 
-- Website - [Eric Sun](https://www.your-site.com)
+- Website - [Eric Sun](https://esun94.github.io/Portfolio/)
 - Github - [@Esun94](https://github.com/Esun94)
 <br><br>
 - Name - Matheus Barbosa
