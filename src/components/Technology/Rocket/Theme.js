@@ -398,7 +398,7 @@ theme.typography.h5 = {
 }
 
 theme.typography.p = {
-    fontFamily: 'Barlow',
+    fontFamily: 'Barlow, sans-serif',
     fontStyle: 'normal',
     fontWeight: 400,
     width: '444px',
@@ -411,13 +411,13 @@ theme.typography.p = {
         lineHeight: '40px',
     },
     [breakpoints.only('iphoneSE')]: {
-        fontSize: '15px',
+        fontSize: '13px',
         lineHeight: '25px',
         fontWeight: 400,
     },
     [breakpoints.only('iphoneXR')]: {
         fontSize: '16px',
-        lineHeight: '30px',
+        lineHeight: '35px',
         fontWeight: 400,
     },
     [breakpoints.only('iphone12Pro')]: {
@@ -431,7 +431,7 @@ theme.typography.p = {
         fontWeight: 400,
     },
     [breakpoints.only('samsungGalaxyS8')]: {
-        fontSize: '15px',
+        fontSize: '13px',
         lineHeight: '30px',
         fontWeight: 400,
     },

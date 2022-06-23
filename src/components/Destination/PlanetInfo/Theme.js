@@ -164,7 +164,6 @@ const theme = createTheme({
                             width: '40em',
                             textAlign: 'center',
                             marginLeft: '4em'
-
                         },
                         [breakpoints.only('iphoneSE')]: {
                             position: 'absolute',
@@ -210,7 +209,6 @@ const theme = createTheme({
                             bottom: '0em',
                             textAlign: 'center',
                             left: '.3em'
-                            // right: '25em'
                         },
                         [breakpoints.only('pixel5')]: {
                             position: 'absolute',
