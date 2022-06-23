@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/TakuyaMats/space-tourism)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Github Live URL](https://takuyamats.github.io/space-tourism/)
 
 ## My process
 ---
@@ -58,16 +58,11 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Material-UI](https://mui.com/) - React frontend framework
+- [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start) - Routing
+- [Material UI Theme](https://mui.com/material-ui/customization/theming/) - For styles
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
@@ -82,10 +77,6 @@ const proudOfThisFunc = () => {
   console.log('🎉')
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 

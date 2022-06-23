@@ -2,7 +2,7 @@
   "name": "space-tourism",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://TakuyaMats.github.io/space-tourism",
+  "homepage": "https://takuyaMats.github.io/space-tourism",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.9.0",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
