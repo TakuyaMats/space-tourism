@@ -86,14 +86,12 @@ const theme = createTheme({
                         [breakpoints.only('iPadAir')]: {
                             marginTop: '2em',
                             marginLeft: '2.406em',
-                            marginRight: '28.5em',
                             marginBottom: '3em',
                             width: '23em',
                         },
                         [breakpoints.only('iPadMini')]: {
                             marginTop: '2em',
                             marginLeft: '2.406em',
-                            marginRight: '28.5em',
                             marginBottom: '1.5em',
                             width: '23em',
                         },
