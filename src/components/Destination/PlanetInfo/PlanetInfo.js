@@ -50,55 +50,56 @@ function PlanetInfo({ data }) {
 
     return (
         <ThemeProvider theme={theme}>
-
-            <Container variant='image'>
-                <img src={planetWebp()} alt='Destination' width='100%' />
-            </Container>
-            <Container variant='info' className="aboveContext">
-                <TabContext value={value}>
-                    <Container variant='destTabs'>
-                        <TabList
-                            value={value}
-                            onChange={handleChange}
-                        >
-                            <Tab sx={{ color: '#D0D6F9' }} value='Moon' onClick={handleClick} label="Moon" />
-                            <Tab sx={{ color: '#D0D6F9' }} value='Mars' onClick={handleClick} label="Mars" />
-                            <Tab sx={{ color: '#D0D6F9' }} value='Europa' onClick={handleClick} label="Europa" />
-                            <Tab sx={{ color: '#D0D6F9' }} value='Titan' onClick={handleClick} label="Titan" />
-                        </TabList>
-                    </Container>
-                    {data.map((planet, index) => {
-                        let capName = planet.name.toUpperCase()
-                        return (
-                            <TabPanel key={index} value={planet.name} >
-                                <Typography variant='name'>
-                                    {capName}
-                                </Typography>
-                                <Typography variant='desc'>
-                                    {planet.description}
-                                </Typography>
-                                <Container variant='subInfo'>
-                                    <Container variant='subDistance'>
-                                        <Typography variant='dist-time'>
-                                            AVG. Distance
-                                        </Typography>
-                                        <Typography variant='distance' noWrap>
-                                            {planet.distance}
-                                        </Typography>
+            <Container variant='img-info-parent'>
+                <Container variant='image'>
+                    <img src={planetWebp()} alt='Destination' />
+                </Container>
+                <Container variant='info' className="aboveContext">
+                    <TabContext value={value}>
+                        <Container variant='destTabs'>
+                            <TabList
+                                value={value}
+                                onChange={handleChange}
+                            >
+                                <Tab sx={{ color: '#D0D6F9' }} value='Moon' onClick={handleClick} label="Moon" />
+                                <Tab sx={{ color: '#D0D6F9' }} value='Mars' onClick={handleClick} label="Mars" />
+                                <Tab sx={{ color: '#D0D6F9' }} value='Europa' onClick={handleClick} label="Europa" />
+                                <Tab sx={{ color: '#D0D6F9' }} value='Titan' onClick={handleClick} label="Titan" />
+                            </TabList>
+                        </Container>
+                        {data.map((planet, index) => {
+                            let capName = planet.name.toUpperCase()
+                            return (
+                                <TabPanel key={index} value={planet.name} >
+                                    <Typography variant='name'>
+                                        {capName}
+                                    </Typography>
+                                    <Typography variant='desc'>
+                                        {planet.description}
+                                    </Typography>
+                                    <Container variant='subInfo'>
+                                        <Container variant='subDistance'>
+                                            <Typography variant='dist-time'>
+                                                AVG. Distance
+                                            </Typography>
+                                            <Typography variant='distance' noWrap>
+                                                {planet.distance}
+                                            </Typography>
+                                        </Container>
+                                        <Container variant='subTime'>
+                                            <Typography variant='dist-time'>
+                                                EST. Travel Time
+                                            </Typography>
+                                            <Typography variant='travel' noWrap >
+                                                {planet.travel}
+                                            </Typography>
+                                        </Container>
                                     </Container>
-                                    <Container variant='subTime'>
-                                        <Typography variant='dist-time'>
-                                            EST. Travel Time
-                                        </Typography>
-                                        <Typography variant='travel' noWrap >
-                                            {planet.travel}
-                                        </Typography>
-                                    </Container>
-                                </Container>
-                            </TabPanel>
-                        )
-                    })}
-                </TabContext>
+                                </TabPanel>
+                            )
+                        })}
+                    </TabContext>
+                </Container>
             </Container>
         </ThemeProvider>
     )
