@@ -5,6 +5,13 @@ import createBreakpoints from '@mui/system/createTheme/createBreakpoints';
 const customBreakpointValues = {
     values: {
         xs: 0,
+        galaxyFold: 280,
+        samsungGalaxyS8: 360,
+        iphoneSE: 375,
+        iphone12Pro: 390,
+        pixel5: 392,
+        samsungGalaxyS20: 412,
+        iphoneXR: 414,
         sm: 600,
         md: 900,
         lg: 1200,
@@ -43,18 +50,21 @@ const theme = createTheme({
                         variant: 'crew'
                     },
                     style: {
+                        width: 'auto',
                         height: "90vh",
+                        marginLeft: "5rem",
                         [breakpoints.down('tablet')]: {
                             height: "80vh",
                             display: 'grid',
-                            gridTemplateRows: '40% 61%'
+                            gridTemplateRows: '40% 61%',
+                            marginLeft: 0,
                         },
                         [breakpoints.down('mobile')]: {
+                            marginLeft: 0,
                             height: "35vh",
                             display: 'flex'
                         },
                     }
-
                 },
                 {
                     props: {
@@ -63,10 +73,7 @@ const theme = createTheme({
                     style: {
                         display: 'block',
                         marginTop: '5%',
-
-                        display: 'grid',
-                        gridTemplateRows: '5% 15% 40% 10%',
-
+                        gridTemplateRows: '5% 15% 25% 10%',
                         [breakpoints.down('tablet')]: {
                             display: 'block',
                             marginTop: '0',
@@ -79,7 +86,6 @@ const theme = createTheme({
                             flexDirection: 'column'
                         },
                     }
-
                 },
                 {
                     props: {
@@ -103,7 +109,6 @@ const theme = createTheme({
                             order: '4'
                         },
                     }
-
                 },
                 {
                     props: {
@@ -117,7 +122,6 @@ const theme = createTheme({
                             marginTop: "5%",
                             marginBottom: "5%",
                             maxWidth: "100%",
-
                         },
                         [breakpoints.down('mobile')]: {
                             order: '1',
@@ -125,11 +129,8 @@ const theme = createTheme({
                             marginRight: "0%",
                             marginTop: "10%",
                             marginBottom: "10%",
-
-
                         },
                     }
-
                 },
                 {
                     props: {
@@ -142,16 +143,13 @@ const theme = createTheme({
                         [breakpoints.down('tablet')]: {
                             backgroundPosition: 'center',
                             height: 'auto'
-
                         },
                         [breakpoints.down('mobile')]: {
                             order: '1',
                             height: '40vh',
                             borderBottom: '1px double #D0D6F9'
-
                         },
                     }
-
                 },
                 {
                     props: {
@@ -162,7 +160,6 @@ const theme = createTheme({
                             order: '2'
                         },
                     }
-
                 },
                 {
                     props: {
@@ -173,20 +170,11 @@ const theme = createTheme({
                             order: '3'
                         },
                     }
-
                 },
             ]
         },
         MuiBox: {
             variants: [
-                {
-                    props: {
-                        variant: 'title'
-                    },
-                    style: {
-
-                    }
-                },
                 {
                     props: {
                         variant: 'image'
@@ -198,16 +186,6 @@ const theme = createTheme({
                         },
                     }
                 },
-                {
-                    props: {
-                        variant: 'pageTitle'
-                    },
-                    style: {
-
-                    }
-
-                }
-
             ]
         },
         MuiTypography: {
@@ -224,10 +202,13 @@ const theme = createTheme({
                         fontStyle: 'normal',
                         letterSpacing: '.294em',
                         fontSize: '1.75em',
+                        marginLeft: "5rem",
                         [breakpoints.down('tablet')]: {
-                            fontSize: '1.5em',
+                            marginLeft: 0,
+                            fontSize: '1.25em',
                         },
                         [breakpoints.down('mobile')]: {
+                            marginLeft: 0,
                             fontSize: '1em',
                             letterSpacing: '.169em',
                         },
@@ -247,7 +228,7 @@ const theme = createTheme({
                         textTransform: 'uppercase',
                         marginLeft: '1.7rem',
                         [breakpoints.down('tablet')]: {
-                            fontSize: '1.50em',
+                            fontSize: '1.25em',
                             marginLeft: '1.188em'
                         },
                         [breakpoints.down('mobile')]: {
@@ -295,11 +276,43 @@ theme.typography.paragraph = {
     fontFamily: 'Barlow, sans-serif',
     lineHeight: '32px',
     color: '#D0D6F9',
+    mixBlendMode: 'difference',
     [breakpoints.down('tablet')]: {
         textAlign: 'center',
         fontSize: '1em'
     },
     [breakpoints.down('mobile')]: {
+        lineHeight: 1,
+        textAlign: 'center',
+        fontSize: '0.8em'
+    },
+    [breakpoints.only('iphoneSE')]: {
+        lineHeight: 1,
+        textAlign: 'center',
+        fontSize: '0.8em'
+    },
+    [breakpoints.only('iphoneXR')]: {
+        lineHeight: 3,
+        textAlign: 'center',
+        fontSize: '0.8em'
+    },
+    [breakpoints.only('iphone12Pro')]: {
+        lineHeight: 2,
+        textAlign: 'center',
+        fontSize: '0.8em'
+    },
+    [breakpoints.only('pixel5')]: {
+        lineHeight: 2.5,
+        textAlign: 'center',
+        fontSize: '0.8em'
+    },
+    [breakpoints.only('samsungGalaxyS8')]: {
+        lineHeight: 1.8,
+        textAlign: 'center',
+        fontSize: '0.8em'
+    },
+    [breakpoints.only('samsungGalaxyS20')]: {
+        lineHeight: 3,
         textAlign: 'center',
         fontSize: '0.8em'
     },
