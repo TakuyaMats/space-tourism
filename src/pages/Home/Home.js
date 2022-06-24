@@ -14,17 +14,17 @@ import './Home.css';
 function Home() {
     return (
         <ThemeProvider theme={theme}>
-            <Paper variant="body1">
-            <NavBar />
-                <Container variant="container1">
-                    <Typography variant="h5">SO, YOU WANT TO TRAVEL TO</Typography>
-                    <Typography variant="h1">SPACE</Typography>
-                    <Typography variant="p">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</Typography>
-                </Container>
-                <Box className="btn-container">
-                    <Button component={Link} to="/destination" variant="exploreBtn" className="explore-btn">EXPLORE</Button>
-                </Box>
-            </Paper>
+                <Paper variant="body1">
+                <NavBar />
+                    <Container variant="container1">
+                        <Typography variant="h5">SO, YOU WANT TO TRAVEL TO</Typography>
+                        <Typography variant="h1">SPACE</Typography>
+                        <Typography variant="p">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</Typography>
+                    </Container>
+                    <Box className="btn-container">
+                        <Button component={Link} to="/destination" variant="exploreBtn" className="explore-btn">EXPLORE</Button>
+                    </Box>
+                </Paper>
         </ThemeProvider>
     )
 }

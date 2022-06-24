@@ -21,7 +21,7 @@ const customBreakpointValues = {
         iPadMini: 768,
         iPadAir: 820,
         surfacePro7: 912,
-        // tablet: 913,
+        tablet: 913,
         desktop: 1140,
         xl: 1680,
     },
@@ -48,6 +48,7 @@ const theme = createTheme({
                         minWidth: '100%',
                         minHeight: '100%',
                         position: 'fixed',
+                        overflow: 'auto',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                             borderRadius: '0px'

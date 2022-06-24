@@ -23,6 +23,12 @@ function Crew() {
   return (
 
     <ThemeProvider theme={theme}>
+      <Box 
+        sx={{
+            display: 'flex',
+            flexWrap: 'wrap'
+        }}
+        >
       <Paper variant="body1" square
         sx={{
           width: "100vw",
@@ -34,10 +40,8 @@ function Crew() {
           <CrewMember crew={data.Crew} />
         </Container>
       </Paper>
+      </Box>
     </ThemeProvider>
-
-
-
   );
 }
 

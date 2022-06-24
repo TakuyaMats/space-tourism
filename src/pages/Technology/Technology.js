@@ -4,6 +4,7 @@ import NavBar from '../../components/Navbar/Navbar';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import theme from './Theme';
 import { data } from '../../assets/dataJSON';
 import Rocket from '../../components/Technology/Rocket/Rocket';
@@ -13,6 +14,12 @@ function Technology() {
 
     return (
         <ThemeProvider theme={theme}>
+            <Box 
+                sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap'
+                }}
+            >
             <Paper variant="body">
                 <NavBar/>
                 <Container variant="title-container">
@@ -21,6 +28,7 @@ function Technology() {
                 </Container>
                 <Rocket data={Technology}/>
             </Paper>
+            </Box>
         </ThemeProvider>
     )
 }
