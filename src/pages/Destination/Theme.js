@@ -46,9 +46,15 @@ const theme = createTheme({
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
-                        minWidth: '100%',
-                        minHeight: '100%',
-                        position: 'fixed',
+                        maxWidth: '100vw',
+                        minHeight: '100vh',
+                        // marginTop: '1em',
+                        // position: 'fixed',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        // alignContent: 'center',
+                        overflow: 'scroll',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                         },
@@ -63,20 +69,23 @@ const theme = createTheme({
                         variant: 'title'
                     },
                     style: {
+                        display: 'flex',
                         height: '2.12rem',
+                        flexDirection:'row',
+                        flexWrap: 'none',
                         marginTop: '4em',
                         marginLeft: '10.4em',
-                        marginBottom: '5em',
+                        marginBottom: '4em',
                         width: '33em',
-                        marginRight: 'auto',
-                        [breakpoints.down('laptop')]: {
-                            height: '2.12rem',
-                            marginTop: '1.5em',
-                            marginLeft: '10em',
-                            marginBottom: '4.5em',
-                            width: '33em',
-                            marginRight: 'auto',
-                        },
+                        // marginRight: 'auto',
+                        // [breakpoints.down('laptop')]: {
+                        //     height: '2.12rem',
+                        //     marginTop: '1.5em',
+                        //     marginLeft: '10em',
+                        //     marginBottom: '4.5em',
+                        //     width: '33em',
+                        //     marginRight: 'auto',
+                        // },
                         [breakpoints.only('surfacePro7')]: {
                             marginTop: '2.5em',
                             marginLeft: '3em',
@@ -86,26 +95,28 @@ const theme = createTheme({
                         [breakpoints.only('iPadAir')]: {
                             marginTop: '2em',
                             marginLeft: '2.406em',
-                            marginBottom: '3em',
-                            width: '23em',
+                            marginBottom: '2.5em',
+                            // width: 'em',
                         },
                         [breakpoints.only('iPadMini')]: {
                             marginTop: '2em',
                             marginLeft: '2.406em',
                             marginBottom: '1.5em',
-                            width: '23em',
+                            // width: '23em',
                         },
                         [breakpoints.only('iphoneSE')]: {
+                            justifyContent: 'center',
                             marginTop: '1.5em',
                             marginBottom: '1em',
-                            marginLeft: '3.5em',
-                            width: '19em',
+                            marginLeft: '2.5em',
+                            width: '16em',
                         },
                         [breakpoints.only('iphoneXR')]: {
+                            justifyContent: 'center',
                             marginTop: '1.5em',
-                            marginLeft: '4.8rem',
+                            marginLeft: '4.5rem',
                             marginBottom: '1em',
-                            width: '23em'
+                            width: '17em'
                         },
                         [breakpoints.only('iphone12Pro')]: {
                             marginTop: '1.5em',
@@ -120,16 +131,17 @@ const theme = createTheme({
                             width: '17em',
                         },
                         [breakpoints.only('samsungGalaxyS20')]: {
-                            marginTop: '1.5em',
+                            // justifyContent: 'center',
+                            marginTop: '2em',
                             marginLeft: '5.2rem',
-                            marginBottom: '1em',
-                            width: '17em',
+                            marginBottom: '.1em',
+                            width: '16em',
                         },
                         [breakpoints.only('pixel5')]: {
                             marginTop: '1.5em',
                             marginBottom: '1em',
                             marginLeft: '4.3em',
-                            width: '19em',
+                            width: '16em',
                         },
                     }
                 }
@@ -142,6 +154,7 @@ const theme = createTheme({
                         variant: '01'
                     },
                     style: {
+                        display: 'flex',
                         color: 'rgba(225, 225, 225, 1)',
                         opacity: '0.3',
                         fontFamily: 'Barlow Condensed',
@@ -189,6 +202,7 @@ const theme = createTheme({
                         variant: 'pickDest'
                     },
                     style: {
+                        // display: 'flex',
                         color: '#FFFFFF',
                         fontFamily: 'Barlow Condensed',
                         fontWeight: 400,
