@@ -31,6 +31,7 @@ const theme = createTheme({
                     width: "100vw",
                     height: "100vh",
                     position: "fixed",
+                    overflow: 'scroll',
                     [breakpoints.down('tablet')]: {
                         backgroundImage: `url(${tabletBackgroundImage})`
                     }
