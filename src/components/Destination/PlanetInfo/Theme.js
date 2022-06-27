@@ -427,6 +427,7 @@ const theme = createTheme({
                         variant: 'destTabs'
                     },
                     style: {
+                        overflow: 'auto',
                         [breakpoints.only('surfacePro7')]: {
                             display: 'flex',
                             justifyContent: 'center',
