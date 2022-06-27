@@ -11,13 +11,9 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Contributors](#contributors)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 ---
@@ -32,15 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+##### **DESKTOP VIEW**
+![DESKTOP-VIEW](./src/assets/video/Desktop_View_ST.gif)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+##### **TABLET VIEW**
+![TABLET-VIEW](./src/assets/video/Tablet_View_ST.gif)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+##### **MOBILE VIEW**
+![MOBILE-VIEW](./src/assets/video/Mobile_View_ST.gif)
 
 ### Links
 
@@ -65,31 +60,65 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### What I learned
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+{data.map((launch, index) => {
+    let capName = launch.name.toUpperCase()
+    return (
+        <TabPanel key={index} value={launch.name}>
+            <Container variant="container">
+                <Typography variant="h5">THE TERMINOLOGY...</Typography>
+                <Typography variant="h1">{capName}</Typography>
+                <Typography variant="p">{launch.description}</Typography>
+            </Container>
+        </TabPanel>
+    )
+})}
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+const theme = createTheme({
+  components: {
+      MuiTabs: {
+          styleOverrides: {
+              flexContainer: {
+                      "&.MuiTabs-flexContainer": {
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      justifyContent: 'center',
+                      textDecoration: 'none',
+                      position: 'fixed',
+                      left: '165px',
+                      top: '383px',
+                      [breakpoints.down('desktop')]: {
+                          flexDirection: 'row',
+                      },
+                    },
+              },
+          },
+      },
+  },
+});
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function crewmatePicture() {
+  let crewmateImage = ''
+  switch (selectedCrewmate) {
+    case 0:
+      crewmateImage = crewmateDouglas
+      break;
+    case 1:
+      crewmateImage = crewmateMark
+      break;
+    case 2:
+      crewmateImage = crewmateVictor
+      break;
+    case 3:
+      crewmateImage = crewmateAnsari
+      break;
+    default:
+      crewmateImage = crewmateDouglas
+  }
+  return crewmateImage
 }
 ```
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 ---
@@ -108,10 +137,3 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Name - Matheus Barbosa
 - Github - [@mattbarb93](https://github.com/mattbarb93)
 
-
-## Acknowledgments
----
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
