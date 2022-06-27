@@ -54,7 +54,7 @@ const theme = createTheme({
                         flexDirection: 'column',
                         justifyContent: 'center',
                         // alignContent: 'center',
-                        overflow: 'scroll',
+                        overflow: 'auto',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                         },

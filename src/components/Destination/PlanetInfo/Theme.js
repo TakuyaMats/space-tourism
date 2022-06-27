@@ -504,6 +504,7 @@ const theme = createTheme({
                         color: 'rgba(255, 255, 255, 1)',
                         [breakpoints.only('surfacePro7')]: {
                             fontSize: '6em',
+                            justifyContent: 'center',
                         },
                         [breakpoints.only('iPadAir')]: {
                             fontSize: '5.5em',
@@ -513,6 +514,7 @@ const theme = createTheme({
                         },
                         [breakpoints.only('iPadMini')]: {
                             fontSize: '5.5em',
+                            justifyContent: 'center',
 
                         },
                         [breakpoints.only('iphoneSE')]: {
