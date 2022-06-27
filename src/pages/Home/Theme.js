@@ -48,6 +48,7 @@ const theme = createTheme({
                         minWidth: '100%',
                         minHeight: '100%',
                         position: 'fixed',
+                        overflow: 'scroll',
                         [breakpoints.down('desktop')]: {
                             backgroundImage: `url(${tabletBackgroundImage})`,
                             borderRadius: '0px'

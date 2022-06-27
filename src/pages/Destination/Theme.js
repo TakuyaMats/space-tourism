@@ -48,8 +48,6 @@ const theme = createTheme({
                         backgroundRepeat: 'no-repeat',
                         maxWidth: '100vw',
                         minHeight: '100vh',
-                        // marginTop: '1em',
-                        // position: 'fixed',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
